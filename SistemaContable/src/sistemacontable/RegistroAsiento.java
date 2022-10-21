@@ -443,7 +443,7 @@ public class RegistroAsiento extends javax.swing.JFrame implements PropertyChang
              registroIVA.getDescripcion().append(txtDescripcion.getText());
              DialogoCrearRegistroDeIVA dialogoCrearRegistroDeIVA = new DialogoCrearRegistroDeIVA(this, true, cuentasDisp,registroIVA);
              dialogoCrearRegistroDeIVA.setVisible(true);
-                
+             dialogoCrearRegistroDeIVA.setTitle("Seleccione la cuenta de IVA y el tipo de transacción.");
             controladorTablaRegistro.añadirNuevoRegistro(registroIVA);
             
         }
