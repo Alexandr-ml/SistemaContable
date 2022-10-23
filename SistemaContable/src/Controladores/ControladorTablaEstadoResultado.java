@@ -26,7 +26,7 @@ public class ControladorTablaEstadoResultado extends AbstractTableModel{
 
     @Override
     public int getColumnCount() {
-        return 4;
+        return 5;
     }
 
     @Override
@@ -39,7 +39,7 @@ public class ControladorTablaEstadoResultado extends AbstractTableModel{
             case 0 -> cuenta.getCodCuenta();
             case 1 -> cuenta.getNombre();
             case 2 -> (saldo > 0)? saldo: "";
-            case 3 -> (saldo < 0)? saldo: "";
+            case 3 -> (saldo < 0)? Math.abs(saldo): "";
             case 4 -> cuenta.getNaturaleza();
             default -> null;
         };

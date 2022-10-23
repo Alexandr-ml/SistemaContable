@@ -66,7 +66,7 @@ public class PersistenciaDeDatos {
     }
     
     public void configurarArchivoNuevoParaAlmacenar(String ruta, String nombre){
-        String directorio = ruta+"\\"+nombre+".txt";
+        String directorio = ruta+"\\"+nombre+".ser";
         archivo = new File(directorio);
     }
     

@@ -97,6 +97,7 @@ public class Cuenta extends Serializacion{
         sb.append(", totalHaber=").append(totalHaber);
         sb.append(", saldo=").append(saldo);
         sb.append(", naturaleza=").append(naturaleza);
+        sb.append(", categoria= ").append(categoria);
         sb.append('}');
         return sb.toString();
     }

@@ -6,6 +6,7 @@ package Controladores;
 
 import ModeloContable.Registro;
 import ModeloContable.Tipo;
+import java.util.ArrayList;
 import java.util.List;
 import javax.swing.table.AbstractTableModel;
 
@@ -14,10 +15,10 @@ import javax.swing.table.AbstractTableModel;
  * @author pc
  */
 public class ControladorTablaLibroDiario extends AbstractTableModel{
-    private List<Registro> registros;
+    private List<Registro> registros = new ArrayList<>();
 
-    public ControladorTablaLibroDiario(List<Registro> registros) {
-        this.registros = registros;
+    public ControladorTablaLibroDiario() {
+        
         
     }
     

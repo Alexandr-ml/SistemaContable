@@ -33,6 +33,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
 import java.util.Map;
+import static java.util.stream.Collectors.partitioningBy;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.SwingConstants;
@@ -46,16 +47,17 @@ import javax.swing.filechooser.FileNameExtensionFilter;
  */
 public class Principal extends javax.swing.JFrame  implements ListSelectionListener{
     //controladores
-    ControladorListadoCuentasDisponibles controladorCuentasDisp;
-    ControladorTablaLibroDiario controladorTablaLibroDiario;
+    ControladorListadoCuentasDisponibles controladorCuentasDisp = new ControladorListadoCuentasDisponibles();
+    ControladorTablaLibroDiario controladorTablaLibroDiario = new ControladorTablaLibroDiario();
     ControladorTablaLibroMayor controladorTablaLibroMayor;
-    
+    ControladorTablaEstadoResultado controladorTablaEstadoResultado;
     //modelos contables
     InformacionContable informacionContable;
     LibroMayor libroMayor;
     List<Registro> asientos;
     LibroDiario libroDiario;
     List<Cuenta> cuentas;
+    List<Cuenta> cuentasSaldadas;
    
     //Escritura-lectura de archivos
     final PersistenciaDeDatos persistenciaDeDatos = PersistenciaDeDatos.getPersistenciaDeDatos();
@@ -88,6 +90,8 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
                 libroDiario = (LibroDiario)informacionContable.getLibroDiario();
                 asientos = libroDiario.getAsientos();
             }else{
+                return;
+                /*
                 informacionContable = new InformacionContable();
                 libroMayor = new LibroMayor();
                 libroDiario = new LibroDiario();
@@ -96,7 +100,9 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
                 informacionContable.setLibroMayor(libroMayor);
                 informacionContable.setLibroDiario(libroDiario);
                 cuentas = libroMayor.getCuentas();
+                System.out.println(cuentas.isEmpty());
                 asientos = libroDiario.getAsientos();
+                */
             }
             
            
@@ -138,26 +144,7 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
         
         @Override
         protected List<Cuenta> doInBackground() throws Exception {
-            /*
-            registrosAgrupadosPorCuentas = asientos
-                    .stream()
-                    .collect(Collectors.groupingBy(Registro::getCuenta));
-            
-           Map<Boolean,List<Registro>> registrosAgrupadosPorTipoTransaccion = asientos.stream()
-                                        .collect(Collectors.partitioningBy(registro -> registro.getTipo() == Tipo.DEBE));
-                
-            
-           cuentas.stream()
-                   .map(cuenta -> {
-                        cuenta.setSaldo(asientos.stream()
-                                           .filter(asientos-> asientos.getCuenta().equals(cuenta))
-                                           .filter(asientoCuentaActual -> asientoCuentaActual.getTipo().equals(Tipo.DEBE))
-                                           .mapToDouble(asiento -> asiento.getValor())
-                                           .sum()
-                        );
-                       return cuenta;
-                   }).toList().forEach(System.out::println);
-           */
+
             //solucion imperativa
             
             for(Cuenta cuenta: cuentas){
@@ -226,7 +213,7 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
     
     public void configurarListViewCuentasDisponibles(List<Cuenta> listadoCuentas){
         
-        controladorCuentasDisp = new ControladorListadoCuentasDisponibles();
+        
         
         if(listadoCuentas == null) return;
         controladorCuentasDisp.setListadoCuentas(listadoCuentas);
@@ -240,7 +227,8 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
        
        if(asientos == null) return;
        
-       controladorTablaLibroDiario = new ControladorTablaLibroDiario(asientos);
+       
+       controladorTablaLibroDiario.añadirRegistros(asientos);
        tablaLibroDiario.setModel(controladorTablaLibroDiario);   
        
        for(int a = 0; a< numColumnas;a++){
@@ -309,6 +297,7 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
         cmbSeleccionarCuenta = new javax.swing.JComboBox<>();
         btnAbrirArchivo = new javax.swing.JButton();
         btnCrearNuevoArchivoInfc = new javax.swing.JButton();
+        btnOlvidarSeleccionCuenta = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -326,12 +315,15 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
         txtHaber = new javax.swing.JTextField();
         txtDebe = new javax.swing.JTextField();
         lblInforBalanzaComprobacion = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
         jScrollPane4 = new javax.swing.JScrollPane();
-        tblEstadoResultado = new javax.swing.JTable();
+        tablaEstadoResultado = new javax.swing.JTable();
         jLabel6 = new javax.swing.JLabel();
         txtUtilidadesPerdidas = new javax.swing.JTextField();
+        btnGenerarEstadoResultado = new javax.swing.JButton();
+        lblResultadoGastosVsIngresos = new javax.swing.JLabel();
+        btnCalculoUtilidadesPerdidas = new javax.swing.JButton();
+        lblInfoEstadoResultado = new javax.swing.JLabel();
         jPanel27 = new javax.swing.JPanel();
         jPanel28 = new javax.swing.JPanel();
         jLabel146 = new javax.swing.JLabel();
@@ -759,6 +751,7 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
         jScrollPane1.setViewportView(lstCuentasDisponibles);
 
         btnAnadirCuenta.setText("Añadir cuentas");
+        btnAnadirCuenta.setEnabled(false);
         btnAnadirCuenta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAnadirCuentaActionPerformed(evt);
@@ -766,6 +759,7 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
         });
 
         btnModificarCuenta.setText("Modificar cuenta");
+        btnModificarCuenta.setEnabled(false);
         btnModificarCuenta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnModificarCuentaActionPerformed(evt);
@@ -789,6 +783,9 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
             }
         });
 
+        btnOlvidarSeleccionCuenta.setText("Olvidar selección");
+        btnOlvidarSeleccionCuenta.setEnabled(false);
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -800,38 +797,43 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
                         .addComponent(btnAbrirArchivo)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(btnCrearNuevoArchivoInfc))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(btnModificarCuenta)
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addComponent(btnAnadirCuenta)
+                                .addComponent(jLabel51, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGap(18, 18, 18)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addComponent(btnAnadirCuenta)
-                            .addComponent(jLabel51, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(btnModificarCuenta)
-                            .addComponent(txtNombreCuenta)
-                            .addComponent(txtCodigoCuenta, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cmbSeleccionarCuenta, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addGap(80, 80, 80)
+                                .addComponent(txtNombreCuenta)
+                                .addComponent(cmbSeleccionarCuenta, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(btnOlvidarSeleccionCuenta)
+                                    .addComponent(txtCodigoCuenta, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                .addGap(243, 243, 243)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 281, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(542, Short.MAX_VALUE))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 281, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(385, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(13, 13, 13)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel3)
-                    .addComponent(txtNombreCuenta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(13, 13, 13)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel1)
+                                    .addComponent(txtNombreCuenta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel3)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel51)
                             .addComponent(cmbSeleccionarCuenta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -842,9 +844,13 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
                         .addGap(24, 24, 24)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(btnAnadirCuenta)
-                            .addComponent(btnModificarCuenta)))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 418, Short.MAX_VALUE)
+                            .addComponent(btnOlvidarSeleccionCuenta)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
+                .addComponent(btnModificarCuenta)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 406, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnCrearNuevoArchivoInfc)
                     .addComponent(btnAbrirArchivo))
@@ -857,10 +863,7 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
 
         tablaLibroDiario.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
                 "Fecha", "Cuenta", "Debe", "Haber"
@@ -913,10 +916,7 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
 
         tablaLibroMayor.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null}
+
             },
             new String [] {
                 "Código", "Cuenta", "Debe", "Haber", "Saldo", "Tipo de saldo"
@@ -965,11 +965,7 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
 
         tablaBalanzaComprobacion.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
                 "Código", "Cuenta", "Debe", "Haber"
@@ -1008,8 +1004,6 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
 
         lblInforBalanzaComprobacion.setText("Debe generar el libro mayor primero.");
 
-        jButton2.setText("Generar utilidades o perdidas.");
-
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
@@ -1029,12 +1023,9 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
                         .addGap(160, 160, 160)
                         .addComponent(jLabel7)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 443, Short.MAX_VALUE)
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton2)
-                            .addGroup(jPanel4Layout.createSequentialGroup()
-                                .addComponent(txtDebe, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(83, 83, 83)
-                                .addComponent(txtHaber, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(txtDebe, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(83, 83, 83)
+                        .addComponent(txtHaber, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(31, 31, 31)))
                 .addContainerGap())
         );
@@ -1049,26 +1040,18 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
                     .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(txtHaber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(txtDebe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btnGenerarBalanzaComprobacion)
-                            .addComponent(lblInforBalanzaComprobacion)))
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton2)))
+                .addGap(20, 20, 20)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnGenerarBalanzaComprobacion)
+                    .addComponent(lblInforBalanzaComprobacion))
                 .addContainerGap(330, Short.MAX_VALUE))
         );
 
         contenedorPestañas.addTab("Balance comprobación", jPanel4);
 
-        tblEstadoResultado.setModel(new javax.swing.table.DefaultTableModel(
+        tablaEstadoResultado.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
+
             },
             new String [] {
                 "Codigo", "Nombre de la cuenta", "Debe", "Haber", "Tipo de saldo"
@@ -1089,9 +1072,25 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane4.setViewportView(tblEstadoResultado);
+        jScrollPane4.setViewportView(tablaEstadoResultado);
 
         jLabel6.setText("Utilidades o perdidas:");
+
+        btnGenerarEstadoResultado.setText("Generar estado resultado.");
+        btnGenerarEstadoResultado.setEnabled(false);
+        btnGenerarEstadoResultado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGenerarEstadoResultadoActionPerformed(evt);
+            }
+        });
+
+        lblResultadoGastosVsIngresos.setText("a");
+
+        btnCalculoUtilidadesPerdidas.setText("Calcular utilidades o perdidas");
+        btnCalculoUtilidadesPerdidas.setEnabled(false);
+
+        lblInfoEstadoResultado.setForeground(new java.awt.Color(255, 0, 0));
+        lblInfoEstadoResultado.setText("Debe generar el balance de comprobacion antes.");
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -1100,11 +1099,20 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtUtilidadesPerdidas, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 981, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(jPanel5Layout.createSequentialGroup()
+                            .addComponent(btnGenerarEstadoResultado)
+                            .addGap(18, 18, 18)
+                            .addComponent(btnCalculoUtilidadesPerdidas)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(18, 18, 18)
+                            .addComponent(txtUtilidadesPerdidas, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(18, 18, 18)
+                            .addComponent(lblResultadoGastosVsIngresos, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(66, 66, 66))
+                        .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 981, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblInfoEstadoResultado))
                 .addContainerGap(190, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
@@ -1112,11 +1120,16 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addGap(22, 22, 22)
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(135, 135, 135)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnGenerarEstadoResultado)
+                    .addComponent(txtUtilidadesPerdidas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6)
-                    .addComponent(txtUtilidadesPerdidas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(319, Short.MAX_VALUE))
+                    .addComponent(lblResultadoGastosVsIngresos)
+                    .addComponent(btnCalculoUtilidadesPerdidas))
+                .addGap(18, 18, 18)
+                .addComponent(lblInfoEstadoResultado)
+                .addContainerGap(401, Short.MAX_VALUE))
         );
 
         contenedorPestañas.addTab("Estado de resultado", jPanel5);
@@ -4274,10 +4287,10 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
     }//GEN-LAST:event_btnGuardarActionPerformed
 
     private void btnGenerarBalanzaComprobacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGenerarBalanzaComprobacionActionPerformed
-        var cuentasSaldoReal = cuentas.stream()
+        cuentasSaldadas = cuentas.stream()
         .filter(cuenta -> cuenta.getSaldo()!= 0)
         .toList();
-        ControladorTablaBalanzaComprobacion controladorTablaBalanzaComprobacion = new ControladorTablaBalanzaComprobacion(cuentasSaldoReal);
+        ControladorTablaBalanzaComprobacion controladorTablaBalanzaComprobacion = new ControladorTablaBalanzaComprobacion(cuentasSaldadas);
         tablaBalanzaComprobacion.setModel(controladorTablaBalanzaComprobacion);
 
         var colModel = tablaBalanzaComprobacion.getColumnModel();
@@ -4289,17 +4302,20 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
             if(j==3) colModel.getColumn(j).setHeaderValue("Haber");
         }
 
-        double totalDebeBalanzaComprobacion = cuentasSaldoReal.stream()
+        double totalDebeBalanzaComprobacion = cuentasSaldadas.stream()
         .filter(cuenta -> cuenta.getSaldo()> 0)
         .mapToDouble(Cuenta::getSaldo)
         .sum();
-        double totalHaberBalanzaComprobacion = cuentasSaldoReal.stream()
+        double totalHaberBalanzaComprobacion = cuentasSaldadas.stream()
         .filter(cuenta -> cuenta.getSaldo()< 0)
         .mapToDouble(Cuenta::getSaldo)
         .sum();
 
         txtDebe.setText(String.valueOf(totalDebeBalanzaComprobacion));
         txtHaber.setText(String.valueOf(Math.abs(totalHaberBalanzaComprobacion)));
+        
+        btnGenerarEstadoResultado.setEnabled(true);
+        lblInfoEstadoResultado.setVisible(false);
     }//GEN-LAST:event_btnGenerarBalanzaComprobacionActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
@@ -4326,8 +4342,25 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
             String ruta = seleccionadorRutaAlmacenamiento.getSelectedFile().getAbsolutePath();
             String nombreArchivo = JOptionPane.showInputDialog(this,"Ingrese el nombre del archivo.");
             persistenciaDeDatos.configurarArchivoNuevoParaAlmacenar(ruta, nombreArchivo);
-
+            
+            informacionContable = new InformacionContable();
+            
+            libroMayor = new LibroMayor();
+            libroDiario = new LibroDiario();
+            
+            
+            informacionContable.setLibroDiario(libroDiario);
+            informacionContable.setLibroMayor(libroMayor);
+            
+            
+            cuentas = libroMayor.getCuentas();
+            asientos = libroDiario.getAsientos();
+            
+            configurarListViewCuentasDisponibles(cuentas);
+            configurarTablaLibroDiario(asientos);
+            
             contenedorPestañas.setEnabled(true);
+            btnAnadirCuenta.setEnabled(true);
         }
 
     }//GEN-LAST:event_btnCrearNuevoArchivoInfcActionPerformed
@@ -4335,33 +4368,34 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
     private void btnAbrirArchivoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAbrirArchivoActionPerformed
         JFileChooser seleccionadorArchivo = new JFileChooser();
         seleccionadorArchivo.setFileSelectionMode(JFileChooser.FILES_ONLY);
-        seleccionadorArchivo.setFileFilter(new FileNameExtensionFilter("Informacion contable","txt"));
+        seleccionadorArchivo.setFileFilter(new FileNameExtensionFilter("Informacion contable","ser"));
         int opcion = seleccionadorArchivo.showOpenDialog(this);
         LectorArchivos lectorArchivos = new LectorArchivos();
 
         if(opcion == JFileChooser.APPROVE_OPTION){
             persistenciaDeDatos.configurarArchivo(seleccionadorArchivo.getSelectedFile().getPath());
+        
+            inicializacionDeDatosDialog = new JDialog(this);
+            JPanel panelDeCarga = new JPanel();
+
+            //barra de progreso
+            JProgressBar barraDeProgreso = new JProgressBar();
+            barraDeProgreso.setIndeterminate(true);
+
+            //añadiendo la barra de progreso al panel
+            panelDeCarga.add(barraDeProgreso);
+
+            inicializacionDeDatosDialog.setSize(new Dimension(400,400));
+            inicializacionDeDatosDialog.setContentPane(panelDeCarga);
+            inicializacionDeDatosDialog.pack();
+            //centra el cuadro de carga
+            inicializacionDeDatosDialog.setLocationRelativeTo(null);
+            inicializacionDeDatosDialog.setVisible(true);
+
+            lectorArchivos.execute();
+            contenedorPestañas.setEnabled(true);
+            btnAnadirCuenta.setEnabled(true);
         }
-
-        inicializacionDeDatosDialog = new JDialog(this);
-        JPanel panelDeCarga = new JPanel();
-
-        //barra de progreso
-        JProgressBar barraDeProgreso = new JProgressBar();
-        barraDeProgreso.setIndeterminate(true);
-
-        //añadiendo la barra de progreso al panel
-        panelDeCarga.add(barraDeProgreso);
-
-        inicializacionDeDatosDialog.setSize(new Dimension(400,400));
-        inicializacionDeDatosDialog.setContentPane(panelDeCarga);
-        inicializacionDeDatosDialog.pack();
-        //centra el cuadro de carga
-        inicializacionDeDatosDialog.setLocationRelativeTo(null);
-        inicializacionDeDatosDialog.setVisible(true);
-
-        lectorArchivos.execute();
-        contenedorPestañas.setEnabled(true);
     }//GEN-LAST:event_btnAbrirArchivoActionPerformed
 
     private void btnModificarCuentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarCuentaActionPerformed
@@ -4370,6 +4404,14 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
 
     private void btnAnadirCuentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAnadirCuentaActionPerformed
 
+        if(txtNombreCuenta.getText().isBlank() ||
+                cmbSeleccionarCuenta.getSelectedIndex() == -1 || 
+                txtCodigoCuenta.getText().isBlank())
+        {       
+            JOptionPane.showMessageDialog(this,"Rellene todos los campos","Campos vacios!",JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+        
         int codigoCuenta = Integer.parseInt(txtCodigoCuenta.getText());
         String nombreCuenta = txtNombreCuenta.getText();
 
@@ -4386,10 +4428,29 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
         limpiarTxtPestañaCuentas();
     }//GEN-LAST:event_btnAnadirCuentaActionPerformed
 
+    private void btnGenerarEstadoResultadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGenerarEstadoResultadoActionPerformed
+        Map<Boolean,List<Cuenta>> cuentasParticionadasPorIngresosGastos;
+        cuentasParticionadasPorIngresosGastos = cuentasSaldadas
+                                                .stream()
+                                                .filter( (Cuenta cuenta) -> cuenta.getCategoria() == Categoria.INGRESOS || cuenta.getCategoria() == Categoria.COSTOS_y_GASTOS)
+                                                .collect(partitioningBy(cuenta -> cuenta.getCategoria()==Categoria.INGRESOS));
+       
+        var listadoCuentasIngresoGastos = cuentasParticionadasPorIngresosGastos.values().stream()
+                                            .flatMap(List::stream)
+                                            .toList();
+        
+        listadoCuentasIngresoGastos.forEach(System.out::println);
+       controladorTablaEstadoResultado = new ControladorTablaEstadoResultado(listadoCuentasIngresoGastos);
+       tablaEstadoResultado.setModel(controladorTablaEstadoResultado);
+        
+
+    }//GEN-LAST:event_btnGenerarEstadoResultadoActionPerformed
+
     //metodos utilitarios
     public void limpiarTxtPestañaCuentas(){
         txtCodigoCuenta.setText("");
         txtNombreCuenta.setText("");
+        cmbSeleccionarCuenta.setSelectedIndex(-1);
     }
     
     
@@ -4437,15 +4498,17 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
     private javax.swing.JButton btnAnadirCuenta;
     private javax.swing.JButton btnAnadirTransaccion;
     private javax.swing.JButton btnCalcularManoDeObra;
+    private javax.swing.JButton btnCalculoUtilidadesPerdidas;
     private javax.swing.JButton btnCrearNuevoArchivoInfc;
     private javax.swing.JButton btnGenerarBalanzaComprobacion;
+    private javax.swing.JButton btnGenerarEstadoResultado;
     private javax.swing.JButton btnGuardar;
     private javax.swing.JButton btnLimpia;
     private javax.swing.JButton btnLimpiar;
     private javax.swing.JButton btnModificarCuenta;
+    private javax.swing.JButton btnOlvidarSeleccionCuenta;
     private javax.swing.JComboBox<String> cmbSeleccionarCuenta;
     private javax.swing.JTabbedPane contenedorPestañas;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
@@ -4607,12 +4670,14 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JScrollPane jScrollPane8;
+    private javax.swing.JLabel lblInfoEstadoResultado;
     private javax.swing.JLabel lblInforBalanzaComprobacion;
+    private javax.swing.JLabel lblResultadoGastosVsIngresos;
     private javax.swing.JList<String> lstCuentasDisponibles;
     private javax.swing.JTable tablaBalanzaComprobacion;
+    private javax.swing.JTable tablaEstadoResultado;
     private javax.swing.JTable tablaLibroDiario;
     private javax.swing.JTable tablaLibroMayor;
-    private javax.swing.JTable tblEstadoResultado;
     private javax.swing.JTextField txtAFP;
     private javax.swing.JTextField txtAguinaldo2;
     private javax.swing.JTextField txtAnalisisConsumo;

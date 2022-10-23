@@ -13,8 +13,6 @@ import java.util.List;
  */
 public class LibroMayor extends Serializacion{
    private final List<Cuenta> cuentas = new ArrayList<>();
-   List<LibroDiario> libroDiarios;
-   List<Registro> ajustes;
 
    public LibroMayor(){}
    
@@ -29,22 +27,15 @@ public class LibroMayor extends Serializacion{
         this.cuentas.addAll(cuentas);
     }
 
+ 
 
-    public List<LibroDiario> getLibroDiarios() {
-        return libroDiarios;
-    }
-
-    public void setLibroDiarios(List<LibroDiario> libroDiarios) {
-        this.libroDiarios = libroDiarios;
-    }
+    
 
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("LibroMayor{");
         sb.append("cuentas=").append(cuentas);
-        sb.append(", libroDiarios=").append(libroDiarios);
-        sb.append(", ajustes=").append(ajustes);
         sb.append('}');
         return sb.toString();
     }
