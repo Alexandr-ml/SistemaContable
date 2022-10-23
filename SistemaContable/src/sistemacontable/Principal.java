@@ -326,14 +326,12 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
         txtHaber = new javax.swing.JTextField();
         txtDebe = new javax.swing.JTextField();
         lblInforBalanzaComprobacion = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
         jScrollPane4 = new javax.swing.JScrollPane();
         tblEstadoResultado = new javax.swing.JTable();
-        jScrollPane5 = new javax.swing.JScrollPane();
-        tblUtilidadPerdida = new javax.swing.JTable();
-        txtResultado = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        txtUtilidadesPerdidas = new javax.swing.JTextField();
         jPanel27 = new javax.swing.JPanel();
         jPanel28 = new javax.swing.JPanel();
         jLabel146 = new javax.swing.JLabel();
@@ -437,7 +435,6 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
         txtTotalEspacio = new javax.swing.JTextField();
         txtTotalConsumo = new javax.swing.JTextField();
         txtTotalEmpleado = new javax.swing.JTextField();
-        jPanel8 = new javax.swing.JPanel();
         jScrollPane7 = new javax.swing.JScrollPane();
         jPanel20 = new javax.swing.JPanel();
         jLabel92 = new javax.swing.JLabel();
@@ -1011,20 +1008,14 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
 
         lblInforBalanzaComprobacion.setText("Debe generar el libro mayor primero.");
 
+        jButton2.setText("Generar utilidades o perdidas.");
+
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGap(160, 160, 160)
-                        .addComponent(jLabel7)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 443, Short.MAX_VALUE)
-                        .addComponent(txtDebe, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(83, 83, 83)
-                        .addComponent(txtHaber, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(31, 31, 31))
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1033,7 +1024,18 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
                                 .addComponent(btnGenerarBalanzaComprobacion)
                                 .addGap(18, 18, 18)
                                 .addComponent(lblInforBalanzaComprobacion)
-                                .addGap(0, 0, Short.MAX_VALUE)))))
+                                .addGap(0, 0, Short.MAX_VALUE))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                        .addGap(160, 160, 160)
+                        .addComponent(jLabel7)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 443, Short.MAX_VALUE)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton2)
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addComponent(txtDebe, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(83, 83, 83)
+                                .addComponent(txtHaber, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(31, 31, 31)))
                 .addContainerGap())
         );
         jPanel4Layout.setVerticalGroup(
@@ -1047,31 +1049,36 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
                     .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(txtHaber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(txtDebe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(20, 20, 20)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnGenerarBalanzaComprobacion)
-                    .addComponent(lblInforBalanzaComprobacion))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnGenerarBalanzaComprobacion)
+                            .addComponent(lblInforBalanzaComprobacion)))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton2)))
+                .addContainerGap(330, Short.MAX_VALUE))
         );
 
         contenedorPestañas.addTab("Balance comprobación", jPanel4);
 
         tblEstadoResultado.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null}
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
             },
             new String [] {
-                "Codigo", "Nombre de la cuenta", "Debe", "Haber", "Saldo deudor", "Saldo acreedor"
+                "Codigo", "Nombre de la cuenta", "Debe", "Haber", "Tipo de saldo"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class
+                java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Object.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false
+                false, false, false, false, true
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -1084,38 +1091,7 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
         });
         jScrollPane4.setViewportView(tblEstadoResultado);
 
-        tblUtilidadPerdida.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "Codigo", "Nombre de la cuenta", "Saldo deudor", "Saldo acreedor"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.Integer.class
-            };
-            boolean[] canEdit = new boolean [] {
-                false, false, false, false
-            };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        jScrollPane5.setViewportView(tblUtilidadPerdida);
-
-        txtResultado.setEditable(false);
-
-        jLabel6.setText("RESULTADO DE LA OPERACION:");
-
-        jButton1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jButton1.setText("ACTUALIZAR");
+        jLabel6.setText("Utilidades o perdidas:");
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -1125,33 +1101,22 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
                 .addContainerGap()
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 656, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 503, Short.MAX_VALUE))
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel5Layout.createSequentialGroup()
-                                .addComponent(jLabel6)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txtResultado, javax.swing.GroupLayout.PREFERRED_SIZE, 313, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 981, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+                        .addComponent(txtUtilidadesPerdidas, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 981, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(190, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addGap(22, 22, 22)
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(32, 32, 32)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 67, Short.MAX_VALUE)
-                    .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                .addGap(32, 32, 32)
+                .addGap(135, 135, 135)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
-                    .addComponent(txtResultado, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(314, Short.MAX_VALUE))
+                    .addComponent(txtUtilidadesPerdidas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(319, Short.MAX_VALUE))
         );
 
         contenedorPestañas.addTab("Estado de resultado", jPanel5);
@@ -1776,19 +1741,6 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
         );
 
         contenedorPestañas.addTab("CIF", jPanel7);
-
-        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
-        jPanel8.setLayout(jPanel8Layout);
-        jPanel8Layout.setHorizontalGroup(
-            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        jPanel8Layout.setVerticalGroup(
-            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-
-        contenedorPestañas.addTab("Costo total", jPanel8);
 
         jScrollPane7.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
         jScrollPane7.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
@@ -3756,65 +3708,6 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnAnadirCuentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAnadirCuentaActionPerformed
-      
-        int codigoCuenta = Integer.parseInt(txtCodigoCuenta.getText());
-        String nombreCuenta = txtNombreCuenta.getText();
-        
-        int seleccion = JOptionPane.showConfirmDialog(this,"¿Desea agregar esta nueva cuenta?","Agregar cuenta nueva",JOptionPane.OK_CANCEL_OPTION,JOptionPane.INFORMATION_MESSAGE);
-        
-        if(seleccion == JOptionPane.OK_OPTION)
-        {
-            //CAMBIAR POR LA CATEGORIA ----------------------------------------------------
-            Categoria categoria = Categoria.valueOf(cmbSeleccionarCuenta.getSelectedItem().toString());
-            controladorCuentasDisp.añadirNuevaCuenta(new Cuenta(codigoCuenta, nombreCuenta,categoria));
-            
-        }
-        
-        limpiarTxtPestañaCuentas();
-    }//GEN-LAST:event_btnAnadirCuentaActionPerformed
-
-    private void btnAnadirTransaccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAnadirTransaccionActionPerformed
-        RegistroAsiento ra = new RegistroAsiento(controladorTablaLibroDiario,cuentas);
-        
-
-    }//GEN-LAST:event_btnAnadirTransaccionActionPerformed
-
-    private void btnAbrirArchivoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAbrirArchivoActionPerformed
-        JFileChooser seleccionadorArchivo = new JFileChooser();
-        seleccionadorArchivo.setFileSelectionMode(JFileChooser.FILES_ONLY);
-        seleccionadorArchivo.setFileFilter(new FileNameExtensionFilter("Informacion contable","txt"));
-        int opcion = seleccionadorArchivo.showOpenDialog(this);
-        LectorArchivos lectorArchivos = new LectorArchivos();
-        
-        
-        if(opcion == JFileChooser.APPROVE_OPTION){
-            persistenciaDeDatos.configurarArchivo(seleccionadorArchivo.getSelectedFile().getPath());
-        }
-        
-               
-        inicializacionDeDatosDialog = new JDialog(this);
-        JPanel panelDeCarga = new JPanel();
-         
-        //barra de progreso
-        JProgressBar barraDeProgreso = new JProgressBar();
-        barraDeProgreso.setIndeterminate(true);
-        
-        //añadiendo la barra de progreso al panel
-        panelDeCarga.add(barraDeProgreso);
-        
-        
-        inicializacionDeDatosDialog.setSize(new Dimension(400,400));
-        inicializacionDeDatosDialog.setContentPane(panelDeCarga);
-        inicializacionDeDatosDialog.pack();
-        //centra el cuadro de carga
-        inicializacionDeDatosDialog.setLocationRelativeTo(null);
-        inicializacionDeDatosDialog.setVisible(true);
-        
-        lectorArchivos.execute();
-        contenedorPestañas.setEnabled(true);
-    }//GEN-LAST:event_btnAbrirArchivoActionPerformed
-
     private void onClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_onClosing
          if(persistenciaDeDatos == null || informacionContable == null) return;
         
@@ -3826,65 +3719,156 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
         
     }//GEN-LAST:event_onClosing
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-       GeneradorLibroMayor generadorLibroMayor = new GeneradorLibroMayor();
-       generadorLibroMayor.execute();
-       btnGenerarBalanzaComprobacion.setEnabled(true);
-       lblInforBalanzaComprobacion.setVisible(false);
-    }//GEN-LAST:event_jButton6ActionPerformed
-
-    private void btnCrearNuevoArchivoInfcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCrearNuevoArchivoInfcActionPerformed
-    
-        JFileChooser seleccionadorRutaAlmacenamiento = new JFileChooser();
-        seleccionadorRutaAlmacenamiento.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
-        seleccionadorRutaAlmacenamiento.setDialogTitle("Seleccione la ruta de almacenamiento.");
-        seleccionadorRutaAlmacenamiento.setApproveButtonText("Aceptar");
-        int seleccion = seleccionadorRutaAlmacenamiento.showSaveDialog(this);
-        
-        if(seleccion == JFileChooser.APPROVE_OPTION){
-            String ruta = seleccionadorRutaAlmacenamiento.getSelectedFile().getAbsolutePath();
-            String nombreArchivo = JOptionPane.showInputDialog(this,"Ingrese el nombre del archivo.");
-            persistenciaDeDatos.configurarArchivoNuevoParaAlmacenar(ruta, nombreArchivo);
-            
-            contenedorPestañas.setEnabled(true);
-        }
-        
-        
-
-    }//GEN-LAST:event_btnCrearNuevoArchivoInfcActionPerformed
-
-    private void btnGenerarBalanzaComprobacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGenerarBalanzaComprobacionActionPerformed
-        var cuentasSaldoReal = cuentas.stream()
-                .filter(cuenta -> cuenta.getSaldo()!= 0)
-                .toList();
-        ControladorTablaBalanzaComprobacion controladorTablaBalanzaComprobacion = new ControladorTablaBalanzaComprobacion(cuentasSaldoReal);
-        tablaBalanzaComprobacion.setModel(controladorTablaBalanzaComprobacion);
-        
-        var colModel = tablaBalanzaComprobacion.getColumnModel();
-        
-        for(int j=0;j<colModel.getColumnCount();j++){
-            if(j==0) colModel.getColumn(j).setHeaderValue("Código");
-            if(j==1) colModel.getColumn(j).setHeaderValue("Cuenta");
-            if(j==2) colModel.getColumn(j).setHeaderValue("Debe");
-            if(j==3) colModel.getColumn(j).setHeaderValue("Haber");
-        }
-        
-        double totalDebeBalanzaComprobacion = cuentasSaldoReal.stream()
-                                                .filter(cuenta -> cuenta.getSaldo()> 0)
-                                                .mapToDouble(Cuenta::getSaldo)
-                                                .sum();
-        double totalHaberBalanzaComprobacion = cuentasSaldoReal.stream()
-                                                .filter(cuenta -> cuenta.getSaldo()< 0)
-                                                .mapToDouble(Cuenta::getSaldo)
-                                                .sum();
-      
-    txtDebe.setText(String.valueOf(totalDebeBalanzaComprobacion));
-    txtHaber.setText(String.valueOf(Math.abs(totalHaberBalanzaComprobacion)));
-    }//GEN-LAST:event_btnGenerarBalanzaComprobacionActionPerformed
-
-    private void btnModificarCuentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarCuentaActionPerformed
+    private void txtHorasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtHorasActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnModificarCuentaActionPerformed
+    }//GEN-LAST:event_txtHorasActionPerformed
+
+    private void btnCalcularManoDeObraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcularManoDeObraActionPerformed
+        //Se obtienen los datos introducidos en los textbox
+        double salario;
+        int horasTrabajadas, diasAguinaldo, diasVacacion, diasTrabajados;
+        float recargoVacacion, recargoSeguro, recargoAFP, eficienciaEmpleado, recargoINSAFORP;
+
+        salario = Double.parseDouble(txtSalario.getText());
+        horasTrabajadas = Integer.parseInt(txtHoras.getText());
+        diasAguinaldo = Integer.parseInt(txtDiasAguinaldo.getText());
+        diasVacacion = Integer.parseInt(txtDiasVacacion.getText());
+        diasTrabajados = Integer.parseInt(txtDiasTrabajado.getText());
+        recargoVacacion = Float.parseFloat(txtPorcentajeVacacion.getText());
+        recargoSeguro = Float.parseFloat(txtPorcentajeSeguro.getText());
+        recargoAFP = Float.parseFloat(txtPorcentajeAFP.getText());
+        recargoINSAFORP = Float.parseFloat(txtPorcentajeINSAFORP.getText());
+        eficienciaEmpleado = Float.parseFloat(txtPorcentajeEficiencia.getText());
+
+        //Respectivas salidas
+        //Var de proceso de la primera tabla
+        double septimoDia, aguinaldo, vacacion, salud, afp, totalDia, totalHora, total, insaforp;
+        //Var de proceso de tabla SIN eficiencia
+        double factorDia, factorHora, factorSemana, factorSalarioDia, factorSalarioHora, factorSalarioSemana, totalDiaS, totalHoraS, totalSemanaS;
+        //Var de proceso de tabla con eficiencia
+        double factorDiaE, factorHoraE, factorSemanaE, factorSalarioDiaE, factorSalarioHoraE, factorSalarioSemanaE, totalDiaSE, totalHoraSE, totalSemanaSE;
+
+        //calculos
+        //PRIMERA TABLA
+        septimoDia = 7*salario;
+        vacacion = ((salario*diasVacacion*(1 + convierte(recargoVacacion))+ (salario*diasVacacion*convierte(recargoAFP)) + (salario*diasVacacion*convierte(recargoSeguro))))/52;
+        aguinaldo = (salario*diasAguinaldo)/52;
+        salud = (septimoDia + vacacion)*(convierte(recargoSeguro));
+        afp = (septimoDia + vacacion)*(convierte(recargoAFP));
+        insaforp = (septimoDia + vacacion)*(convierte(recargoINSAFORP));
+        total = septimoDia + vacacion + aguinaldo + salud + afp + insaforp;
+        totalDia = total/5;
+        totalHora = totalDia/8;
+
+        //TABLA SIN EFICIENCIA
+        //Columna derecha
+        factorSemana = (total)/(salario*5);
+        factorDia = totalDia/salario;
+        factorHora = (totalHora)/(salario/8);
+        //columna del medio
+        factorSalarioDia = salario;
+        factorSalarioHora = salario/8;
+        factorSalarioSemana = salario*diasTrabajados;
+        //columna izquierda
+        totalDiaS = factorSalarioDia*factorSemana;
+        totalHoraS = factorSalarioHora*factorHora;
+        totalSemanaS = factorSalarioSemana*factorSemana;
+
+        //TABLA CON EFICIENCIA
+        //columna derecha
+        factorDiaE = (totalDia/(salario*(convierte(eficienciaEmpleado))));
+        factorHoraE = (totalHora)/(salario*(convierte(eficienciaEmpleado))/8);
+        factorSemanaE = (total)/(salario*5*(convierte(eficienciaEmpleado)));
+        //columna izquierda
+        totalDiaSE = totalDiaS;
+        totalHoraSE = totalHoraS;
+        totalSemanaSE = totalSemanaS;
+        //columna del medio
+        factorSalarioDiaE = totalDiaSE/factorDiaE;
+        factorSalarioHoraE = totalHoraSE/factorHoraE;
+        factorSalarioSemanaE = totalSemanaSE/factorSemanaE;
+
+        //Impresion en los txtBox de la primera tabla
+        txtVacacion2.setText(""+vacacion);
+        txtSeptimo2.setText(""+septimoDia);
+        txtAguinaldo2.setText(""+aguinaldo);
+        txtSalud.setText(""+ salud);
+        txtAFP.setText(""+afp);
+        txtINSAFORP.setText(""+insaforp);
+        txtTotal.setText(""+total);
+        txtTotalDia.setText(""+totalDia);
+        txtTotalHora.setText(""+totalHora);
+
+        //Impresion en los txtBox de la tabla SIN EFICIENCIA
+        txtFactorDia.setText("" + factorDia);
+        txtFactorHora.setText("" + factorHora);
+        txtFactorSemana.setText("" + factorSemana);
+        txtSalarioDia.setText("" + factorSalarioDia);
+        txtSalarioHora.setText("" + factorSalarioHora);
+        txtSalarioSemana.setText("" + factorSalarioSemana);
+        txtDia.setText("" + totalDiaS);
+        txtHora.setText("" + totalHoraS);
+        txtSemana.setText("" + totalSemanaS);
+
+        //Impresion de los txtBox en la tabal CON EFICIENCIA
+        txtFactorDiaEficiencia.setText("" + factorDiaE);
+        txtFactorHoraEficiencia.setText("" + factorHoraE);
+        txtFactorSemanaEficiencia.setText("" + factorSemanaE);
+        txtSalarioDiaEficiencia.setText("" + factorSalarioDiaE);
+        txtSalarioHoraEficiencia.setText("" + factorSalarioHoraE);
+        txtSalarioSemanaEficiencia.setText("" + factorSalarioSemanaE);
+        txtDiaEficiencia.setText("" + totalDiaSE);
+        txtHoraEficiencia.setText("" + totalHoraSE);
+        txtSemanaEficiencia.setText("" + totalSemanaSE);
+    }//GEN-LAST:event_btnCalcularManoDeObraActionPerformed
+
+    private void txtTotalHoraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTotalHoraActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtTotalHoraActionPerformed
+
+    private void txtVacacion2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtVacacion2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtVacacion2ActionPerformed
+
+    private void txtTotalEspacioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTotalEspacioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtTotalEspacioActionPerformed
+
+    private void txtMantenimientoServicioEspacioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMantenimientoServicioEspacioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtMantenimientoServicioEspacioActionPerformed
+
+    private void txtCalidadEspacioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCalidadEspacioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtCalidadEspacioActionPerformed
+
+    private void txtMantenimientoSoftEspacioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMantenimientoSoftEspacioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtMantenimientoSoftEspacioActionPerformed
+
+    private void txtInsumoEspacioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtInsumoEspacioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtInsumoEspacioActionPerformed
+
+    private void txtMantenimientoEspacioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMantenimientoEspacioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtMantenimientoEspacioActionPerformed
+
+    private void txtPruebaEspacioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPruebaEspacioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPruebaEspacioActionPerformed
+
+    private void txtDesarrolloEspacioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDesarrolloEspacioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtDesarrolloEspacioActionPerformed
+
+    private void txtDisenoEspacioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDisenoEspacioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtDisenoEspacioActionPerformed
+
+    private void txtAnalisisEspacioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAnalisisEspacioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtAnalisisEspacioActionPerformed
 
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
         // TODO add your handling code here:
@@ -4289,156 +4273,118 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
         txtTotalVInfraestructura.setText("" + sumaInfraestructura);
     }//GEN-LAST:event_btnGuardarActionPerformed
 
-    private void txtAnalisisEspacioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAnalisisEspacioActionPerformed
+    private void btnGenerarBalanzaComprobacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGenerarBalanzaComprobacionActionPerformed
+        var cuentasSaldoReal = cuentas.stream()
+        .filter(cuenta -> cuenta.getSaldo()!= 0)
+        .toList();
+        ControladorTablaBalanzaComprobacion controladorTablaBalanzaComprobacion = new ControladorTablaBalanzaComprobacion(cuentasSaldoReal);
+        tablaBalanzaComprobacion.setModel(controladorTablaBalanzaComprobacion);
+
+        var colModel = tablaBalanzaComprobacion.getColumnModel();
+
+        for(int j=0;j<colModel.getColumnCount();j++){
+            if(j==0) colModel.getColumn(j).setHeaderValue("Código");
+            if(j==1) colModel.getColumn(j).setHeaderValue("Cuenta");
+            if(j==2) colModel.getColumn(j).setHeaderValue("Debe");
+            if(j==3) colModel.getColumn(j).setHeaderValue("Haber");
+        }
+
+        double totalDebeBalanzaComprobacion = cuentasSaldoReal.stream()
+        .filter(cuenta -> cuenta.getSaldo()> 0)
+        .mapToDouble(Cuenta::getSaldo)
+        .sum();
+        double totalHaberBalanzaComprobacion = cuentasSaldoReal.stream()
+        .filter(cuenta -> cuenta.getSaldo()< 0)
+        .mapToDouble(Cuenta::getSaldo)
+        .sum();
+
+        txtDebe.setText(String.valueOf(totalDebeBalanzaComprobacion));
+        txtHaber.setText(String.valueOf(Math.abs(totalHaberBalanzaComprobacion)));
+    }//GEN-LAST:event_btnGenerarBalanzaComprobacionActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        GeneradorLibroMayor generadorLibroMayor = new GeneradorLibroMayor();
+        generadorLibroMayor.execute();
+        btnGenerarBalanzaComprobacion.setEnabled(true);
+        lblInforBalanzaComprobacion.setVisible(false);
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void btnAnadirTransaccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAnadirTransaccionActionPerformed
+        RegistroAsiento ra = new RegistroAsiento(controladorTablaLibroDiario,cuentas);
+
+    }//GEN-LAST:event_btnAnadirTransaccionActionPerformed
+
+    private void btnCrearNuevoArchivoInfcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCrearNuevoArchivoInfcActionPerformed
+
+        JFileChooser seleccionadorRutaAlmacenamiento = new JFileChooser();
+        seleccionadorRutaAlmacenamiento.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+        seleccionadorRutaAlmacenamiento.setDialogTitle("Seleccione la ruta de almacenamiento.");
+        seleccionadorRutaAlmacenamiento.setApproveButtonText("Aceptar");
+        int seleccion = seleccionadorRutaAlmacenamiento.showSaveDialog(this);
+
+        if(seleccion == JFileChooser.APPROVE_OPTION){
+            String ruta = seleccionadorRutaAlmacenamiento.getSelectedFile().getAbsolutePath();
+            String nombreArchivo = JOptionPane.showInputDialog(this,"Ingrese el nombre del archivo.");
+            persistenciaDeDatos.configurarArchivoNuevoParaAlmacenar(ruta, nombreArchivo);
+
+            contenedorPestañas.setEnabled(true);
+        }
+
+    }//GEN-LAST:event_btnCrearNuevoArchivoInfcActionPerformed
+
+    private void btnAbrirArchivoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAbrirArchivoActionPerformed
+        JFileChooser seleccionadorArchivo = new JFileChooser();
+        seleccionadorArchivo.setFileSelectionMode(JFileChooser.FILES_ONLY);
+        seleccionadorArchivo.setFileFilter(new FileNameExtensionFilter("Informacion contable","txt"));
+        int opcion = seleccionadorArchivo.showOpenDialog(this);
+        LectorArchivos lectorArchivos = new LectorArchivos();
+
+        if(opcion == JFileChooser.APPROVE_OPTION){
+            persistenciaDeDatos.configurarArchivo(seleccionadorArchivo.getSelectedFile().getPath());
+        }
+
+        inicializacionDeDatosDialog = new JDialog(this);
+        JPanel panelDeCarga = new JPanel();
+
+        //barra de progreso
+        JProgressBar barraDeProgreso = new JProgressBar();
+        barraDeProgreso.setIndeterminate(true);
+
+        //añadiendo la barra de progreso al panel
+        panelDeCarga.add(barraDeProgreso);
+
+        inicializacionDeDatosDialog.setSize(new Dimension(400,400));
+        inicializacionDeDatosDialog.setContentPane(panelDeCarga);
+        inicializacionDeDatosDialog.pack();
+        //centra el cuadro de carga
+        inicializacionDeDatosDialog.setLocationRelativeTo(null);
+        inicializacionDeDatosDialog.setVisible(true);
+
+        lectorArchivos.execute();
+        contenedorPestañas.setEnabled(true);
+    }//GEN-LAST:event_btnAbrirArchivoActionPerformed
+
+    private void btnModificarCuentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarCuentaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtAnalisisEspacioActionPerformed
+    }//GEN-LAST:event_btnModificarCuentaActionPerformed
 
-    private void txtDisenoEspacioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDisenoEspacioActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtDisenoEspacioActionPerformed
+    private void btnAnadirCuentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAnadirCuentaActionPerformed
 
-    private void txtDesarrolloEspacioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDesarrolloEspacioActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtDesarrolloEspacioActionPerformed
+        int codigoCuenta = Integer.parseInt(txtCodigoCuenta.getText());
+        String nombreCuenta = txtNombreCuenta.getText();
 
-    private void txtPruebaEspacioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPruebaEspacioActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtPruebaEspacioActionPerformed
+        int seleccion = JOptionPane.showConfirmDialog(this,"¿Desea agregar esta nueva cuenta?","Agregar cuenta nueva",JOptionPane.OK_CANCEL_OPTION,JOptionPane.INFORMATION_MESSAGE);
 
-    private void txtMantenimientoEspacioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMantenimientoEspacioActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtMantenimientoEspacioActionPerformed
+        if(seleccion == JOptionPane.OK_OPTION)
+        {
+            //CAMBIAR POR LA CATEGORIA ----------------------------------------------------
+            Categoria categoria = Categoria.valueOf(cmbSeleccionarCuenta.getSelectedItem().toString());
+            controladorCuentasDisp.añadirNuevaCuenta(new Cuenta(codigoCuenta, nombreCuenta,categoria));
 
-    private void txtInsumoEspacioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtInsumoEspacioActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtInsumoEspacioActionPerformed
+        }
 
-    private void txtMantenimientoSoftEspacioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMantenimientoSoftEspacioActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtMantenimientoSoftEspacioActionPerformed
-
-    private void txtCalidadEspacioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCalidadEspacioActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtCalidadEspacioActionPerformed
-
-    private void txtMantenimientoServicioEspacioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMantenimientoServicioEspacioActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtMantenimientoServicioEspacioActionPerformed
-
-    private void txtTotalEspacioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTotalEspacioActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtTotalEspacioActionPerformed
-
-    private void txtVacacion2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtVacacion2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtVacacion2ActionPerformed
-
-    private void txtTotalHoraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTotalHoraActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtTotalHoraActionPerformed
-
-    private void btnCalcularManoDeObraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcularManoDeObraActionPerformed
-        //Se obtienen los datos introducidos en los textbox
-        double salario;
-        int horasTrabajadas, diasAguinaldo, diasVacacion, diasTrabajados;
-        float recargoVacacion, recargoSeguro, recargoAFP, eficienciaEmpleado, recargoINSAFORP;
-
-        salario = Double.parseDouble(txtSalario.getText());
-        horasTrabajadas = Integer.parseInt(txtHoras.getText());
-        diasAguinaldo = Integer.parseInt(txtDiasAguinaldo.getText());
-        diasVacacion = Integer.parseInt(txtDiasVacacion.getText());
-        diasTrabajados = Integer.parseInt(txtDiasTrabajado.getText());
-        recargoVacacion = Float.parseFloat(txtPorcentajeVacacion.getText());
-        recargoSeguro = Float.parseFloat(txtPorcentajeSeguro.getText());
-        recargoAFP = Float.parseFloat(txtPorcentajeAFP.getText());
-        recargoINSAFORP = Float.parseFloat(txtPorcentajeINSAFORP.getText());
-        eficienciaEmpleado = Float.parseFloat(txtPorcentajeEficiencia.getText());
-
-        //Respectivas salidas
-        //Var de proceso de la primera tabla
-        double septimoDia, aguinaldo, vacacion, salud, afp, totalDia, totalHora, total, insaforp;
-        //Var de proceso de tabla SIN eficiencia
-        double factorDia, factorHora, factorSemana, factorSalarioDia, factorSalarioHora, factorSalarioSemana, totalDiaS, totalHoraS, totalSemanaS;
-        //Var de proceso de tabla con eficiencia
-        double factorDiaE, factorHoraE, factorSemanaE, factorSalarioDiaE, factorSalarioHoraE, factorSalarioSemanaE, totalDiaSE, totalHoraSE, totalSemanaSE;
-
-        //calculos
-        //PRIMERA TABLA
-        septimoDia = 7*salario;
-        vacacion = ((salario*diasVacacion*(1 + convierte(recargoVacacion))+ (salario*diasVacacion*convierte(recargoAFP)) + (salario*diasVacacion*convierte(recargoSeguro))))/52;
-        aguinaldo = (salario*diasAguinaldo)/52;
-        salud = (septimoDia + vacacion)*(convierte(recargoSeguro));
-        afp = (septimoDia + vacacion)*(convierte(recargoAFP));
-        insaforp = (septimoDia + vacacion)*(convierte(recargoINSAFORP));
-        total = septimoDia + vacacion + aguinaldo + salud + afp + insaforp;
-        totalDia = total/5;
-        totalHora = totalDia/8;
-
-        //TABLA SIN EFICIENCIA
-        //Columna derecha
-        factorSemana = (total)/(salario*5);
-        factorDia = totalDia/salario;
-        factorHora = (totalHora)/(salario/8);
-        //columna del medio
-        factorSalarioDia = salario;
-        factorSalarioHora = salario/8;
-        factorSalarioSemana = salario*diasTrabajados;
-        //columna izquierda
-        totalDiaS = factorSalarioDia*factorSemana;
-        totalHoraS = factorSalarioHora*factorHora;
-        totalSemanaS = factorSalarioSemana*factorSemana;
-
-        //TABLA CON EFICIENCIA
-        //columna derecha
-        factorDiaE = (totalDia/(salario*(convierte(eficienciaEmpleado))));
-        factorHoraE = (totalHora)/(salario*(convierte(eficienciaEmpleado))/8);
-        factorSemanaE = (total)/(salario*5*(convierte(eficienciaEmpleado)));
-        //columna izquierda
-        totalDiaSE = totalDiaS;
-        totalHoraSE = totalHoraS;
-        totalSemanaSE = totalSemanaS;
-        //columna del medio
-        factorSalarioDiaE = totalDiaSE/factorDiaE;
-        factorSalarioHoraE = totalHoraSE/factorHoraE;
-        factorSalarioSemanaE = totalSemanaSE/factorSemanaE;
-
-        //Impresion en los txtBox de la primera tabla
-        txtVacacion.setText(""+vacacion);
-        txtSeptimo.setText(""+septimoDia);
-        txtAguinaldo.setText(""+aguinaldo);
-        txtSalud.setText(""+ salud);
-        txtAFP.setText(""+afp);
-        txtINSAFORP.setText(""+insaforp);
-        txtTotal.setText(""+total);
-        txtTotalDia.setText(""+totalDia);
-        txtTotalHora.setText(""+totalHora);
-
-        //Impresion en los txtBox de la tabla SIN EFICIENCIA
-        txtFactorDia.setText("" + factorDia);
-        txtFactorHora.setText("" + factorHora);
-        txtFactorSemana.setText("" + factorSemana);
-        txtSalarioDia.setText("" + factorSalarioDia);
-        txtSalarioHora.setText("" + factorSalarioHora);
-        txtSalarioSemana.setText("" + factorSalarioSemana);
-        txtDia.setText("" + totalDiaS);
-        txtHora.setText("" + totalHoraS);
-        txtSemana.setText("" + totalSemanaS);
-
-        //Impresion de los txtBox en la tabal CON EFICIENCIA
-        txtFactorDiaEficiencia.setText("" + factorDiaE);
-        txtFactorHoraEficiencia.setText("" + factorHoraE);
-        txtFactorSemanaEficiencia.setText("" + factorSemanaE);
-        txtSalarioDiaEficiencia.setText("" + factorSalarioDiaE);
-        txtSalarioHoraEficiencia.setText("" + factorSalarioHoraE);
-        txtSalarioSemanaEficiencia.setText("" + factorSalarioSemanaE);
-        txtDiaEficiencia.setText("" + totalDiaSE);
-        txtHoraEficiencia.setText("" + totalHoraSE);
-        txtSemanaEficiencia.setText("" + totalSemanaSE);
-    }//GEN-LAST:event_btnCalcularManoDeObraActionPerformed
-
-    private void txtHorasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtHorasActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtHorasActionPerformed
+        limpiarTxtPestañaCuentas();
+    }//GEN-LAST:event_btnAnadirCuentaActionPerformed
 
     //metodos utilitarios
     public void limpiarTxtPestañaCuentas(){
@@ -4499,12 +4445,11 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
     private javax.swing.JButton btnModificarCuenta;
     private javax.swing.JComboBox<String> cmbSeleccionarCuenta;
     private javax.swing.JTabbedPane contenedorPestañas;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel100;
     private javax.swing.JLabel jLabel101;
     private javax.swing.JLabel jLabel102;
@@ -4515,7 +4460,6 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
     private javax.swing.JLabel jLabel107;
     private javax.swing.JLabel jLabel108;
     private javax.swing.JLabel jLabel109;
-    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel110;
     private javax.swing.JLabel jLabel111;
     private javax.swing.JLabel jLabel112;
@@ -4526,7 +4470,6 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
     private javax.swing.JLabel jLabel117;
     private javax.swing.JLabel jLabel118;
     private javax.swing.JLabel jLabel119;
-    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel120;
     private javax.swing.JLabel jLabel121;
     private javax.swing.JLabel jLabel122;
@@ -4537,7 +4480,6 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
     private javax.swing.JLabel jLabel127;
     private javax.swing.JLabel jLabel128;
     private javax.swing.JLabel jLabel129;
-    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel130;
     private javax.swing.JLabel jLabel131;
     private javax.swing.JLabel jLabel132;
@@ -4548,7 +4490,6 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
     private javax.swing.JLabel jLabel137;
     private javax.swing.JLabel jLabel138;
     private javax.swing.JLabel jLabel139;
-    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel140;
     private javax.swing.JLabel jLabel141;
     private javax.swing.JLabel jLabel142;
@@ -4559,18 +4500,7 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
     private javax.swing.JLabel jLabel147;
     private javax.swing.JLabel jLabel148;
     private javax.swing.JLabel jLabel149;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
@@ -4629,7 +4559,6 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
     private javax.swing.JLabel jLabel77;
     private javax.swing.JLabel jLabel78;
     private javax.swing.JLabel jLabel79;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel80;
     private javax.swing.JLabel jLabel81;
     private javax.swing.JLabel jLabel82;
@@ -4640,7 +4569,6 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
     private javax.swing.JLabel jLabel87;
     private javax.swing.JLabel jLabel88;
     private javax.swing.JLabel jLabel89;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel jLabel90;
     private javax.swing.JLabel jLabel91;
     private javax.swing.JLabel jLabel92;
@@ -4652,10 +4580,6 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
     private javax.swing.JLabel jLabel98;
     private javax.swing.JLabel jLabel99;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel10;
-    private javax.swing.JPanel jPanel11;
-    private javax.swing.JPanel jPanel12;
-    private javax.swing.JPanel jPanel13;
     private javax.swing.JPanel jPanel14;
     private javax.swing.JPanel jPanel15;
     private javax.swing.JPanel jPanel16;
@@ -4675,15 +4599,11 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
-    private javax.swing.JPanel jPanel8;
-    private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
-    private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JScrollPane jScrollPane8;
@@ -4693,10 +4613,7 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
     private javax.swing.JTable tablaLibroDiario;
     private javax.swing.JTable tablaLibroMayor;
     private javax.swing.JTable tblEstadoResultado;
-    private javax.swing.JTable tblUtilidadPerdida;
     private javax.swing.JTextField txtAFP;
-    private javax.swing.JTextField txtAguinaldo;
-    private javax.swing.JTextField txtAguinaldo1;
     private javax.swing.JTextField txtAguinaldo2;
     private javax.swing.JTextField txtAnalisisConsumo;
     private javax.swing.JTextField txtAnalisisEmpleado;
@@ -4857,7 +4774,6 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
     private javax.swing.JTextField txtPruebaEmpleado;
     private javax.swing.JTextField txtPruebaEspacio;
     private javax.swing.JTextField txtPruebaHora;
-    private javax.swing.JTextField txtResultado;
     private javax.swing.JTextField txtSalario;
     private javax.swing.JTextField txtSalarioDia;
     private javax.swing.JTextField txtSalarioDiaEficiencia;
@@ -4888,8 +4804,6 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
     private javax.swing.JTextField txtSalud;
     private javax.swing.JTextField txtSemana;
     private javax.swing.JTextField txtSemanaEficiencia;
-    private javax.swing.JTextField txtSeptimo;
-    private javax.swing.JTextField txtSeptimo1;
     private javax.swing.JTextField txtSeptimo2;
     private javax.swing.JTextField txtServicioPrivadoAnalisisProductivo;
     private javax.swing.JTextField txtServicioPrivadoCalidadServicio;
@@ -4955,8 +4869,7 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
     private javax.swing.JTextField txtTotalVInsumo;
     private javax.swing.JTextField txtTotalVMantenimientoSoft;
     private javax.swing.JTextField txtTotales;
-    private javax.swing.JTextField txtVacacion;
-    private javax.swing.JTextField txtVacacion1;
+    private javax.swing.JTextField txtUtilidadesPerdidas;
     private javax.swing.JTextField txtVacacion2;
     // End of variables declaration//GEN-END:variables
 

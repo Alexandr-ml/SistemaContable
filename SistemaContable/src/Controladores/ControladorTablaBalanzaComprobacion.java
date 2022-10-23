@@ -16,10 +16,10 @@ public class ControladorTablaBalanzaComprobacion extends AbstractTableModel{
     private List<Cuenta> cuentasSaldadas;
 
     public ControladorTablaBalanzaComprobacion(List<Cuenta> cuentasSaldadas) {
-        this.cuentasSaldadas = cuentasSaldadas;
+        this.cuentasSaldadas = cuentasSaldadas; 
     }
     
-    
+
     
     @Override
     public int getRowCount() {
