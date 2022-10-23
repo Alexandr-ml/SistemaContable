@@ -89,6 +89,7 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
                 cuentas = libroMayor.getCuentas();
                 libroDiario = (LibroDiario)informacionContable.getLibroDiario();
                 asientos = libroDiario.getAsientos();
+                
             }else{
                 return;
                 /*
@@ -131,8 +132,8 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
             
             
             configurarListViewCuentasDisponibles(cuentas);
-            
             configurarTablaLibroDiario(asientos);
+            
             //configurarSeleccionCuenta();
             
         }
@@ -227,8 +228,8 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
        
        if(asientos == null) return;
        
+       controladorTablaLibroDiario.setDatos(asientos);
        
-       controladorTablaLibroDiario.añadirRegistros(asientos);
        tablaLibroDiario.setModel(controladorTablaLibroDiario);   
        
        for(int a = 0; a< numColumnas;a++){
@@ -253,6 +254,7 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
     }
     
     public void configurarTablaLibroMayor(List<Cuenta> cuentas){
+        System.out.println(cuentas);
           var cuentasSaldadas = cuentas.parallelStream()
                     .filter(cuenta-> cuenta.getSaldo()!=0)
                     .toList();
@@ -785,6 +787,11 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
 
         btnOlvidarSeleccionCuenta.setText("Olvidar selección");
         btnOlvidarSeleccionCuenta.setEnabled(false);
+        btnOlvidarSeleccionCuenta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnOlvidarSeleccionCuentaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -800,40 +807,40 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(btnModificarCuenta)
                         .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addComponent(btnAnadirCuenta)
-                                .addComponent(jLabel51, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGap(18, 18, 18)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                        .addComponent(jLabel51, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGap(18, 18, 18))
+                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                    .addComponent(btnAnadirCuenta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addGap(12, 12, 12)))
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(txtNombreCuenta)
                                 .addComponent(cmbSeleccionarCuenta, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(btnOlvidarSeleccionCuenta)
                                     .addComponent(txtCodigoCuenta, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))))))
-                .addGap(243, 243, 243)
+                .addGap(57, 57, 57)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 281, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(385, Short.MAX_VALUE))
+                .addContainerGap(571, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(13, 13, 13)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(txtNombreCuenta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(13, 13, 13)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel1)
-                                    .addComponent(txtNombreCuenta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(jLabel3)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel51)
                             .addComponent(cmbSeleccionarCuenta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -844,13 +851,11 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
                         .addGap(24, 24, 24)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(btnAnadirCuenta)
-                            .addComponent(btnOlvidarSeleccionCuenta)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(18, 18, 18)
-                .addComponent(btnModificarCuenta)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 406, Short.MAX_VALUE)
+                            .addComponent(btnOlvidarSeleccionCuenta))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btnModificarCuenta))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 412, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnCrearNuevoArchivoInfc)
                     .addComponent(btnAbrirArchivo))
@@ -4446,6 +4451,13 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
 
     }//GEN-LAST:event_btnGenerarEstadoResultadoActionPerformed
 
+    private void btnOlvidarSeleccionCuentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOlvidarSeleccionCuentaActionPerformed
+        
+        lstCuentasDisponibles.clearSelection();
+        limpiarTxtPestañaCuentas();
+        btnOlvidarSeleccionCuenta.setEnabled(false);
+    }//GEN-LAST:event_btnOlvidarSeleccionCuentaActionPerformed
+
     //metodos utilitarios
     public void limpiarTxtPestañaCuentas(){
         txtCodigoCuenta.setText("");
@@ -4940,12 +4952,18 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
 
     @Override
     public void valueChanged(ListSelectionEvent e) {
+        
+        
         JList<String> listadoCuentas = (JList) e.getSource();
         int indiceCuentaSeleccionada = listadoCuentas.getSelectedIndex();
+        if(indiceCuentaSeleccionada == -1) return;
+        
         int codigoCuentaSeleccionada = controladorCuentasDisp.getListadoCuentas().get(indiceCuentaSeleccionada).getCodCuenta();
+        
         
         txtCodigoCuenta.setText(String.valueOf(codigoCuentaSeleccionada));
         cmbSeleccionarCuenta.setSelectedItem(cuentas.get(indiceCuentaSeleccionada).getCategoria().toString());
         txtNombreCuenta.setText(listadoCuentas.getSelectedValue());
+        btnOlvidarSeleccionCuenta.setEnabled(true);
     }
 }

@@ -15,14 +15,16 @@ import javax.swing.table.AbstractTableModel;
  * @author pc
  */
 public class ControladorTablaLibroDiario extends AbstractTableModel{
-    private List<Registro> registros = new ArrayList<>();
+    private List<Registro> registros;
 
     public ControladorTablaLibroDiario() {
         
         
     }
     
-    
+    public void setDatos(List<Registro> asientos){
+        registros = asientos;
+    }
 
     @Override
     public int getRowCount() {
