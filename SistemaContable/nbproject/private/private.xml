@@ -4,8 +4,9 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/pc/OneDrive/Documents/GitHub/SistemaContable/SistemaContable/src/sistemacontable/Principal.java</file>
-            <file>file:/C:/Users/pc/OneDrive/Documents/GitHub/SistemaContable/SistemaContable/src/Controladores/ControladorTablaEstadoResultado.java</file>
-            <file>file:/C:/Users/pc/OneDrive/Documents/GitHub/SistemaContable/SistemaContable/src/ModeloContable/Cuenta.java</file>
+            <file>file:/C:/Users/pc/OneDrive/Documents/GitHub/SistemaContable/SistemaContable/src/Controladores/ControladorListadoCuentasDisponibles.java</file>
+            <file>file:/C:/Users/pc/OneDrive/Documents/GitHub/SistemaContable/SistemaContable/src/Controladores/ControladorTablaLibroDiario.java</file>
+            <file>file:/C:/Users/pc/OneDrive/Documents/GitHub/SistemaContable/SistemaContable/src/sistemacontable/RegistroAsiento.java</file>
         </group>
     </open-files>
 </project-private>

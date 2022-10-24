@@ -70,4 +70,5 @@ public class ControladorTablaLibroDiario extends AbstractTableModel{
         
     }
     
+  
 }

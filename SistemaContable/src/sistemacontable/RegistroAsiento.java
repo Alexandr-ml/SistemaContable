@@ -154,7 +154,7 @@ public class RegistroAsiento extends javax.swing.JFrame implements PropertyChang
         jScrollPane1 = new javax.swing.JScrollPane();
         txtDescripcion = new javax.swing.JTextArea();
         btnAñadirTransaccion = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        btnEliminarSeleccionTransaccion = new javax.swing.JButton();
         btnGuardarNuevasTransacciones = new javax.swing.JButton();
         btnArbolDeCuentas = new javax.swing.JButton();
         txtFecha = new javax.swing.JTextField();
@@ -245,7 +245,12 @@ public class RegistroAsiento extends javax.swing.JFrame implements PropertyChang
             }
         });
 
-        jButton2.setText("Eliminar transacción seleccionada.");
+        btnEliminarSeleccionTransaccion.setText("Eliminar transacción seleccionada.");
+        btnEliminarSeleccionTransaccion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEliminarSeleccionTransaccionActionPerformed(evt);
+            }
+        });
 
         btnGuardarNuevasTransacciones.setText("Guardar.");
         btnGuardarNuevasTransacciones.setEnabled(false);
@@ -323,7 +328,7 @@ public class RegistroAsiento extends javax.swing.JFrame implements PropertyChang
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(btnAñadirTransaccion)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton2)
+                        .addComponent(btnEliminarSeleccionTransaccion)
                         .addGap(28, 28, 28)
                         .addComponent(btnGuardarTransaccionModificada)
                         .addGap(18, 18, 18)
@@ -380,7 +385,7 @@ public class RegistroAsiento extends javax.swing.JFrame implements PropertyChang
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnAñadirTransaccion)
-                    .addComponent(jButton2)
+                    .addComponent(btnEliminarSeleccionTransaccion)
                     .addComponent(btnGuardarNuevasTransacciones)
                     .addComponent(btnGuardarTransaccionModificada)
                     .addComponent(btnEliminarSeleccion))
@@ -525,6 +530,12 @@ public class RegistroAsiento extends javax.swing.JFrame implements PropertyChang
     private void tieneIVAItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_tieneIVAItemStateChanged
         // TODO add your handling code here:
     }//GEN-LAST:event_tieneIVAItemStateChanged
+
+    private void btnEliminarSeleccionTransaccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarSeleccionTransaccionActionPerformed
+        int indiceElementoSeleccionado = tablaRegistrosNuevos.getSelectedRow();
+        
+        
+    }//GEN-LAST:event_btnEliminarSeleccionTransaccionActionPerformed
 
     public void añadirHijosDesdeLista(Nodo<String> nodoRaiz,Map<Categoria,List<Cuenta>> agrupacionPorCategoria){
         
@@ -717,6 +728,11 @@ public class RegistroAsiento extends javax.swing.JFrame implements PropertyChang
             
             fireTableDataChanged();
         }
+        
+        public void removerTransaccion(int indice){
+            nuevosRegistros.remove(indice);
+            fireTableDataChanged();
+        }
     }
 
 
@@ -724,10 +740,10 @@ public class RegistroAsiento extends javax.swing.JFrame implements PropertyChang
     private javax.swing.JButton btnArbolDeCuentas;
     private javax.swing.JButton btnAñadirTransaccion;
     private javax.swing.JButton btnEliminarSeleccion;
+    private javax.swing.JButton btnEliminarSeleccionTransaccion;
     private javax.swing.JButton btnGuardarNuevasTransacciones;
     private javax.swing.JButton btnGuardarTransaccionModificada;
     private javax.swing.ButtonGroup btngTipoTransaccion;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

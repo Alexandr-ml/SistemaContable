@@ -933,824 +933,6 @@
             </Component>
           </SubComponents>
         </Container>
-        <Container class="javax.swing.JPanel" name="jPanel7">
-          <Constraints>
-            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-              <JTabbedPaneConstraints tabName="CIF">
-                <Property name="tabTitle" type="java.lang.String" value="CIF"/>
-              </JTabbedPaneConstraints>
-            </Constraint>
-          </Constraints>
-
-          <Layout>
-            <DimensionLayout dim="0">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Component id="btnGuardar" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
-                              <Component id="btnLimpia" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Component id="jPanel17" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jPanel18" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
-                  </Group>
-              </Group>
-            </DimensionLayout>
-            <DimensionLayout dim="1">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="jPanel18" min="-2" max="-2" attributes="0"/>
-                          <Group type="102" attributes="0">
-                              <Component id="jPanel17" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="btnGuardar" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="btnLimpia" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                      </Group>
-                      <EmptySpace pref="336" max="32767" attributes="0"/>
-                  </Group>
-              </Group>
-            </DimensionLayout>
-          </Layout>
-          <SubComponents>
-            <Container class="javax.swing.JPanel" name="jPanel17">
-              <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="99" green="99" red="99" type="rgb"/>
-                </Property>
-              </Properties>
-
-              <Layout>
-                <DimensionLayout dim="0">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jLabel91" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="txtTotales" min="-2" pref="120" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Component id="jLabel69" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                                      <Component id="jLabel70" min="-2" pref="288" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="txtServiciosPrivados" min="-2" pref="120" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Component id="jLabel73" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                                      <Component id="jLabel68" min="-2" pref="288" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="txtServiciosPublicos" min="-2" pref="120" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Component id="jLabel71" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                                      <Component id="jLabel72" min="-2" pref="288" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="txtImpuestos" min="-2" pref="120" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Component id="jLabel62" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                                      <Component id="jLabel63" min="-2" pref="288" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="txtDepreciacion" min="-2" pref="120" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Component id="jLabel60" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                                      <Component id="jLabel61" min="-2" pref="288" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="txtOtrosMateriales" min="-2" pref="120" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Component id="jLabel66" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                                      <Component id="jLabel67" min="-2" pref="288" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="txtHerramientas" min="-2" pref="120" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Component id="jLabel64" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                                      <Component id="jLabel65" min="-2" pref="288" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="txtSuministros" min="-2" pref="120" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Component id="jLabel58" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                                      <Component id="jLabel59" min="-2" pref="288" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="txtMaterialesIndirectos" min="-2" pref="120" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Component id="jLabel56" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                                      <Component id="jLabel57" min="-2" pref="288" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="txtManoDeObraIndirecta" min="-2" pref="120" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Component id="jLabel55" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                                      <Component id="jLabel54" min="-2" pref="288" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="txtSalariosOfi" min="-2" pref="120" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Component id="jLabel52" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                                      <Component id="jLabel53" min="-2" pref="288" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="txtSalariosSup" min="-2" pref="120" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                          </Group>
-                          <EmptySpace pref="49" max="32767" attributes="0"/>
-                      </Group>
-                  </Group>
-                </DimensionLayout>
-                <DimensionLayout dim="1">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel52" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel53" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtSalariosSup" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel55" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel54" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtSalariosOfi" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel56" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel57" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtManoDeObraIndirecta" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel58" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel59" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtMaterialesIndirectos" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel64" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel65" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtSuministros" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel66" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel67" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtHerramientas" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel60" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel61" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtOtrosMateriales" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel62" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel63" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtDepreciacion" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel71" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel72" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtImpuestos" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel73" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel68" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtServiciosPublicos" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel69" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel70" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtServiciosPrivados" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel91" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtTotales" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="32767" attributes="0"/>
-                      </Group>
-                  </Group>
-                </DimensionLayout>
-              </Layout>
-              <SubComponents>
-                <Component class="javax.swing.JLabel" name="jLabel52">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="531"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="jLabel53">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Salarios supervisi&#xf3;n"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JTextField" name="txtSalariosSup">
-                </Component>
-                <Component class="javax.swing.JTextField" name="txtSalariosOfi">
-                </Component>
-                <Component class="javax.swing.JLabel" name="jLabel54">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Salarios de oficina"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="jLabel55">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="532"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="jLabel56">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="533"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="jLabel57">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Mano de obra indirecta"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JTextField" name="txtManoDeObraIndirecta">
-                </Component>
-                <Component class="javax.swing.JLabel" name="jLabel58">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="534"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="jLabel59">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Materiales indirectos"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JTextField" name="txtMaterialesIndirectos">
-                </Component>
-                <Component class="javax.swing.JLabel" name="jLabel60">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="537"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="jLabel61">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Otros Materiales"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JTextField" name="txtOtrosMateriales">
-                </Component>
-                <Component class="javax.swing.JLabel" name="jLabel62">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="538"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="jLabel63">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Depreciaci&#xf3;n"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="jLabel64">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="535"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JTextField" name="txtDepreciacion">
-                </Component>
-                <Component class="javax.swing.JLabel" name="jLabel65">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Suministros"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JTextField" name="txtSuministros">
-                </Component>
-                <Component class="javax.swing.JLabel" name="jLabel66">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="536"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="jLabel67">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Herramientas"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JTextField" name="txtHerramientas">
-                </Component>
-                <Component class="javax.swing.JTextField" name="txtImpuestos">
-                </Component>
-                <Component class="javax.swing.JLabel" name="jLabel68">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Servicios P&#xfa;blicos"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JTextField" name="txtServiciosPublicos">
-                </Component>
-                <Component class="javax.swing.JLabel" name="jLabel69">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="613"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="jLabel70">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Servicios Privados"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JTextField" name="txtServiciosPrivados">
-                </Component>
-                <Component class="javax.swing.JLabel" name="jLabel71">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="539"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="jLabel72">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Impuestos"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="jLabel73">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="612"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="jLabel91">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="TOTALES"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JTextField" name="txtTotales">
-                  <Properties>
-                    <Property name="editable" type="boolean" value="false"/>
-                  </Properties>
-                </Component>
-              </SubComponents>
-            </Container>
-            <Component class="javax.swing.JButton" name="btnLimpia">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="LIMPIAR"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JButton" name="btnGuardar">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="GUARDAR"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnGuardarActionPerformed"/>
-              </Events>
-            </Component>
-            <Container class="javax.swing.JPanel" name="jPanel18">
-              <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="99" green="99" red="99" type="rgb"/>
-                </Property>
-              </Properties>
-
-              <Layout>
-                <DimensionLayout dim="0">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Component id="jLabel85" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="165" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLabel90" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                                              <Group type="102" alignment="1" attributes="0">
-                                                  <Component id="jLabel89" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
-                                              </Group>
-                                              <Component id="jLabel88" alignment="1" min="-2" pref="151" max="-2" attributes="0"/>
-                                              <Component id="jLabel87" alignment="0" min="-2" pref="121" max="-2" attributes="0"/>
-                                          </Group>
-                                          <Component id="jLabel86" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <Component id="txtMantenimientoSoftEspacio" min="-2" pref="96" max="-2" attributes="0"/>
-                                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                                              <Component id="txtMantenimientoSoftConsumo" min="-2" pref="106" max="-2" attributes="0"/>
-                                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                                              <Component id="txtMantenimientoSoftEmpleado" min="-2" pref="126" max="-2" attributes="0"/>
-                                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                                              <Component id="txtMantenimientoSoftHora" min="-2" pref="119" max="-2" attributes="0"/>
-                                          </Group>
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <Component id="txtInsumoEspacio" min="-2" pref="96" max="-2" attributes="0"/>
-                                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                                              <Component id="txtInsumoConsumo" min="-2" pref="106" max="-2" attributes="0"/>
-                                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                                              <Component id="txtInsumoEmpleado" min="-2" pref="126" max="-2" attributes="0"/>
-                                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                                              <Component id="txtInsumoHora" min="-2" pref="119" max="-2" attributes="0"/>
-                                          </Group>
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <Component id="txtCalidadEspacio" min="-2" pref="96" max="-2" attributes="0"/>
-                                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                                              <Component id="txtCalidadConsumo" min="-2" pref="106" max="-2" attributes="0"/>
-                                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                                              <Component id="txtCalidadEmpleado" min="-2" pref="126" max="-2" attributes="0"/>
-                                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                                              <Component id="txtCalidadHora" min="-2" pref="119" max="-2" attributes="0"/>
-                                          </Group>
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <Component id="txtMantenimientoServicioEspacio" min="-2" pref="96" max="-2" attributes="0"/>
-                                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                                              <Component id="txtMantenimientoServicioConsumo" min="-2" pref="106" max="-2" attributes="0"/>
-                                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                                              <Component id="txtMantenimientoServicioEmpleado" min="-2" pref="126" max="-2" attributes="0"/>
-                                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                                              <Component id="txtMantenimientoServicioHora" min="-2" pref="119" max="-2" attributes="0"/>
-                                          </Group>
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <Component id="txtTotalEspacio" min="-2" pref="96" max="-2" attributes="0"/>
-                                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                                              <Component id="txtTotalConsumo" min="-2" pref="106" max="-2" attributes="0"/>
-                                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                                              <Component id="txtTotalEmpleado" min="-2" pref="126" max="-2" attributes="0"/>
-                                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                                              <Component id="txtTotalHoraHombre" min="-2" pref="119" max="-2" attributes="0"/>
-                                          </Group>
-                                      </Group>
-                                  </Group>
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="jLabel83" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLabel82" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLabel81" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLabel80" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLabel79" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace max="32767" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <Component id="txtPruebaEspacio" min="-2" pref="96" max="-2" attributes="0"/>
-                                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                                              <Component id="txtPruebaConsumo" min="-2" pref="106" max="-2" attributes="0"/>
-                                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                                              <Component id="txtPruebaEmpleado" min="-2" pref="126" max="-2" attributes="0"/>
-                                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                                              <Component id="txtPruebaHora" min="-2" pref="119" max="-2" attributes="0"/>
-                                          </Group>
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <Component id="txtDesarrolloEspacio" min="-2" pref="96" max="-2" attributes="0"/>
-                                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                                              <Component id="txtDesarrolloConsumo" min="-2" pref="106" max="-2" attributes="0"/>
-                                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                                              <Component id="txtDesarrolloEmpleado" min="-2" pref="126" max="-2" attributes="0"/>
-                                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                                              <Component id="txtDesarrolloHora" min="-2" pref="119" max="-2" attributes="0"/>
-                                          </Group>
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <Component id="txtDisenoEspacio" min="-2" pref="96" max="-2" attributes="0"/>
-                                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                                              <Component id="txtDisenoConsumo" min="-2" pref="106" max="-2" attributes="0"/>
-                                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                                              <Component id="txtDisenoEmpleado" min="-2" pref="126" max="-2" attributes="0"/>
-                                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                                              <Component id="txtDisenoHora" min="-2" pref="119" max="-2" attributes="0"/>
-                                          </Group>
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <Component id="txtAnalisisEspacio" min="-2" pref="96" max="-2" attributes="0"/>
-                                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                                              <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="jLabel84" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                  <Group type="102" alignment="0" attributes="0">
-                                                      <Component id="txtAnalisisConsumo" min="-2" pref="106" max="-2" attributes="0"/>
-                                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                      <Component id="txtAnalisisEmpleado" min="-2" pref="126" max="-2" attributes="0"/>
-                                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                      <Component id="txtAnalisisHora" min="-2" pref="119" max="-2" attributes="0"/>
-                                                  </Group>
-                                              </Group>
-                                          </Group>
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <Component id="txtMantenimientoEspacio" min="-2" pref="96" max="-2" attributes="0"/>
-                                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                                              <Component id="txtMantenimientoConsumo" min="-2" pref="106" max="-2" attributes="0"/>
-                                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                                              <Component id="txtMantenimientoEmpleado" min="-2" pref="126" max="-2" attributes="0"/>
-                                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                                              <Component id="txtMantenimientoHora" min="-2" pref="119" max="-2" attributes="0"/>
-                                          </Group>
-                                      </Group>
-                                  </Group>
-                              </Group>
-                          </Group>
-                          <EmptySpace pref="15" max="32767" attributes="0"/>
-                      </Group>
-                  </Group>
-                </DimensionLayout>
-                <DimensionLayout dim="1">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jLabel84" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel79" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtAnalisisEspacio" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtAnalisisConsumo" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtAnalisisEmpleado" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtAnalisisHora" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel80" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtDisenoEspacio" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtDisenoConsumo" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtDisenoEmpleado" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtDisenoHora" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel81" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtDesarrolloEspacio" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtDesarrolloConsumo" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtDesarrolloEmpleado" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtDesarrolloHora" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel82" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtPruebaEspacio" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtPruebaConsumo" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtPruebaEmpleado" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtPruebaHora" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel83" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtMantenimientoEspacio" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtMantenimientoConsumo" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtMantenimientoEmpleado" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtMantenimientoHora" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
-                          <Component id="jLabel85" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel86" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtCalidadEspacio" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtCalidadConsumo" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtCalidadEmpleado" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtCalidadHora" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel87" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtInsumoEspacio" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtInsumoConsumo" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtInsumoEmpleado" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtInsumoHora" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel88" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtMantenimientoSoftEspacio" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtMantenimientoSoftConsumo" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtMantenimientoSoftEmpleado" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtMantenimientoSoftHora" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel89" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtMantenimientoServicioEspacio" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtMantenimientoServicioConsumo" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtMantenimientoServicioEmpleado" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtMantenimientoServicioHora" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace pref="20" max="32767" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLabel90" alignment="1" min="-2" max="-2" attributes="0"/>
-                              <Group type="103" alignment="1" groupAlignment="3" attributes="0">
-                                  <Component id="txtTotalEspacio" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="txtTotalConsumo" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="txtTotalEmpleado" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="txtTotalHoraHombre" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                </DimensionLayout>
-              </Layout>
-              <SubComponents>
-                <Component class="javax.swing.JLabel" name="jLabel79">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="An&#xe1;lisis"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="jLabel80">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Dise&#xf1;o"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="jLabel81">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Desarrollo"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="jLabel82">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Pruebas"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="jLabel83">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Mantenimiento"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JTextField" name="txtAnalisisEspacio">
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtAnalisisEspacioActionPerformed"/>
-                  </Events>
-                </Component>
-                <Component class="javax.swing.JTextField" name="txtAnalisisConsumo">
-                </Component>
-                <Component class="javax.swing.JTextField" name="txtAnalisisEmpleado">
-                </Component>
-                <Component class="javax.swing.JTextField" name="txtAnalisisHora">
-                </Component>
-                <Component class="javax.swing.JTextField" name="txtDisenoHora">
-                </Component>
-                <Component class="javax.swing.JTextField" name="txtDisenoEspacio">
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtDisenoEspacioActionPerformed"/>
-                  </Events>
-                </Component>
-                <Component class="javax.swing.JTextField" name="txtDisenoConsumo">
-                </Component>
-                <Component class="javax.swing.JTextField" name="txtDisenoEmpleado">
-                </Component>
-                <Component class="javax.swing.JTextField" name="txtDesarrolloHora">
-                </Component>
-                <Component class="javax.swing.JTextField" name="txtDesarrolloEspacio">
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtDesarrolloEspacioActionPerformed"/>
-                  </Events>
-                </Component>
-                <Component class="javax.swing.JTextField" name="txtDesarrolloConsumo">
-                </Component>
-                <Component class="javax.swing.JTextField" name="txtDesarrolloEmpleado">
-                </Component>
-                <Component class="javax.swing.JTextField" name="txtPruebaHora">
-                </Component>
-                <Component class="javax.swing.JTextField" name="txtPruebaEspacio">
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtPruebaEspacioActionPerformed"/>
-                  </Events>
-                </Component>
-                <Component class="javax.swing.JTextField" name="txtPruebaConsumo">
-                </Component>
-                <Component class="javax.swing.JTextField" name="txtPruebaEmpleado">
-                </Component>
-                <Component class="javax.swing.JTextField" name="txtMantenimientoHora">
-                </Component>
-                <Component class="javax.swing.JTextField" name="txtMantenimientoEspacio">
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtMantenimientoEspacioActionPerformed"/>
-                  </Events>
-                </Component>
-                <Component class="javax.swing.JTextField" name="txtMantenimientoConsumo">
-                </Component>
-                <Component class="javax.swing.JTextField" name="txtMantenimientoEmpleado">
-                </Component>
-                <Component class="javax.swing.JLabel" name="jLabel84">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="DEPARTAMENTOS &#xc1;REA PRODUCTIVA."/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="jLabel85">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="DEPARTAMENTOS &#xc1;REA DE SERVICIOS BRINDADOS"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JTextField" name="txtCalidadConsumo">
-                </Component>
-                <Component class="javax.swing.JTextField" name="txtCalidadEmpleado">
-                </Component>
-                <Component class="javax.swing.JTextField" name="txtInsumoHora">
-                </Component>
-                <Component class="javax.swing.JTextField" name="txtInsumoEspacio">
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtInsumoEspacioActionPerformed"/>
-                  </Events>
-                </Component>
-                <Component class="javax.swing.JTextField" name="txtInsumoConsumo">
-                </Component>
-                <Component class="javax.swing.JTextField" name="txtInsumoEmpleado">
-                </Component>
-                <Component class="javax.swing.JTextField" name="txtMantenimientoSoftHora">
-                </Component>
-                <Component class="javax.swing.JTextField" name="txtMantenimientoSoftEspacio">
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtMantenimientoSoftEspacioActionPerformed"/>
-                  </Events>
-                </Component>
-                <Component class="javax.swing.JTextField" name="txtMantenimientoSoftConsumo">
-                </Component>
-                <Component class="javax.swing.JTextField" name="txtMantenimientoSoftEmpleado">
-                </Component>
-                <Component class="javax.swing.JLabel" name="jLabel86">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Calidad"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="jLabel87">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Insumos y materiales"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="jLabel88">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Mantenimiento de software"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="jLabel89">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Mantenimiento"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JTextField" name="txtCalidadHora">
-                </Component>
-                <Component class="javax.swing.JTextField" name="txtCalidadEspacio">
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtCalidadEspacioActionPerformed"/>
-                  </Events>
-                </Component>
-                <Component class="javax.swing.JTextField" name="txtMantenimientoServicioHora">
-                </Component>
-                <Component class="javax.swing.JTextField" name="txtMantenimientoServicioEspacio">
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtMantenimientoServicioEspacioActionPerformed"/>
-                  </Events>
-                </Component>
-                <Component class="javax.swing.JTextField" name="txtMantenimientoServicioConsumo">
-                </Component>
-                <Component class="javax.swing.JTextField" name="txtMantenimientoServicioEmpleado">
-                </Component>
-                <Component class="javax.swing.JLabel" name="jLabel90">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="TOTALES"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JTextField" name="txtTotalHoraHombre">
-                  <Properties>
-                    <Property name="editable" type="boolean" value="false"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JTextField" name="txtTotalEspacio">
-                  <Properties>
-                    <Property name="editable" type="boolean" value="false"/>
-                  </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtTotalEspacioActionPerformed"/>
-                  </Events>
-                </Component>
-                <Component class="javax.swing.JTextField" name="txtTotalConsumo">
-                  <Properties>
-                    <Property name="editable" type="boolean" value="false"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JTextField" name="txtTotalEmpleado">
-                  <Properties>
-                    <Property name="editable" type="boolean" value="false"/>
-                  </Properties>
-                </Component>
-              </SubComponents>
-            </Container>
-          </SubComponents>
-        </Container>
         <Container class="javax.swing.JScrollPane" name="jScrollPane7">
           <Properties>
             <Property name="horizontalScrollBarPolicy" type="int" value="32"/>
@@ -5055,6 +4237,830 @@
                 </Component>
                 <Component class="javax.swing.JTextField" name="txtPorcentajeINSAFORP">
                 </Component>
+              </SubComponents>
+            </Container>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JScrollPane" name="jScrollPane5">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="CIF">
+                <Property name="tabTitle" type="java.lang.String" value="CIF"/>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Container class="javax.swing.JPanel" name="jPanel9">
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Component id="btnGuardar" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Component id="btnLimpia" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="jPanel30" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="jPanel18" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Component id="jPanel18" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <Component id="jPanel30" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="btnGuardar" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="btnLimpia" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <EmptySpace pref="336" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Container class="javax.swing.JPanel" name="jPanel30">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="99" green="99" red="99" type="rgb"/>
+                    </Property>
+                  </Properties>
+
+                  <Layout>
+                    <DimensionLayout dim="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="jLabel195" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="32767" attributes="0"/>
+                                      <Component id="txtTotales2" min="-2" pref="120" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <Component id="jLabel190" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                                          <Component id="jLabel191" min="-2" pref="288" max="-2" attributes="0"/>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Component id="txtServiciosPrivados2" min="-2" pref="120" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <Component id="jLabel194" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                                          <Component id="jLabel189" min="-2" pref="288" max="-2" attributes="0"/>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Component id="txtServiciosPublicos2" min="-2" pref="120" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <Component id="jLabel192" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                                          <Component id="jLabel193" min="-2" pref="288" max="-2" attributes="0"/>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Component id="txtImpuestos2" min="-2" pref="120" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <Component id="jLabel183" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                                          <Component id="jLabel184" min="-2" pref="288" max="-2" attributes="0"/>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Component id="txtDepreciacion2" min="-2" pref="120" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <Component id="jLabel181" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                                          <Component id="jLabel182" min="-2" pref="288" max="-2" attributes="0"/>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Component id="txtOtrosMateriales2" min="-2" pref="120" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <Component id="jLabel187" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                                          <Component id="jLabel188" min="-2" pref="288" max="-2" attributes="0"/>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Component id="txtHerramientas2" min="-2" pref="120" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <Component id="jLabel185" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                                          <Component id="jLabel186" min="-2" pref="288" max="-2" attributes="0"/>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Component id="txtSuministros2" min="-2" pref="120" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <Component id="jLabel179" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                                          <Component id="jLabel180" min="-2" pref="288" max="-2" attributes="0"/>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Component id="txtMaterialesIndirectos2" min="-2" pref="120" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <Component id="jLabel177" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                                          <Component id="jLabel178" min="-2" pref="288" max="-2" attributes="0"/>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Component id="txtManoDeObraIndirecta2" min="-2" pref="120" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <Component id="jLabel176" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                                          <Component id="jLabel175" min="-2" pref="288" max="-2" attributes="0"/>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Component id="txtSalariosOfi2" min="-2" pref="120" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <Component id="jLabel173" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                                          <Component id="jLabel174" min="-2" pref="288" max="-2" attributes="0"/>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Component id="txtSalariosSup2" min="-2" pref="120" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                              <EmptySpace pref="49" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                    <DimensionLayout dim="1">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabel173" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel174" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtSalariosSup2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabel176" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel175" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtSalariosOfi2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabel177" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel178" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtManoDeObraIndirecta2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabel179" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel180" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtMaterialesIndirectos2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabel185" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel186" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtSuministros2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabel187" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel188" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtHerramientas2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabel181" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel182" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtOtrosMateriales2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabel183" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel184" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtDepreciacion2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabel192" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel193" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtImpuestos2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabel194" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel189" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtServiciosPublicos2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabel190" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel191" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtServiciosPrivados2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabel195" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtTotales2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                  </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JLabel" name="jLabel173">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="531"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel174">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Salarios supervisi&#xf3;n"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="txtSalariosSup2">
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="txtSalariosOfi2">
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel175">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Salarios de oficina"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel176">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="532"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel177">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="533"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel178">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Mano de obra indirecta"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="txtManoDeObraIndirecta2">
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel179">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="534"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel180">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Materiales indirectos"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="txtMaterialesIndirectos2">
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel181">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="537"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel182">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Otros Materiales"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="txtOtrosMateriales2">
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel183">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="538"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel184">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Depreciaci&#xf3;n"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel185">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="535"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="txtDepreciacion2">
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel186">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Suministros"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="txtSuministros2">
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel187">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="536"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel188">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Herramientas"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="txtHerramientas2">
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="txtImpuestos2">
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel189">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Servicios P&#xfa;blicos"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="txtServiciosPublicos2">
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel190">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="613"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel191">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Servicios Privados"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="txtServiciosPrivados2">
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel192">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="539"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel193">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Impuestos"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel194">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="612"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel195">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="TOTALES"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="txtTotales2">
+                      <Properties>
+                        <Property name="editable" type="boolean" value="false"/>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
+                </Container>
+                <Component class="javax.swing.JButton" name="btnLimpia">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="LIMPIAR"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JButton" name="btnGuardar">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="GUARDAR"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnGuardarActionPerformed"/>
+                  </Events>
+                </Component>
+                <Container class="javax.swing.JPanel" name="jPanel18">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="99" green="99" red="99" type="rgb"/>
+                    </Property>
+                  </Properties>
+
+                  <Layout>
+                    <DimensionLayout dim="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="jLabel85" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="165" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jLabel90" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                                                  <Group type="102" alignment="1" attributes="0">
+                                                      <Component id="jLabel89" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Component id="jLabel88" alignment="1" min="-2" pref="151" max="-2" attributes="0"/>
+                                                  <Component id="jLabel87" alignment="0" min="-2" pref="121" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Component id="jLabel86" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="txtMantenimientoSoftEspacio" min="-2" pref="96" max="-2" attributes="0"/>
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Component id="txtMantenimientoSoftConsumo" min="-2" pref="106" max="-2" attributes="0"/>
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Component id="txtMantenimientoSoftEmpleado" min="-2" pref="126" max="-2" attributes="0"/>
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Component id="txtMantenimientoSoftHora" min="-2" pref="119" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="txtInsumoEspacio" min="-2" pref="96" max="-2" attributes="0"/>
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Component id="txtInsumoConsumo" min="-2" pref="106" max="-2" attributes="0"/>
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Component id="txtInsumoEmpleado" min="-2" pref="126" max="-2" attributes="0"/>
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Component id="txtInsumoHora" min="-2" pref="119" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="txtCalidadEspacio" min="-2" pref="96" max="-2" attributes="0"/>
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Component id="txtCalidadConsumo" min="-2" pref="106" max="-2" attributes="0"/>
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Component id="txtCalidadEmpleado" min="-2" pref="126" max="-2" attributes="0"/>
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Component id="txtCalidadHora" min="-2" pref="119" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="txtMantenimientoServicioEspacio" min="-2" pref="96" max="-2" attributes="0"/>
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Component id="txtMantenimientoServicioConsumo" min="-2" pref="106" max="-2" attributes="0"/>
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Component id="txtMantenimientoServicioEmpleado" min="-2" pref="126" max="-2" attributes="0"/>
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Component id="txtMantenimientoServicioHora" min="-2" pref="119" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="txtTotalEspacio" min="-2" pref="96" max="-2" attributes="0"/>
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Component id="txtTotalConsumo" min="-2" pref="106" max="-2" attributes="0"/>
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Component id="txtTotalEmpleado" min="-2" pref="126" max="-2" attributes="0"/>
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Component id="txtTotalHoraHombre" min="-2" pref="119" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                      </Group>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="jLabel83" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabel82" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabel81" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabel80" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabel79" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace max="32767" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="txtPruebaEspacio" min="-2" pref="96" max="-2" attributes="0"/>
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Component id="txtPruebaConsumo" min="-2" pref="106" max="-2" attributes="0"/>
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Component id="txtPruebaEmpleado" min="-2" pref="126" max="-2" attributes="0"/>
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Component id="txtPruebaHora" min="-2" pref="119" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="txtDesarrolloEspacio" min="-2" pref="96" max="-2" attributes="0"/>
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Component id="txtDesarrolloConsumo" min="-2" pref="106" max="-2" attributes="0"/>
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Component id="txtDesarrolloEmpleado" min="-2" pref="126" max="-2" attributes="0"/>
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Component id="txtDesarrolloHora" min="-2" pref="119" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="txtDisenoEspacio" min="-2" pref="96" max="-2" attributes="0"/>
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Component id="txtDisenoConsumo" min="-2" pref="106" max="-2" attributes="0"/>
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Component id="txtDisenoEmpleado" min="-2" pref="126" max="-2" attributes="0"/>
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Component id="txtDisenoHora" min="-2" pref="119" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="txtAnalisisEspacio" min="-2" pref="96" max="-2" attributes="0"/>
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Component id="jLabel84" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Group type="102" alignment="0" attributes="0">
+                                                          <Component id="txtAnalisisConsumo" min="-2" pref="106" max="-2" attributes="0"/>
+                                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                          <Component id="txtAnalisisEmpleado" min="-2" pref="126" max="-2" attributes="0"/>
+                                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                          <Component id="txtAnalisisHora" min="-2" pref="119" max="-2" attributes="0"/>
+                                                      </Group>
+                                                  </Group>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="txtMantenimientoEspacio" min="-2" pref="96" max="-2" attributes="0"/>
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Component id="txtMantenimientoConsumo" min="-2" pref="106" max="-2" attributes="0"/>
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Component id="txtMantenimientoEmpleado" min="-2" pref="126" max="-2" attributes="0"/>
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Component id="txtMantenimientoHora" min="-2" pref="119" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                              <EmptySpace pref="15" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                    <DimensionLayout dim="1">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jLabel84" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabel79" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtAnalisisEspacio" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtAnalisisConsumo" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtAnalisisEmpleado" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtAnalisisHora" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabel80" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtDisenoEspacio" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtDisenoConsumo" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtDisenoEmpleado" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtDisenoHora" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabel81" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtDesarrolloEspacio" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtDesarrolloConsumo" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtDesarrolloEmpleado" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtDesarrolloHora" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabel82" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtPruebaEspacio" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtPruebaConsumo" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtPruebaEmpleado" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtPruebaHora" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabel83" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtMantenimientoEspacio" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtMantenimientoConsumo" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtMantenimientoEmpleado" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtMantenimientoHora" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                              <Component id="jLabel85" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabel86" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtCalidadEspacio" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtCalidadConsumo" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtCalidadEmpleado" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtCalidadHora" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabel87" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtInsumoEspacio" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtInsumoConsumo" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtInsumoEmpleado" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtInsumoHora" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabel88" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtMantenimientoSoftEspacio" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtMantenimientoSoftConsumo" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtMantenimientoSoftEmpleado" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtMantenimientoSoftHora" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabel89" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtMantenimientoServicioEspacio" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtMantenimientoServicioConsumo" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtMantenimientoServicioEmpleado" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtMantenimientoServicioHora" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace pref="20" max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jLabel90" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" alignment="1" groupAlignment="3" attributes="0">
+                                      <Component id="txtTotalEspacio" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="txtTotalConsumo" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="txtTotalEmpleado" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="txtTotalHoraHombre" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                  </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JLabel" name="jLabel79">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="An&#xe1;lisis"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel80">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Dise&#xf1;o"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel81">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Desarrollo"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel82">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Pruebas"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel83">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Mantenimiento"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="txtAnalisisEspacio">
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtAnalisisEspacioActionPerformed"/>
+                      </Events>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="txtAnalisisConsumo">
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="txtAnalisisEmpleado">
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="txtAnalisisHora">
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="txtDisenoHora">
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="txtDisenoEspacio">
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtDisenoEspacioActionPerformed"/>
+                      </Events>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="txtDisenoConsumo">
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="txtDisenoEmpleado">
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="txtDesarrolloHora">
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="txtDesarrolloEspacio">
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtDesarrolloEspacioActionPerformed"/>
+                      </Events>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="txtDesarrolloConsumo">
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="txtDesarrolloEmpleado">
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="txtPruebaHora">
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="txtPruebaEspacio">
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtPruebaEspacioActionPerformed"/>
+                      </Events>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="txtPruebaConsumo">
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="txtPruebaEmpleado">
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="txtMantenimientoHora">
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="txtMantenimientoEspacio">
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtMantenimientoEspacioActionPerformed"/>
+                      </Events>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="txtMantenimientoConsumo">
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="txtMantenimientoEmpleado">
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel84">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="DEPARTAMENTOS &#xc1;REA PRODUCTIVA."/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel85">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="DEPARTAMENTOS &#xc1;REA DE SERVICIOS BRINDADOS"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="txtCalidadConsumo">
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="txtCalidadEmpleado">
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="txtInsumoHora">
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="txtInsumoEspacio">
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtInsumoEspacioActionPerformed"/>
+                      </Events>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="txtInsumoConsumo">
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="txtInsumoEmpleado">
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="txtMantenimientoSoftHora">
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="txtMantenimientoSoftEspacio">
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtMantenimientoSoftEspacioActionPerformed"/>
+                      </Events>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="txtMantenimientoSoftConsumo">
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="txtMantenimientoSoftEmpleado">
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel86">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Calidad"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel87">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Insumos y materiales"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel88">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Mantenimiento de software"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel89">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Mantenimiento"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="txtCalidadHora">
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="txtCalidadEspacio">
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtCalidadEspacioActionPerformed"/>
+                      </Events>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="txtMantenimientoServicioHora">
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="txtMantenimientoServicioEspacio">
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtMantenimientoServicioEspacioActionPerformed"/>
+                      </Events>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="txtMantenimientoServicioConsumo">
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="txtMantenimientoServicioEmpleado">
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel90">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="TOTALES"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="txtTotalHoraHombre">
+                      <Properties>
+                        <Property name="editable" type="boolean" value="false"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="txtTotalEspacio">
+                      <Properties>
+                        <Property name="editable" type="boolean" value="false"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtTotalEspacioActionPerformed"/>
+                      </Events>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="txtTotalConsumo">
+                      <Properties>
+                        <Property name="editable" type="boolean" value="false"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="txtTotalEmpleado">
+                      <Properties>
+                        <Property name="editable" type="boolean" value="false"/>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
+                </Container>
               </SubComponents>
             </Container>
           </SubComponents>
