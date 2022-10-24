@@ -3984,7 +3984,9 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
     }//GEN-LAST:event_btnAbrirArchivoActionPerformed
 
     private void btnModificarCuentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarCuentaActionPerformed
-        // TODO add your handling code here:
+      
+        
+        
     }//GEN-LAST:event_btnModificarCuentaActionPerformed
 
     private void btnAnadirCuentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAnadirCuentaActionPerformed
@@ -4003,22 +4005,21 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
         String nombreCuenta = txtNombreCuenta.getText();
 
         if(!cuentas.isEmpty()){
-        cuentaYaExiste= cuentas.stream().filter(cuenta -> cuenta.getCodCuenta() == codigoCuenta).map(cuenta -> true).findAny().get();
+        cuentaYaExiste= cuentas.stream().filter(cuenta -> cuenta.getCodCuenta() == codigoCuenta).map(cuenta -> true).findAny().orElse(false);
         }
         if(cuentaYaExiste){
             JOptionPane.showMessageDialog(this,"Ya existe una cuenta con el código ingresado.","",JOptionPane.ERROR_MESSAGE);
+        }else{
+            int seleccion = JOptionPane.showConfirmDialog(this,"¿Desea agregar esta nueva cuenta?","Agregar cuenta nueva",JOptionPane.OK_CANCEL_OPTION,JOptionPane.INFORMATION_MESSAGE);
+            if(seleccion == JOptionPane.OK_OPTION)
+            {
+                //CAMBIAR POR LA CATEGORIA ----------------------------------------------------
+                Categoria categoria = Categoria.valueOf(cmbSeleccionarCuenta.getSelectedItem().toString());
+                controladorCuentasDisp.añadirNuevaCuenta(new Cuenta(codigoCuenta, nombreCuenta,categoria));
+            }
+
+            limpiarTxtPestañaCuentas();
         }
-        int seleccion = JOptionPane.showConfirmDialog(this,"¿Desea agregar esta nueva cuenta?","Agregar cuenta nueva",JOptionPane.OK_CANCEL_OPTION,JOptionPane.INFORMATION_MESSAGE);
-
-        if(seleccion == JOptionPane.OK_OPTION)
-        {
-            //CAMBIAR POR LA CATEGORIA ----------------------------------------------------
-            Categoria categoria = Categoria.valueOf(cmbSeleccionarCuenta.getSelectedItem().toString());
-            controladorCuentasDisp.añadirNuevaCuenta(new Cuenta(codigoCuenta, nombreCuenta,categoria));
-
-        }
-
-        limpiarTxtPestañaCuentas();
     }//GEN-LAST:event_btnAnadirCuentaActionPerformed
 
     private void btnGenerarEstadoResultadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGenerarEstadoResultadoActionPerformed
@@ -4103,17 +4104,17 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
         //salidas
         double sumaCatalogo, sumaEspacio, sumaConsumo, sumaEmpleado, sumaHora;
         //Recojo los datos de los textBox
-        salarioSup = Double.parseDouble(txtSalariosSup.getText());
-        salarioOfi = Double.parseDouble(txtSalariosOfi.getText());
-        manoObraIndirecta = Double.parseDouble(txtManoDeObraIndirecta.getText());
-        materialesIndirectos = Double.parseDouble(txtMaterialesIndirectos.getText());
-        suministros = Double.parseDouble(txtSuministros.getText());
-        herramientas = Double.parseDouble(txtHerramientas.getText());
-        otrosMateriales = Double.parseDouble(txtOtrosMateriales.getText());
-        depreciacion = Double.parseDouble(txtDepreciacion.getText());
-        impuestos = Double.parseDouble(txtImpuestos.getText());
-        serviciosPublicos = Double.parseDouble(txtServiciosPublicos.getText());
-        serviciosPrivados = Double.parseDouble(txtServiciosPrivados.getText());
+        salarioSup = Double.parseDouble(txtSalariosSup2.getText());
+        salarioOfi = Double.parseDouble(txtSalariosOfi2.getText());
+        manoObraIndirecta = Double.parseDouble(txtManoDeObraIndirecta2.getText());
+        materialesIndirectos = Double.parseDouble(txtMaterialesIndirectos2.getText());
+        suministros = Double.parseDouble(txtSuministros2.getText());
+        herramientas = Double.parseDouble(txtHerramientas2.getText());
+        otrosMateriales = Double.parseDouble(txtOtrosMateriales2.getText());
+        depreciacion = Double.parseDouble(txtDepreciacion2.getText());
+        impuestos = Double.parseDouble(txtImpuestos2.getText());
+        serviciosPublicos = Double.parseDouble(txtServiciosPublicos2.getText());
+        serviciosPrivados = Double.parseDouble(txtServiciosPrivados2.getText());
 
         //Recojo los datos de los textbox de Departamentos
         analisisEspacio = Double.parseDouble(txtAnalisisEspacio.getText());
@@ -4159,7 +4160,7 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
         sumaEmpleado = analisisEmpleado + disenoEmpleado + desarrolloEmpleado + pruebaEmpleado + mantenimientoEmpleado + calidadEmpleado + insumoEmpleado + mantenimientoSoftEmpleado + mantenimientoDepaEmpleado;
         sumaHora = analisisHora + disenoHora + desarrolloHora + pruebaHora + mantenimientoHora + calidadHora + insumoHora + mantenimientoDepaHora + mantenimientoSoftHora;
         //Impresion de los totales en los textbox
-        txtTotales.setText("" + sumaCatalogo);
+        txtTotales2.setText("" + sumaCatalogo);
         txtTotalEspacio.setText("" + sumaEspacio);
         txtTotalConsumo.setText("" + sumaConsumo);
         txtTotalEmpleado.setText("" + sumaEmpleado);
@@ -4605,29 +4606,6 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
     private javax.swing.JLabel jLabel147;
     private javax.swing.JLabel jLabel148;
     private javax.swing.JLabel jLabel149;
-    private javax.swing.JLabel jLabel150;
-    private javax.swing.JLabel jLabel151;
-    private javax.swing.JLabel jLabel152;
-    private javax.swing.JLabel jLabel153;
-    private javax.swing.JLabel jLabel154;
-    private javax.swing.JLabel jLabel155;
-    private javax.swing.JLabel jLabel156;
-    private javax.swing.JLabel jLabel157;
-    private javax.swing.JLabel jLabel158;
-    private javax.swing.JLabel jLabel159;
-    private javax.swing.JLabel jLabel160;
-    private javax.swing.JLabel jLabel161;
-    private javax.swing.JLabel jLabel162;
-    private javax.swing.JLabel jLabel163;
-    private javax.swing.JLabel jLabel164;
-    private javax.swing.JLabel jLabel165;
-    private javax.swing.JLabel jLabel166;
-    private javax.swing.JLabel jLabel167;
-    private javax.swing.JLabel jLabel168;
-    private javax.swing.JLabel jLabel169;
-    private javax.swing.JLabel jLabel170;
-    private javax.swing.JLabel jLabel171;
-    private javax.swing.JLabel jLabel172;
     private javax.swing.JLabel jLabel173;
     private javax.swing.JLabel jLabel174;
     private javax.swing.JLabel jLabel175;
@@ -4680,30 +4658,8 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
     private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel50;
     private javax.swing.JLabel jLabel51;
-    private javax.swing.JLabel jLabel52;
-    private javax.swing.JLabel jLabel53;
-    private javax.swing.JLabel jLabel54;
-    private javax.swing.JLabel jLabel55;
-    private javax.swing.JLabel jLabel56;
-    private javax.swing.JLabel jLabel57;
-    private javax.swing.JLabel jLabel58;
-    private javax.swing.JLabel jLabel59;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel60;
-    private javax.swing.JLabel jLabel61;
-    private javax.swing.JLabel jLabel62;
-    private javax.swing.JLabel jLabel63;
-    private javax.swing.JLabel jLabel64;
-    private javax.swing.JLabel jLabel65;
-    private javax.swing.JLabel jLabel66;
-    private javax.swing.JLabel jLabel67;
-    private javax.swing.JLabel jLabel68;
-    private javax.swing.JLabel jLabel69;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel70;
-    private javax.swing.JLabel jLabel71;
-    private javax.swing.JLabel jLabel72;
-    private javax.swing.JLabel jLabel73;
     private javax.swing.JLabel jLabel74;
     private javax.swing.JLabel jLabel75;
     private javax.swing.JLabel jLabel76;
@@ -4721,7 +4677,6 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
     private javax.swing.JLabel jLabel88;
     private javax.swing.JLabel jLabel89;
     private javax.swing.JLabel jLabel90;
-    private javax.swing.JLabel jLabel91;
     private javax.swing.JLabel jLabel92;
     private javax.swing.JLabel jLabel93;
     private javax.swing.JLabel jLabel94;
@@ -4734,7 +4689,6 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
     private javax.swing.JPanel jPanel14;
     private javax.swing.JPanel jPanel15;
     private javax.swing.JPanel jPanel16;
-    private javax.swing.JPanel jPanel17;
     private javax.swing.JPanel jPanel18;
     private javax.swing.JPanel jPanel19;
     private javax.swing.JPanel jPanel2;
@@ -4747,13 +4701,10 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
     private javax.swing.JPanel jPanel26;
     private javax.swing.JPanel jPanel27;
     private javax.swing.JPanel jPanel28;
-    private javax.swing.JPanel jPanel29;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel30;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel7;
-    private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
@@ -4794,8 +4745,6 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
     private javax.swing.JTextField txtCodigoCuenta;
     private javax.swing.JTextField txtCostoTotal;
     private javax.swing.JTextField txtDebe;
-    private javax.swing.JTextField txtDepreciacion;
-    private javax.swing.JTextField txtDepreciacion1;
     private javax.swing.JTextField txtDepreciacion2;
     private javax.swing.JTextField txtDepreciacionAnalisisProductivo;
     private javax.swing.JTextField txtDepreciacionCalidadServicio;
@@ -4835,15 +4784,11 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
     private javax.swing.JTextField txtHerraMantenimientoProductivo;
     private javax.swing.JTextField txtHerraMantenimientoSoftServicio;
     private javax.swing.JTextField txtHerraPruebaProductivo;
-    private javax.swing.JTextField txtHerramientas;
-    private javax.swing.JTextField txtHerramientas1;
     private javax.swing.JTextField txtHerramientas2;
     private javax.swing.JTextField txtHora;
     private javax.swing.JTextField txtHoraEficiencia;
     private javax.swing.JTextField txtHoras;
     private javax.swing.JTextField txtINSAFORP;
-    private javax.swing.JTextField txtImpuestos;
-    private javax.swing.JTextField txtImpuestos1;
     private javax.swing.JTextField txtImpuestos2;
     private javax.swing.JTextField txtImpuestosAnalisisProductivo;
     private javax.swing.JTextField txtImpuestosCalidadServicio;
@@ -4879,8 +4824,6 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
     private javax.swing.JTextField txtManoAnalisisProductivo;
     private javax.swing.JTextField txtManoCalidadServicio;
     private javax.swing.JTextField txtManoDeObra;
-    private javax.swing.JTextField txtManoDeObraIndirecta;
-    private javax.swing.JTextField txtManoDeObraIndirecta1;
     private javax.swing.JTextField txtManoDeObraIndirecta2;
     private javax.swing.JTextField txtManoDesarrolloProductivo;
     private javax.swing.JTextField txtManoDisenoProductivo;
@@ -4919,8 +4862,6 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
     private javax.swing.JTextField txtMaterialMantenimientoProductivo;
     private javax.swing.JTextField txtMaterialMantenimientoSoftServicio;
     private javax.swing.JTextField txtMaterialPruebaProductivo;
-    private javax.swing.JTextField txtMaterialesIndirectos;
-    private javax.swing.JTextField txtMaterialesIndirectos1;
     private javax.swing.JTextField txtMaterialesIndirectos2;
     private javax.swing.JTextField txtNombreCuenta;
     private javax.swing.JTextField txtOtrosAnalisisProductivo;
@@ -4931,8 +4872,6 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
     private javax.swing.JTextField txtOtrosInsumoServicio;
     private javax.swing.JTextField txtOtrosMantenimientoProductivo;
     private javax.swing.JTextField txtOtrosMantenimientoSoftServicio;
-    private javax.swing.JTextField txtOtrosMateriales;
-    private javax.swing.JTextField txtOtrosMateriales1;
     private javax.swing.JTextField txtOtrosMateriales2;
     private javax.swing.JTextField txtOtrosPruebaProductivo;
     private javax.swing.JTextField txtPorcentajeAFP;
@@ -4969,11 +4908,7 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
     private javax.swing.JTextField txtSalarioSupMantenimientoProductivo;
     private javax.swing.JTextField txtSalarioSupMantenimientoSoftServicio;
     private javax.swing.JTextField txtSalarioSupPruebaProductivo;
-    private javax.swing.JTextField txtSalariosOfi;
-    private javax.swing.JTextField txtSalariosOfi1;
     private javax.swing.JTextField txtSalariosOfi2;
-    private javax.swing.JTextField txtSalariosSup;
-    private javax.swing.JTextField txtSalariosSup1;
     private javax.swing.JTextField txtSalariosSup2;
     private javax.swing.JTextField txtSalud;
     private javax.swing.JTextField txtSemana;
@@ -4997,11 +4932,7 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
     private javax.swing.JTextField txtServicioPublicoMantenimientoProductivo;
     private javax.swing.JTextField txtServicioPublicoMantenimientoSoftServicio;
     private javax.swing.JTextField txtServicioPublicoPruebaProductivo;
-    private javax.swing.JTextField txtServiciosPrivados;
-    private javax.swing.JTextField txtServiciosPrivados1;
     private javax.swing.JTextField txtServiciosPrivados2;
-    private javax.swing.JTextField txtServiciosPublicos;
-    private javax.swing.JTextField txtServiciosPublicos1;
     private javax.swing.JTextField txtServiciosPublicos2;
     private javax.swing.JTextField txtSumiAnalisisProductivo;
     private javax.swing.JTextField txtSumiCalidadServicio;
@@ -5012,8 +4943,6 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
     private javax.swing.JTextField txtSumiMantenimientoProductivo;
     private javax.swing.JTextField txtSumiMantenimientoSoftServicio;
     private javax.swing.JTextField txtSumiPruebaProductivo;
-    private javax.swing.JTextField txtSuministros;
-    private javax.swing.JTextField txtSuministros1;
     private javax.swing.JTextField txtSuministros2;
     private javax.swing.JTextField txtTotal;
     private javax.swing.JTextField txtTotalAnalisis;
@@ -5048,8 +4977,6 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
     private javax.swing.JTextField txtTotalVInfraestructura;
     private javax.swing.JTextField txtTotalVInsumo;
     private javax.swing.JTextField txtTotalVMantenimientoSoft;
-    private javax.swing.JTextField txtTotales;
-    private javax.swing.JTextField txtTotales1;
     private javax.swing.JTextField txtTotales2;
     private javax.swing.JTextField txtUtilidadesPerdidas;
     private javax.swing.JTextField txtVacacion2;
