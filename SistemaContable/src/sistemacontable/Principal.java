@@ -3989,7 +3989,7 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
 
     private void btnAnadirCuentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAnadirCuentaActionPerformed
 
-        
+        boolean cuentaYaExiste = false;
         if(txtNombreCuenta.getText().isBlank() ||
                 cmbSeleccionarCuenta.getSelectedIndex() == -1 || 
                 txtCodigoCuenta.getText().isBlank())
@@ -4002,9 +4002,12 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
         int codigoCuenta = Integer.parseInt(txtCodigoCuenta.getText());
         String nombreCuenta = txtNombreCuenta.getText();
 
-        boolean cuentaYaExiste = cuentas.stream().filter(cuenta -> cuenta.getCodCuenta() == codigoCuenta).map(cuenta -> true).findAny().get();
-        if(cuentaYaExiste) JOptionPane.showMessageDialog(this,"Ya existe una cuenta con el código ingresado.","",JOptionPane.ERROR_MESSAGE);
-        
+        if(!cuentas.isEmpty()){
+        cuentaYaExiste= cuentas.stream().filter(cuenta -> cuenta.getCodCuenta() == codigoCuenta).map(cuenta -> true).findAny().get();
+        }
+        if(cuentaYaExiste){
+            JOptionPane.showMessageDialog(this,"Ya existe una cuenta con el código ingresado.","",JOptionPane.ERROR_MESSAGE);
+        }
         int seleccion = JOptionPane.showConfirmDialog(this,"¿Desea agregar esta nueva cuenta?","Agregar cuenta nueva",JOptionPane.OK_CANCEL_OPTION,JOptionPane.INFORMATION_MESSAGE);
 
         if(seleccion == JOptionPane.OK_OPTION)
@@ -4029,7 +4032,6 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
                                             .flatMap(List::stream)
                                             .toList();
         
-        listadoCuentasIngresoGastos.forEach(System.out::println);
        controladorTablaEstadoResultado = new ControladorTablaEstadoResultado(listadoCuentasIngresoGastos);
        tablaEstadoResultado.setModel(controladorTablaEstadoResultado);
         
