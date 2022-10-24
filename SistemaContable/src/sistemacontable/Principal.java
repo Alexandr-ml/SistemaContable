@@ -3984,9 +3984,19 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
     }//GEN-LAST:event_btnAbrirArchivoActionPerformed
 
     private void btnModificarCuentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarCuentaActionPerformed
+      Cuenta cuentaParaModificar;
+      int indiceCuentaParaModificar = lstCuentasDisponibles.getSelectedIndex();
+      if(indiceCuentaParaModificar == -1) return;
       
-        
-        
+      cuentaParaModificar = cuentas.get(indiceCuentaParaModificar);
+      Categoria categoria = Categoria.valueOf(cmbSeleccionarCuenta.getSelectedItem().toString());
+      cuentaParaModificar.setCategoria(categoria);
+      cuentaParaModificar.setNombre(txtNombreCuenta.getText());
+      cuentaParaModificar.setCodCuenta(txtCodigoCuenta.getText().transform(Integer::parseInt));
+      
+      controladorCuentasDisp.actualizarLista();
+      JOptionPane.showMessageDialog(this,"Modificación de cuenta","Se modificó la cuenta de "+cuentaParaModificar.getNombre(),JOptionPane.INFORMATION_MESSAGE);
+      btnModificarCuenta.setEnabled(false);
     }//GEN-LAST:event_btnModificarCuentaActionPerformed
 
     private void btnAnadirCuentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAnadirCuentaActionPerformed
@@ -4044,6 +4054,7 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
         lstCuentasDisponibles.clearSelection();
         limpiarTxtPestañaCuentas();
         btnOlvidarSeleccionCuenta.setEnabled(false);
+        btnModificarCuenta.setEnabled(false);
     }//GEN-LAST:event_btnOlvidarSeleccionCuentaActionPerformed
 
     private void txtTotalEspacioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTotalEspacioActionPerformed
@@ -4992,7 +5003,7 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
         
         int codigoCuentaSeleccionada = controladorCuentasDisp.getListadoCuentas().get(indiceCuentaSeleccionada).getCodCuenta();
         
-        
+        btnModificarCuenta.setEnabled(true);
         txtCodigoCuenta.setText(String.valueOf(codigoCuentaSeleccionada));
         cmbSeleccionarCuenta.setSelectedItem(cuentas.get(indiceCuentaSeleccionada).getCategoria().toString());
         txtNombreCuenta.setText(listadoCuentas.getSelectedValue());

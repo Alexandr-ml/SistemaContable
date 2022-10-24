@@ -46,5 +46,9 @@ public class ControladorListadoCuentasDisponibles extends AbstractListModel<Stri
         
     }
     
+    public void actualizarLista(){
+        fireIntervalAdded(this, 0, 0);
+    }
+    
     
 }
