@@ -106,7 +106,7 @@
                           <Component id="btnGuardarNuevasTransacciones" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="btnEliminarSeleccion" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="0" pref="30" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="35" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="jLabel4" min="-2" pref="53" max="-2" attributes="0"/>
@@ -258,6 +258,7 @@
           </Properties>
           <Events>
             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="rbtnCargoMouseClicked"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rbtnCargoActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JRadioButton" name="rbtnAbono">
@@ -312,6 +313,7 @@
         <Component class="javax.swing.JButton" name="btnEliminarSeleccionTransaccion">
           <Properties>
             <Property name="text" type="java.lang.String" value="Eliminar transacci&#xf3;n seleccionada."/>
+            <Property name="enabled" type="boolean" value="false"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnEliminarSeleccionTransaccionActionPerformed"/>
@@ -343,18 +345,27 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtCuentaSeleccionada">
+          <Properties>
+            <Property name="editable" type="boolean" value="false"/>
+          </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="btnGuardarTransaccionModificada">
           <Properties>
             <Property name="text" type="java.lang.String" value="Guardar modificaci&#xf3;n."/>
             <Property name="enabled" type="boolean" value="false"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnGuardarTransaccionModificadaActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnEliminarSeleccion">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Eliminar selecci&#xf3;n."/>
+            <Property name="text" type="java.lang.String" value="Olvidar selecci&#xf3;n."/>
             <Property name="enabled" type="boolean" value="false"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnEliminarSeleccionActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel4">
           <Properties>

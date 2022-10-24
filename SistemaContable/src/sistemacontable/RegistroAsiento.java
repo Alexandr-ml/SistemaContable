@@ -30,6 +30,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 import javax.swing.ButtonGroup;
 import javax.swing.DefaultListModel;
+import javax.swing.DefaultListSelectionModel;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JDialog;
@@ -37,6 +38,9 @@ import javax.swing.JList;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.JTree;
+import javax.swing.SwingUtilities;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
 import javax.swing.event.TreeSelectionEvent;
 import javax.swing.event.TreeSelectionListener;
 import javax.swing.table.AbstractTableModel;
@@ -104,10 +108,12 @@ public class RegistroAsiento extends javax.swing.JFrame implements PropertyChang
     
  
     public RegistroAsiento(ControladorTablaLibroDiario controladorTablaLibroDiario,List<Cuenta> cuentasDisp) {
-        this.setVisible(rootPaneCheckingEnabled);
+        
+        
         initComponents();
         controladorTablaRegistro = new ControladorTablaRegistro();
-       
+        this.setVisible(true);
+        this.setAlwaysOnTop(false);
         this.nuevosRegistros = new ArrayList<>();
         this.controladorTablaLibroDiario = controladorTablaLibroDiario;
         this.cuentasDisp = cuentasDisp;
@@ -123,6 +129,36 @@ public class RegistroAsiento extends javax.swing.JFrame implements PropertyChang
         cambioListaRegistros = new PropertyChangeSupport(nuevosRegistros);
         cambioListaRegistros.addPropertyChangeListener(this);
         
+       
+        
+        tablaRegistrosNuevos.getSelectionModel().addListSelectionListener(new ListSelectionListener(){
+            @Override
+            public void valueChanged(ListSelectionEvent e) {
+                btnEliminarSeleccionTransaccion.setEnabled(true);
+                btnGuardarTransaccionModificada.setEnabled(true);
+                btnEliminarSeleccion.setEnabled(true);
+                DefaultListSelectionModel listModel = (DefaultListSelectionModel)e.getSource();
+                if(!e.getValueIsAdjusting()){
+                int indiceRegistroSeleccionado = tablaRegistrosNuevos.getSelectedRow();
+                
+                Registro seleccionado = nuevosRegistros.get(indiceRegistroSeleccionado);
+                
+                txtCuentaSeleccionada.setText(seleccionado.getCuenta().getNombre());
+                txtValor.setText(String.valueOf(seleccionado.getValor()));
+                txtFecha.setText(seleccionado.getFechaRegistro().toString());
+                txtDescripcion.setText(seleccionado.getDescripcion().toString());
+                
+                if(seleccionado.getTipo() == Tipo.DEBE){
+                    rbtnCargo.setSelected(true);
+                }
+                else if(seleccionado.getTipo() == Tipo.HABER){
+                    rbtnAbono.setSelected(true);
+                }
+                
+                
+                } 
+            }
+        });
 
     }
 
@@ -212,6 +248,11 @@ public class RegistroAsiento extends javax.swing.JFrame implements PropertyChang
                 rbtnCargoMouseClicked(evt);
             }
         });
+        rbtnCargo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rbtnCargoActionPerformed(evt);
+            }
+        });
 
         rbtnAbono.setText("Abono");
         rbtnAbono.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -243,6 +284,7 @@ public class RegistroAsiento extends javax.swing.JFrame implements PropertyChang
         });
 
         btnEliminarSeleccionTransaccion.setText("Eliminar transacción seleccionada.");
+        btnEliminarSeleccionTransaccion.setEnabled(false);
         btnEliminarSeleccionTransaccion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEliminarSeleccionTransaccionActionPerformed(evt);
@@ -267,11 +309,23 @@ public class RegistroAsiento extends javax.swing.JFrame implements PropertyChang
 
         jLabel3.setText("Fecha:");
 
+        txtCuentaSeleccionada.setEditable(false);
+
         btnGuardarTransaccionModificada.setText("Guardar modificación.");
         btnGuardarTransaccionModificada.setEnabled(false);
+        btnGuardarTransaccionModificada.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGuardarTransaccionModificadaActionPerformed(evt);
+            }
+        });
 
-        btnEliminarSeleccion.setText("Eliminar selección.");
+        btnEliminarSeleccion.setText("Olvidar selección.");
         btnEliminarSeleccion.setEnabled(false);
+        btnEliminarSeleccion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEliminarSeleccionActionPerformed(evt);
+            }
+        });
 
         jLabel4.setText("Totales:");
 
@@ -329,7 +383,7 @@ public class RegistroAsiento extends javax.swing.JFrame implements PropertyChang
                         .addComponent(btnGuardarNuevasTransacciones)
                         .addGap(18, 18, 18)
                         .addComponent(btnEliminarSeleccion)
-                        .addGap(0, 30, Short.MAX_VALUE))
+                        .addGap(0, 35, Short.MAX_VALUE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -409,32 +463,27 @@ public class RegistroAsiento extends javax.swing.JFrame implements PropertyChang
     private void btnAñadirTransaccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAñadirTransaccionActionPerformed
         Registro registroNuevo = new Registro();
         double valor = Double.parseDouble(txtValor.getText());
-        
-        
-        boolean camposVacios = txtValor.getText().isBlank()
-                & txtCuentaSeleccionada.getText().isBlank()
-                & txtFecha.getText().isBlank()
-                & (tipoTransaccion==null);
-        
-        if (camposVacios){
-            JOptionPane.showInternalMessageDialog(rootPane,"Ingrese todos los datos necesarios","Error",JOptionPane.ERROR_MESSAGE);
-            return;
-        }
-        
-       
         if(rbtnAbono.isSelected()){
             tipoTransaccion = Tipo.HABER;
-        }else{
+        }
+        else if(rbtnCargo.isSelected()){
             tipoTransaccion = Tipo.DEBE;
         }
         
+        boolean camposVacios = (txtValor.getText().isBlank() || txtCuentaSeleccionada.getText().isBlank()) ||
+                (txtFecha.getText().isBlank() || (tipoTransaccion==null));
+        
+        if (camposVacios){
+            JOptionPane.showInternalMessageDialog(null,"Ingrese todos los datos necesarios","Error",JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+
         
         cuentaSeleccionada = cuentasDisp.stream()
                 .filter(cuenta -> cuenta.getNombre().equals(txtCuentaSeleccionada.getText()))
                 .findFirst()
                 .get();
-        
-        
+        //Si la cuenta tiene un valor de IVA relacionado se creará un registro especial para este.
          if(tieneIVA.isSelected()){
              Registro registroIVA =  new Registro();
              registroIVA.setValor(valor*0.13);
@@ -530,6 +579,38 @@ public class RegistroAsiento extends javax.swing.JFrame implements PropertyChang
         controladorTablaRegistro.removerTransaccion(indiceElementoSeleccionado);
         
     }//GEN-LAST:event_btnEliminarSeleccionTransaccionActionPerformed
+
+    private void btnGuardarTransaccionModificadaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarTransaccionModificadaActionPerformed
+        int indiceNuevoRegistroModificado = tablaRegistrosNuevos.getSelectedRow();
+        
+        if(indiceNuevoRegistroModificado == -1) return;
+        
+        Registro registroParaModificar = nuevosRegistros.get(indiceNuevoRegistroModificado);
+        Cuenta cuenta = cuentasDisp.stream()
+                .filter(cuentaB -> cuentaB.getNombre().equals(txtCuentaSeleccionada.getText()))
+                .findFirst()
+                .get();
+        
+        registroParaModificar.setCuenta(cuenta);
+        registroParaModificar.setValor(txtValor.getText().transform(Double::parseDouble));
+        registroParaModificar.getDescripcion().delete(0,registroParaModificar.getDescripcion().length());
+        registroParaModificar.getDescripcion().append(txtDescripcion.getText());
+        registroParaModificar.setTipo(tipoTransaccion);
+        registroParaModificar.setFechaRegistro(LocalDate.parse(txtFecha.getText()));
+        
+        limpiarParametros();
+        controladorTablaRegistro.fireTableDataChanged();
+    }//GEN-LAST:event_btnGuardarTransaccionModificadaActionPerformed
+
+    private void btnEliminarSeleccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarSeleccionActionPerformed
+        limpiarParametros();
+        btnEliminarSeleccion.setEnabled(false);
+        btnGuardarTransaccionModificada.setEnabled(false);
+    }//GEN-LAST:event_btnEliminarSeleccionActionPerformed
+
+    private void rbtnCargoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbtnCargoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rbtnCargoActionPerformed
 
     public void añadirHijosDesdeLista(Nodo<String> nodoRaiz,Map<Categoria,List<Cuenta>> agrupacionPorCategoria){
         
@@ -649,9 +730,11 @@ public class RegistroAsiento extends javax.swing.JFrame implements PropertyChang
             double totalDebe = Double.parseDouble(lblTotalDebe.getText());
             double totalHaber = Double.parseDouble(lblTotalHaber.getText());
             boolean seCumplePartidaDoble = totalDebe == totalHaber;
-            System.out.println(tablaOrigenEvento.getRowCount());
+           
             if(tablaOrigenEvento.getRowCount()>=2 & seCumplePartidaDoble  ){
                 btnGuardarNuevasTransacciones.setEnabled(true);
+            }else{
+                btnGuardarNuevasTransacciones.setEnabled(false);
             }
         
         });

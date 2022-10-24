@@ -3912,6 +3912,7 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
 
     private void btnAnadirTransaccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAnadirTransaccionActionPerformed
         RegistroAsiento ra = new RegistroAsiento(controladorTablaLibroDiario,cuentas);
+        
 
     }//GEN-LAST:event_btnAnadirTransaccionActionPerformed
 

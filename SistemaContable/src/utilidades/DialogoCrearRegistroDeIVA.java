@@ -44,7 +44,7 @@ public class DialogoCrearRegistroDeIVA extends JDialog implements ActionListener
         
         modeloListaIVA = new DefaultListModel<>();
         List<String> listadoCuentasIVA = cuentasIVA.stream()
-                            .filter(cuenta -> cuenta.getNombre().contains("IVA"))
+                            .filter(cuenta -> cuenta.getNombre().equalsIgnoreCase("iva"))
                             .map(Cuenta::getNombre)
                             .toList();
                     
