@@ -26,6 +26,7 @@ import javax.swing.DefaultComboBoxModel;
 import javax.swing.JOptionPane;
 
 import Persistencia.PersistenciaDeDatos;
+import java.awt.Color;
 import java.io.IOException;
 import java.text.DecimalFormat;
 import java.util.concurrent.ExecutionException;
@@ -61,6 +62,8 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
     LibroDiario libroDiario;
     List<Cuenta> cuentas;
     List<Cuenta> cuentasSaldadas;
+    
+    List<Cuenta> listadoCuentasIngresoGastos;
    
     //Escritura-lectura de archivos
     final PersistenciaDeDatos persistenciaDeDatos = PersistenciaDeDatos.getPersistenciaDeDatos();
@@ -1166,14 +1169,17 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
             }
         });
 
-        lblResultadoGastosVsIngresos.setText("a");
-
         btnCalculoUtilidadesPerdidas.setBackground(new java.awt.Color(204, 204, 204));
         btnCalculoUtilidadesPerdidas.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         btnCalculoUtilidadesPerdidas.setForeground(new java.awt.Color(51, 51, 51));
         btnCalculoUtilidadesPerdidas.setText("Calcular utilidades o perdidas");
         btnCalculoUtilidadesPerdidas.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
         btnCalculoUtilidadesPerdidas.setEnabled(false);
+        btnCalculoUtilidadesPerdidas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCalculoUtilidadesPerdidasActionPerformed(evt);
+            }
+        });
 
         lblInfoEstadoResultado.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         lblInfoEstadoResultado.setForeground(new java.awt.Color(255, 0, 0));
@@ -1197,8 +1203,7 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
                             .addGap(18, 18, 18)
                             .addComponent(txtUtilidadesPerdidas, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(18, 18, 18)
-                            .addComponent(lblResultadoGastosVsIngresos, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(66, 66, 66))
+                            .addComponent(lblResultadoGastosVsIngresos, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 981, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(lblInfoEstadoResultado))
                 .addContainerGap(190, Short.MAX_VALUE))
@@ -4357,13 +4362,25 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
                                                 .filter( (Cuenta cuenta) -> cuenta.getCategoria() == Categoria.INGRESOS || cuenta.getCategoria() == Categoria.COSTOS_y_GASTOS)
                                                 .collect(partitioningBy(cuenta -> cuenta.getCategoria()==Categoria.INGRESOS));
        
-        var listadoCuentasIngresoGastos = cuentasParticionadasPorIngresosGastos.values().stream()
+         listadoCuentasIngresoGastos = cuentasParticionadasPorIngresosGastos.values().stream()
                                             .flatMap(List::stream)
                                             .toList();
         
        controladorTablaEstadoResultado = new ControladorTablaEstadoResultado(listadoCuentasIngresoGastos);
        tablaEstadoResultado.setModel(controladorTablaEstadoResultado);
-        
+       var colModel = tablaEstadoResultado.getColumnModel();
+       
+       for(int i = 0; i<colModel.getColumnCount();i++){
+           if(i == 0 ) colModel.getColumn(i).setHeaderValue("Código");
+           if(i == 1) colModel.getColumn(i).setHeaderValue("Cuenta");
+           if(i == 2) colModel.getColumn(i).setHeaderValue("Debe");
+           if(i == 3) colModel.getColumn(i).setHeaderValue("Haber");
+           if(i == 4) colModel.getColumn(i).setHeaderValue("Tipo de saldo");
+           
+           
+       }
+       
+        btnCalculoUtilidadesPerdidas.setEnabled(true);
 
     }//GEN-LAST:event_btnGenerarEstadoResultadoActionPerformed
 
@@ -4817,6 +4834,23 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
         txtTotalVMantenimientoSoft.setText("" + df.format(sumaMantenimientoSoft));
         txtTotalVInfraestructura.setText("" + df.format(sumaInfraestructura));
     }//GEN-LAST:event_btnGuardarActionPerformed
+
+    private void btnCalculoUtilidadesPerdidasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalculoUtilidadesPerdidasActionPerformed
+        double totalIngresos = 0, totalGastos = 0;
+        
+        for(var cuenta: listadoCuentasIngresoGastos){
+            if(cuenta.getCategoria() == Categoria.INGRESOS) totalIngresos += cuenta.getSaldo();
+            if(cuenta.getCategoria() == Categoria.COSTOS_y_GASTOS) totalGastos += cuenta.getSaldo();
+        }
+        
+        double GastosVsIngresos = totalGastos - totalIngresos;
+        
+        Color color = (GastosVsIngresos > 0)? Color.GREEN: Color.RED;
+        String utilidadVsPerdida = (GastosVsIngresos > 0)? "Utilidades":"Perdidas";
+        
+        txtUtilidadesPerdidas.setText(String.valueOf(GastosVsIngresos));
+        lblResultadoGastosVsIngresos.setText(utilidadVsPerdida);
+    }//GEN-LAST:event_btnCalculoUtilidadesPerdidasActionPerformed
 
     //metodos utilitarios
     public void limpiarTxtPestañaCuentas(){

@@ -44,9 +44,11 @@ public class DialogoCrearRegistroDeIVA extends JDialog implements ActionListener
         
         modeloListaIVA = new DefaultListModel<>();
         List<String> listadoCuentasIVA = cuentasIVA.stream()
-                            .filter(cuenta -> cuenta.getNombre().equalsIgnoreCase("iva"))
                             .map(Cuenta::getNombre)
+                            .map(String::toLowerCase)
+                            .filter(nombreCuenta -> nombreCuenta.startsWith("iva"))
                             .toList();
+        
                     
         modeloListaIVA.addAll(listadoCuentasIVA);
                     
@@ -82,12 +84,11 @@ public class DialogoCrearRegistroDeIVA extends JDialog implements ActionListener
             if(!listaIVA.isSelectionEmpty() && grupo.getSelection().isSelected() ){
                 String nombreCuentaIVAseleccionada = listaIVA.getSelectedValue();
                 Cuenta cuentaIVA = cuentasIVA.stream()
-                        .filter(cuenta -> cuenta.getNombre().equals(nombreCuentaIVAseleccionada))
+                        .filter(cuenta -> cuenta.getNombre().equalsIgnoreCase(nombreCuentaIVAseleccionada))
                         .findFirst()
                         .get();
                 
                 registroIncompleto.setCuenta(cuentaIVA);
-                System.out.println(tipo);
                 registroIncompleto.setTipo(tipo);
                 dispose();
             }

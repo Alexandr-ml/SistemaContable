@@ -915,8 +915,7 @@
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Component id="txtUtilidadesPerdidas" min="-2" pref="189" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="lblResultadoGastosVsIngresos" min="-2" pref="37" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
+                                  <Component id="lblResultadoGastosVsIngresos" min="-2" pref="103" max="-2" attributes="0"/>
                               </Group>
                               <Component id="jScrollPane4" min="-2" pref="981" max="-2" attributes="0"/>
                           </Group>
@@ -1064,9 +1063,6 @@
               </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="lblResultadoGastosVsIngresos">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="a"/>
-              </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="btnCalculoUtilidadesPerdidas">
               <Properties>
@@ -1094,6 +1090,9 @@
                 </Property>
                 <Property name="enabled" type="boolean" value="false"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCalculoUtilidadesPerdidasActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="lblInfoEstadoResultado">
               <Properties>
