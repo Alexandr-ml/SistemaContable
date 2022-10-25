@@ -381,9 +381,10 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
         jLabel35 = new javax.swing.JLabel();
         jLabel36 = new javax.swing.JLabel();
         jLabel37 = new javax.swing.JLabel();
-        txtTotal = new javax.swing.JTextField();
-        txtTotalDia = new javax.swing.JTextField();
+        jPanel6 = new javax.swing.JPanel();
         txtTotalHora = new javax.swing.JTextField();
+        txtTotalDia = new javax.swing.JTextField();
+        txtTotal = new javax.swing.JTextField();
         jPanel23 = new javax.swing.JPanel();
         jLabel38 = new javax.swing.JLabel();
         jLabel39 = new javax.swing.JLabel();
@@ -792,7 +793,13 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
             }
         });
 
+        txtNombreCuenta.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+
+        txtCodigoCuenta.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+
         jLabel51.setText("Categoria:");
+
+        cmbSeleccionarCuenta.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
 
         btnAbrirArchivo.setBackground(new java.awt.Color(204, 204, 204));
         btnAbrirArchivo.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -896,7 +903,7 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnAbrirArchivo, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnCrearNuevoArchivoInfc, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(403, Short.MAX_VALUE))
+                .addContainerGap(387, Short.MAX_VALUE))
         );
 
         contenedorPestañas.addTab("Cuentas", jPanel1);
@@ -969,7 +976,7 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 287, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(59, 59, 59)
                 .addComponent(btnAnadirTransaccion, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(345, Short.MAX_VALUE))
+                .addContainerGap(368, Short.MAX_VALUE))
         );
 
         contenedorPestañas.addTab("Libro diario", jPanel2);
@@ -1024,7 +1031,7 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
                 .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 344, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(348, Short.MAX_VALUE))
+                .addContainerGap(371, Short.MAX_VALUE))
         );
 
         contenedorPestañas.addTab("Libro mayor", jPanel3);
@@ -1071,8 +1078,10 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
         jLabel7.setText("TOTAL");
 
         txtHaber.setEditable(false);
+        txtHaber.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
 
         txtDebe.setEditable(false);
+        txtDebe.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
 
         lblInforBalanzaComprobacion.setText("Debe generar el libro mayor primero.");
 
@@ -1116,7 +1125,7 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnGenerarBalanzaComprobacion, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblInforBalanzaComprobacion))
-                .addContainerGap(319, Short.MAX_VALUE))
+                .addContainerGap(338, Short.MAX_VALUE))
         );
 
         contenedorPestañas.addTab("Balance comprobación", jPanel4);
@@ -1150,6 +1159,8 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel6.setText("Utilidades o perdidas:");
+
+        txtUtilidadesPerdidas.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
 
         btnGenerarEstadoResultado.setBackground(new java.awt.Color(204, 204, 204));
         btnGenerarEstadoResultado.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -1232,6 +1243,12 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
         jLabel148.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel148.setText("Costo Total:");
 
+        txtManoDeObra.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+
+        txtCostoTotal.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+
+        txtCIF.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+
         jButton4.setBackground(new java.awt.Color(204, 204, 204));
         jButton4.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
         jButton4.setForeground(new java.awt.Color(51, 51, 51));
@@ -1287,7 +1304,7 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
                     .addComponent(jLabel148)
                     .addComponent(txtCostoTotal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(7, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jLabel149.setText("COSTO TOTAL");
@@ -1313,7 +1330,7 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
                 .addComponent(jLabel149)
                 .addGap(18, 18, 18)
                 .addComponent(jPanel28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(552, Short.MAX_VALUE))
+                .addContainerGap(568, Short.MAX_VALUE))
         );
 
         contenedorPestañas.addTab("Costo total", jPanel27);
@@ -1459,16 +1476,40 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
 
         jLabel37.setText("TOTAL POR HORA:");
 
-        txtTotal.setEditable(false);
-
-        txtTotalDia.setEditable(false);
-
         txtTotalHora.setEditable(false);
         txtTotalHora.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtTotalHoraActionPerformed(evt);
             }
         });
+
+        txtTotalDia.setEditable(false);
+
+        txtTotal.setEditable(false);
+
+        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
+        jPanel6.setLayout(jPanel6Layout);
+        jPanel6Layout.setHorizontalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtTotalHora)
+                    .addComponent(txtTotalDia, javax.swing.GroupLayout.DEFAULT_SIZE, 175, Short.MAX_VALUE)
+                    .addComponent(txtTotal))
+                .addContainerGap())
+        );
+        jPanel6Layout.setVerticalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(txtTotal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(txtTotalDia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(txtTotalHora, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
 
         javax.swing.GroupLayout jPanel19Layout = new javax.swing.GroupLayout(jPanel19);
         jPanel19.setLayout(jPanel19Layout);
@@ -1480,29 +1521,24 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
                     .addComponent(jLabel36, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel35, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel37, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addGap(28, 28, 28)
-                .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(txtTotalDia, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 154, Short.MAX_VALUE)
-                    .addComponent(txtTotal, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtTotalHora))
+                .addGap(18, 18, 18)
+                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel19Layout.setVerticalGroup(
             jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel19Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtTotal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel35))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel36)
-                    .addComponent(txtTotalDia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtTotalHora, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel37))
-                .addContainerGap(16, Short.MAX_VALUE))
+                .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel19Layout.createSequentialGroup()
+                        .addGap(9, 9, 9)
+                        .addComponent(jLabel35)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel36)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel37)))
+                .addContainerGap(30, Short.MAX_VALUE))
         );
 
         jPanel23.setBackground(new java.awt.Color(204, 204, 204));
@@ -1814,11 +1850,20 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
 
         jLabel140.setText("DIAS PAGADOS PARA VACACIONES:");
 
+        txtSalario.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+
+        txtHoras.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
         txtHoras.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtHorasActionPerformed(evt);
             }
         });
+
+        txtDiasAguinaldo.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+
+        txtDiasVacacion.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+
+        txtDiasTrabajado.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
 
         jLabel141.setText("Porcentaje de recargo para vacaciones:");
 
@@ -1830,7 +1875,17 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
 
         jLabel144.setText("Porcentaje de eficiencia del empleado:");
 
+        txtPorcentajeVacacion.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+
+        txtPorcentajeSeguro.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+
+        txtPorcentajeEficiencia.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+
+        txtPorcentajeAFP.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+
         jLabel145.setText("Porcentaje de recargo para INSAFORP:");
+
+        txtPorcentajeINSAFORP.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
 
         javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
         jPanel14.setLayout(jPanel14Layout);
@@ -1982,6 +2037,10 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
         jLabel174.setForeground(new java.awt.Color(51, 51, 51));
         jLabel174.setText("Salarios supervisión");
 
+        txtSalariosSup2.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+
+        txtSalariosOfi2.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+
         jLabel175.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel175.setForeground(new java.awt.Color(51, 51, 51));
         jLabel175.setText("Salarios de oficina");
@@ -1998,6 +2057,8 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
         jLabel178.setForeground(new java.awt.Color(51, 51, 51));
         jLabel178.setText("Mano de obra indirecta");
 
+        txtManoDeObraIndirecta2.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+
         jLabel179.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel179.setForeground(new java.awt.Color(51, 51, 51));
         jLabel179.setText("534");
@@ -2006,6 +2067,8 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
         jLabel180.setForeground(new java.awt.Color(51, 51, 51));
         jLabel180.setText("Materiales indirectos");
 
+        txtMaterialesIndirectos2.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+
         jLabel181.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel181.setForeground(new java.awt.Color(51, 51, 51));
         jLabel181.setText("537");
@@ -2013,6 +2076,8 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
         jLabel182.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel182.setForeground(new java.awt.Color(51, 51, 51));
         jLabel182.setText("Otros Materiales");
+
+        txtOtrosMateriales2.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
 
         jLabel183.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel183.setForeground(new java.awt.Color(51, 51, 51));
@@ -2026,9 +2091,13 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
         jLabel185.setForeground(new java.awt.Color(51, 51, 51));
         jLabel185.setText("535");
 
+        txtDepreciacion2.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+
         jLabel186.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel186.setForeground(new java.awt.Color(51, 51, 51));
         jLabel186.setText("Suministros");
+
+        txtSuministros2.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
 
         jLabel187.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel187.setForeground(new java.awt.Color(51, 51, 51));
@@ -2038,9 +2107,15 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
         jLabel188.setForeground(new java.awt.Color(51, 51, 51));
         jLabel188.setText("Herramientas");
 
+        txtHerramientas2.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+
+        txtImpuestos2.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+
         jLabel189.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel189.setForeground(new java.awt.Color(51, 51, 51));
         jLabel189.setText("Servicios Públicos");
+
+        txtServiciosPublicos2.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
 
         jLabel190.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel190.setForeground(new java.awt.Color(51, 51, 51));
@@ -2049,6 +2124,8 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
         jLabel191.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel191.setForeground(new java.awt.Color(51, 51, 51));
         jLabel191.setText("Servicios Privados");
+
+        txtServiciosPrivados2.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
 
         jLabel192.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel192.setForeground(new java.awt.Color(51, 51, 51));
@@ -2067,6 +2144,7 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
         jLabel195.setText("TOTALES");
 
         txtTotales2.setEditable(false);
+        txtTotales2.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
 
         javax.swing.GroupLayout jPanel30Layout = new javax.swing.GroupLayout(jPanel30);
         jPanel30.setLayout(jPanel30Layout);
@@ -2251,51 +2329,104 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
         jLabel83.setForeground(new java.awt.Color(51, 51, 51));
         jLabel83.setText("Mantenimiento");
 
+        txtAnalisisEspacio.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
         txtAnalisisEspacio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtAnalisisEspacioActionPerformed(evt);
             }
         });
 
+        txtAnalisisConsumo.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+
+        txtAnalisisEmpleado.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+
+        txtAnalisisHora.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+
+        txtDisenoHora.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+
+        txtDisenoEspacio.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
         txtDisenoEspacio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtDisenoEspacioActionPerformed(evt);
             }
         });
 
+        txtDisenoConsumo.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+
+        txtDisenoEmpleado.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+
+        txtDesarrolloHora.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+
+        txtDesarrolloEspacio.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
         txtDesarrolloEspacio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtDesarrolloEspacioActionPerformed(evt);
             }
         });
 
+        txtDesarrolloConsumo.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+
+        txtDesarrolloEmpleado.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+
+        txtPruebaHora.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+
+        txtPruebaEspacio.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
         txtPruebaEspacio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtPruebaEspacioActionPerformed(evt);
             }
         });
 
+        txtPruebaConsumo.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+
+        txtPruebaEmpleado.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+
+        txtMantenimientoHora.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+
+        txtMantenimientoEspacio.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
         txtMantenimientoEspacio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtMantenimientoEspacioActionPerformed(evt);
             }
         });
 
+        txtMantenimientoConsumo.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+
+        txtMantenimientoEmpleado.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+
         jLabel84.setText("DEPARTAMENTOS ÁREA PRODUCTIVA.");
 
         jLabel85.setText("DEPARTAMENTOS ÁREA DE SERVICIOS BRINDADOS");
 
+        txtCalidadConsumo.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+
+        txtCalidadEmpleado.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+
+        txtInsumoHora.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+
+        txtInsumoEspacio.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
         txtInsumoEspacio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtInsumoEspacioActionPerformed(evt);
             }
         });
 
+        txtInsumoConsumo.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+
+        txtInsumoEmpleado.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+
+        txtMantenimientoSoftHora.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+
+        txtMantenimientoSoftEspacio.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
         txtMantenimientoSoftEspacio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtMantenimientoSoftEspacioActionPerformed(evt);
             }
         });
+
+        txtMantenimientoSoftConsumo.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+
+        txtMantenimientoSoftEmpleado.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
 
         jLabel86.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel86.setForeground(new java.awt.Color(51, 51, 51));
@@ -2313,25 +2444,37 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
         jLabel89.setForeground(new java.awt.Color(51, 51, 51));
         jLabel89.setText("Mantenimiento");
 
+        txtCalidadHora.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+
+        txtCalidadEspacio.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
         txtCalidadEspacio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtCalidadEspacioActionPerformed(evt);
             }
         });
 
+        txtMantenimientoServicioHora.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+
+        txtMantenimientoServicioEspacio.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
         txtMantenimientoServicioEspacio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtMantenimientoServicioEspacioActionPerformed(evt);
             }
         });
 
+        txtMantenimientoServicioConsumo.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+
+        txtMantenimientoServicioEmpleado.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+
         jLabel90.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel90.setForeground(new java.awt.Color(51, 51, 51));
         jLabel90.setText("TOTALES");
 
         txtTotalHoraHombre.setEditable(false);
+        txtTotalHoraHombre.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
 
         txtTotalEspacio.setEditable(false);
+        txtTotalEspacio.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
         txtTotalEspacio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtTotalEspacioActionPerformed(evt);
@@ -2339,8 +2482,10 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
         });
 
         txtTotalConsumo.setEditable(false);
+        txtTotalConsumo.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
 
         txtTotalEmpleado.setEditable(false);
+        txtTotalEmpleado.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
 
         javax.swing.GroupLayout jPanel18Layout = new javax.swing.GroupLayout(jPanel18);
         jPanel18.setLayout(jPanel18Layout);
@@ -2546,7 +2691,7 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
         jPanel9Layout.setHorizontalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel9Layout.createSequentialGroup()
-                .addGap(45, 45, 45)
+                .addGap(20, 20, 20)
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel9Layout.createSequentialGroup()
                         .addComponent(btnGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2569,7 +2714,7 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
                         .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(btnGuardar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(btnLimpia, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE))))
-                .addContainerGap(363, Short.MAX_VALUE))
+                .addContainerGap(291, Short.MAX_VALUE))
         );
 
         jScrollPane5.setViewportView(jPanel9);
@@ -3917,10 +4062,10 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(contenedorPestañas, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(contenedorPestañas, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 823, Short.MAX_VALUE)
         );
 
-        setSize(new java.awt.Dimension(1199, 791));
+        setSize(new java.awt.Dimension(1199, 831));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -4528,7 +4673,7 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
         DecimalFormat df = new DecimalFormat("#.00");
         //Colocando todos los valores calculados en los textbox
         txtSalarioSupAnalisisProductivo.setText(""+ df.format(salarioSup_Analisis));
-        txtSalarioSupDisenoProductivo.setText(""+ salarioSup_Diseno);
+        txtSalarioSupDisenoProductivo.setText(""+ df.format(salarioSup_Diseno));
         txtSalarioSupDesarrolloProductivo.setText(""+ salarioSup_Desarrollo);
         txtSalarioSupPruebaProductivo.setText(""+ salarioSup_Prueba);
         txtSalarioSupMantenimientoProductivo.setText(""+ salarioSup_Mantenimiento);
@@ -4893,6 +5038,7 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
     private javax.swing.JPanel jPanel30;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
