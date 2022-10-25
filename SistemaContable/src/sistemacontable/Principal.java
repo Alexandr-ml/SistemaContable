@@ -775,7 +775,7 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
         jScrollPane1.setViewportView(lstCuentasDisponibles);
 
         btnAnadirCuenta.setText("Añadir cuentas");
-        btnAnadirCuenta.setBorder(javax.swing.BorderFactory.createCompoundBorder(null, new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        btnAnadirCuenta.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
         btnAnadirCuenta.setEnabled(false);
         btnAnadirCuenta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -784,7 +784,7 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
         });
 
         btnModificarCuenta.setText("Modificar cuenta");
-        btnModificarCuenta.setBorder(javax.swing.BorderFactory.createCompoundBorder(null, new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        btnModificarCuenta.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
         btnModificarCuenta.setEnabled(false);
         btnModificarCuenta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -818,7 +818,7 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
         });
 
         btnOlvidarSeleccionCuenta.setText("Olvidar selección");
-        btnOlvidarSeleccionCuenta.setBorder(javax.swing.BorderFactory.createCompoundBorder(null, new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        btnOlvidarSeleccionCuenta.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
         btnOlvidarSeleccionCuenta.setEnabled(false);
         btnOlvidarSeleccionCuenta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -832,41 +832,43 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(16, 16, 16)
-                .addComponent(btnAbrirArchivo, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(btnCrearNuevoArchivoInfc, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(103, 103, 103)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel51, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnAnadirCuenta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(jPanel1Layout.createSequentialGroup()
-                                    .addGap(18, 18, 18)
-                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(txtNombreCuenta)
-                                        .addComponent(cmbSeleccionarCuenta, 0, 107, Short.MAX_VALUE)))
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                    .addGap(30, 30, 30)
-                                    .addComponent(txtCodigoCuenta, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(18, 18, 18)
-                                .addComponent(btnOlvidarSeleccionCuenta, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addComponent(btnModificarCuenta, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(68, 68, 68)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 281, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(133, Short.MAX_VALUE))
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel51, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btnAnadirCuenta, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jPanel1Layout.createSequentialGroup()
+                                            .addGap(18, 18, 18)
+                                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                .addComponent(txtNombreCuenta)
+                                                .addComponent(cmbSeleccionarCuenta, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                            .addGap(30, 30, 30)
+                                            .addComponent(txtCodigoCuenta, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGap(18, 18, 18)
+                                        .addComponent(btnOlvidarSeleccionCuenta, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(btnModificarCuenta, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(68, 68, 68)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 281, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(btnAbrirArchivo, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(32, 32, 32)
+                        .addComponent(btnCrearNuevoArchivoInfc, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(559, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(13, 13, 13)
+                .addGap(42, 42, 42)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(txtNombreCuenta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -875,11 +877,7 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 409, Short.MAX_VALUE)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btnCrearNuevoArchivoInfc, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnAbrirArchivo, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(157, 157, 157))
+                        .addGap(13, 13, 13))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel51)
@@ -893,12 +891,18 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
                             .addComponent(btnAnadirCuenta, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnOlvidarSeleccionCuenta, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnModificarCuenta, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addComponent(btnModificarCuenta, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(152, 152, 152)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnAbrirArchivo, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnCrearNuevoArchivoInfc, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(403, Short.MAX_VALUE))
         );
 
         contenedorPestañas.addTab("Cuentas", jPanel1);
 
+        jLabel4.setBackground(new java.awt.Color(204, 204, 204));
+        jLabel4.setForeground(new java.awt.Color(51, 51, 51));
         jLabel4.setText("Transacciones:");
 
         tablaLibroDiario.setBackground(new java.awt.Color(153, 153, 153));
@@ -1052,7 +1056,11 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
         });
         jScrollPane3.setViewportView(tablaBalanzaComprobacion);
 
+        btnGenerarBalanzaComprobacion.setBackground(new java.awt.Color(204, 204, 204));
+        btnGenerarBalanzaComprobacion.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        btnGenerarBalanzaComprobacion.setForeground(new java.awt.Color(51, 51, 51));
         btnGenerarBalanzaComprobacion.setText("Generar balanza de comprobación.");
+        btnGenerarBalanzaComprobacion.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
         btnGenerarBalanzaComprobacion.setEnabled(false);
         btnGenerarBalanzaComprobacion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1079,8 +1087,8 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jScrollPane3)
                             .addGroup(jPanel4Layout.createSequentialGroup()
-                                .addComponent(btnGenerarBalanzaComprobacion)
-                                .addGap(18, 18, 18)
+                                .addComponent(btnGenerarBalanzaComprobacion, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(lblInforBalanzaComprobacion)
                                 .addGap(0, 0, Short.MAX_VALUE))))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
@@ -1106,9 +1114,9 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
                         .addComponent(txtDebe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(20, 20, 20)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnGenerarBalanzaComprobacion)
+                    .addComponent(btnGenerarBalanzaComprobacion, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblInforBalanzaComprobacion))
-                .addContainerGap(331, Short.MAX_VALUE))
+                .addContainerGap(319, Short.MAX_VALUE))
         );
 
         contenedorPestañas.addTab("Balance comprobación", jPanel4);
@@ -1143,10 +1151,11 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel6.setText("Utilidades o perdidas:");
 
-        btnGenerarEstadoResultado.setBackground(new java.awt.Color(153, 153, 153));
+        btnGenerarEstadoResultado.setBackground(new java.awt.Color(204, 204, 204));
         btnGenerarEstadoResultado.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         btnGenerarEstadoResultado.setForeground(new java.awt.Color(51, 51, 51));
         btnGenerarEstadoResultado.setText("Generar estado resultado.");
+        btnGenerarEstadoResultado.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
         btnGenerarEstadoResultado.setEnabled(false);
         btnGenerarEstadoResultado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1156,10 +1165,11 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
 
         lblResultadoGastosVsIngresos.setText("a");
 
-        btnCalculoUtilidadesPerdidas.setBackground(new java.awt.Color(153, 153, 153));
+        btnCalculoUtilidadesPerdidas.setBackground(new java.awt.Color(204, 204, 204));
         btnCalculoUtilidadesPerdidas.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         btnCalculoUtilidadesPerdidas.setForeground(new java.awt.Color(51, 51, 51));
         btnCalculoUtilidadesPerdidas.setText("Calcular utilidades o perdidas");
+        btnCalculoUtilidadesPerdidas.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
         btnCalculoUtilidadesPerdidas.setEnabled(false);
 
         lblInfoEstadoResultado.setForeground(new java.awt.Color(255, 0, 0));
@@ -1174,8 +1184,8 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addGroup(jPanel5Layout.createSequentialGroup()
-                            .addComponent(btnGenerarEstadoResultado)
-                            .addGap(18, 18, 18)
+                            .addComponent(btnGenerarEstadoResultado, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                             .addComponent(btnCalculoUtilidadesPerdidas)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1211,19 +1221,28 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
         jPanel28.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 204, 255)));
         jPanel28.setForeground(new java.awt.Color(255, 255, 255));
 
+        jLabel146.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel146.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel146.setText("Mano de obra real:");
 
+        jLabel147.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel147.setText("Costos indirectos de fabricacion:");
 
+        jLabel148.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel148.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel148.setText("Costo Total:");
 
+        jButton4.setBackground(new java.awt.Color(204, 204, 204));
         jButton4.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
+        jButton4.setForeground(new java.awt.Color(51, 51, 51));
         jButton4.setText("CALCULAR COSTO TOTAL");
+        jButton4.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
 
+        jButton5.setBackground(new java.awt.Color(204, 204, 204));
         jButton5.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
+        jButton5.setForeground(new java.awt.Color(51, 51, 51));
         jButton5.setText("LIMPIAR");
+        jButton5.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
 
         javax.swing.GroupLayout jPanel28Layout = new javax.swing.GroupLayout(jPanel28);
         jPanel28.setLayout(jPanel28Layout);
@@ -1236,7 +1255,7 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
                         .addComponent(jLabel148, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel147, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addComponent(jLabel146, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(txtCIF, javax.swing.GroupLayout.DEFAULT_SIZE, 123, Short.MAX_VALUE)
                     .addComponent(txtManoDeObra)
@@ -1285,7 +1304,7 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
                     .addGroup(jPanel27Layout.createSequentialGroup()
                         .addGap(231, 231, 231)
                         .addComponent(jLabel149)))
-                .addContainerGap(524, Short.MAX_VALUE))
+                .addContainerGap(523, Short.MAX_VALUE))
         );
         jPanel27Layout.setVerticalGroup(
             jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1430,7 +1449,7 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
                         .addContainerGap())))
         );
 
-        jPanel19.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel19.setBackground(new java.awt.Color(204, 204, 204));
         jPanel19.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 204, 255)));
         jPanel19.setForeground(new java.awt.Color(51, 204, 255));
 
@@ -1626,7 +1645,7 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
 
         jLabel45.setText("FACTOR DE RECARGO DIA, HORA, SEMANA");
 
-        jPanel25.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel25.setBackground(new java.awt.Color(204, 204, 204));
         jPanel25.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 204, 255)));
 
         jLabel46.setText("FACTOR DE RECARGO");
@@ -1768,6 +1787,7 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
         btnCalcularManoDeObra.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
         btnCalcularManoDeObra.setForeground(new java.awt.Color(51, 51, 51));
         btnCalcularManoDeObra.setText("CALCULAR MANO DE OBRA REAL");
+        btnCalcularManoDeObra.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
         btnCalcularManoDeObra.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCalcularManoDeObraActionPerformed(evt);
@@ -1778,6 +1798,7 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
         btnLimpiar.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
         btnLimpiar.setForeground(new java.awt.Color(51, 51, 51));
         btnLimpiar.setText("LIMPIAR");
+        btnLimpiar.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
 
         jLabel77.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel77.setText("SALARIO:");
@@ -1944,7 +1965,7 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
                         .addComponent(jLabel76)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jPanel25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(160, 160, 160))
+                .addGap(130, 130, 130))
         );
 
         jScrollPane8.setViewportView(jPanel14);
@@ -2195,10 +2216,13 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
         btnLimpia.setBackground(new java.awt.Color(204, 204, 204));
         btnLimpia.setForeground(new java.awt.Color(51, 51, 51));
         btnLimpia.setText("LIMPIAR");
+        btnLimpia.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
 
         btnGuardar.setBackground(new java.awt.Color(204, 204, 204));
+        btnGuardar.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         btnGuardar.setForeground(new java.awt.Color(51, 51, 51));
         btnGuardar.setText("GUARDAR");
+        btnGuardar.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
         btnGuardar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnGuardarActionPerformed(evt);
@@ -2506,7 +2530,7 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
                     .addComponent(txtMantenimientoServicioConsumo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtMantenimientoServicioEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtMantenimientoServicioHora, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
                 .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel90, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -2525,9 +2549,9 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
                 .addGap(45, 45, 45)
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel9Layout.createSequentialGroup()
-                        .addComponent(btnGuardar)
+                        .addComponent(btnGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnLimpia))
+                        .addComponent(btnLimpia, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jPanel30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jPanel18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2537,14 +2561,14 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel9Layout.createSequentialGroup()
                 .addGap(22, 22, 22)
-                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel9Layout.createSequentialGroup()
                         .addComponent(jPanel30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btnGuardar)
-                            .addComponent(btnLimpia))))
+                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(btnGuardar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnLimpia, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE))))
                 .addContainerGap(363, Short.MAX_VALUE))
         );
 
