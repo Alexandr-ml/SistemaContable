@@ -904,7 +904,7 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
                 .addContainerGap(387, Short.MAX_VALUE))
         );
 
-        contenedorPestañas.addTab("Cuentas", new javax.swing.ImageIcon("F:\\GitHub\\SistemaContable\\img\\recibo.png"), jPanel1); // NOI18N
+        contenedorPestañas.addTab("Cuentas", new javax.swing.ImageIcon(getClass().getResource("/img/recibo.png")), jPanel1); // NOI18N
 
         jLabel4.setBackground(new java.awt.Color(204, 204, 204));
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -970,7 +970,7 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
                 .addContainerGap(422, Short.MAX_VALUE))
         );
 
-        contenedorPestañas.addTab("Libro diario", new javax.swing.ImageIcon("F:\\GitHub\\SistemaContable\\img\\libro.png"), jPanel2); // NOI18N
+        contenedorPestañas.addTab("Libro diario", new javax.swing.ImageIcon(getClass().getResource("/img/libro.png")), jPanel2); // NOI18N
 
         tablaLibroMayor.setBackground(new java.awt.Color(153, 153, 153));
         tablaLibroMayor.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
@@ -1026,7 +1026,7 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
                 .addContainerGap(322, Short.MAX_VALUE))
         );
 
-        contenedorPestañas.addTab("Libro mayor", new javax.swing.ImageIcon("F:\\GitHub\\SistemaContable\\img\\libros.png"), jPanel3); // NOI18N
+        contenedorPestañas.addTab("Libro mayor", new javax.swing.ImageIcon(getClass().getResource("/img/libros.png")), jPanel3); // NOI18N
 
         tablaBalanzaComprobacion.setBackground(new java.awt.Color(153, 153, 153));
         tablaBalanzaComprobacion.setForeground(new java.awt.Color(51, 51, 51));
@@ -1120,7 +1120,7 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
                 .addContainerGap(328, Short.MAX_VALUE))
         );
 
-        contenedorPestañas.addTab("Balance comprobación", new javax.swing.ImageIcon("F:\\GitHub\\SistemaContable\\img\\hora.png"), jPanel4); // NOI18N
+        contenedorPestañas.addTab("Balance comprobación", new javax.swing.ImageIcon(getClass().getResource("/img/hora.png")), jPanel4); // NOI18N
 
         tablaEstadoResultado.setBackground(new java.awt.Color(153, 153, 153));
         tablaEstadoResultado.setForeground(new java.awt.Color(51, 51, 51));
@@ -1221,7 +1221,7 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
                 .addGap(394, 394, 394))
         );
 
-        contenedorPestañas.addTab("Estado de resultado", new javax.swing.ImageIcon("F:\\GitHub\\SistemaContable\\img\\resultados.png"), jPanel5); // NOI18N
+        contenedorPestañas.addTab("Estado de resultado", new javax.swing.ImageIcon(getClass().getResource("/img/resultados.png")), jPanel5); // NOI18N
 
         jPanel28.setBackground(new java.awt.Color(255, 255, 255));
         jPanel28.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 204, 255)));
@@ -1328,7 +1328,7 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
                 .addContainerGap(558, Short.MAX_VALUE))
         );
 
-        contenedorPestañas.addTab("Costo total", new javax.swing.ImageIcon("F:\\GitHub\\SistemaContable\\img\\presupuesto.png"), jPanel27); // NOI18N
+        contenedorPestañas.addTab("Costo total", new javax.swing.ImageIcon(getClass().getResource("/img/presupuesto.png")), jPanel27); // NOI18N
 
         jLabel26.setText("COSTO REAL DE MANO DE OBRA DE LOS EMPLEADOS");
 
@@ -4047,7 +4047,7 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
 
         jScrollPane7.setViewportView(jPanel20);
 
-        contenedorPestañas.addTab("Calculos CIF", new javax.swing.ImageIcon("F:\\GitHub\\SistemaContable\\img\\calculadora.png"), jScrollPane7); // NOI18N
+        contenedorPestañas.addTab("Calculos CIF", new javax.swing.ImageIcon(getClass().getResource("/img/calculadora.png")), jScrollPane7); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
