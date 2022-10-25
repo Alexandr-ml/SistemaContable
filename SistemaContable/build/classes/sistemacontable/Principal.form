@@ -73,7 +73,7 @@
               <JTabbedPaneConstraints tabName="Cuentas">
                 <Property name="tabTitle" type="java.lang.String" value="Cuentas"/>
                 <Property name="tabIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="F:\GitHub\SistemaContable\SistemaContable\img\recibo.png"/>
+                  <Image iconType="3" name="/img/recibo.png"/>
                 </Property>
               </JTabbedPaneConstraints>
             </Constraint>
@@ -402,7 +402,7 @@
               <JTabbedPaneConstraints tabName="Libro diario">
                 <Property name="tabTitle" type="java.lang.String" value="Libro diario"/>
                 <Property name="tabIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="F:\GitHub\SistemaContable\SistemaContable\img\libro.png"/>
+                  <Image iconType="3" name="/img/libro.png"/>
                 </Property>
               </JTabbedPaneConstraints>
             </Constraint>
@@ -549,7 +549,7 @@
               <JTabbedPaneConstraints tabName="Libro mayor">
                 <Property name="tabTitle" type="java.lang.String" value="Libro mayor"/>
                 <Property name="tabIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="F:\GitHub\SistemaContable\SistemaContable\img\libros.png"/>
+                  <Image iconType="3" name="/img/libros.png"/>
                 </Property>
               </JTabbedPaneConstraints>
             </Constraint>
@@ -696,7 +696,7 @@
               <JTabbedPaneConstraints tabName="Balance comprobaci&#xf3;n">
                 <Property name="tabTitle" type="java.lang.String" value="Balance comprobaci&#xf3;n"/>
                 <Property name="tabIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="F:\GitHub\SistemaContable\SistemaContable\img\hora.png"/>
+                  <Image iconType="3" name="/img/hora.png"/>
                 </Property>
               </JTabbedPaneConstraints>
             </Constraint>
@@ -893,7 +893,7 @@
               <JTabbedPaneConstraints tabName="Estado de resultado">
                 <Property name="tabTitle" type="java.lang.String" value="Estado de resultado"/>
                 <Property name="tabIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="F:\GitHub\SistemaContable\SistemaContable\img\resultados.png"/>
+                  <Image iconType="3" name="/img/resultados.png"/>
                 </Property>
               </JTabbedPaneConstraints>
             </Constraint>
@@ -1119,7 +1119,7 @@
               <JTabbedPaneConstraints tabName="Costo total">
                 <Property name="tabTitle" type="java.lang.String" value="Costo total"/>
                 <Property name="tabIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="F:\GitHub\SistemaContable\SistemaContable\img\presupuesto.png"/>
+                  <Image iconType="3" name="/img/presupuesto.png"/>
                 </Property>
               </JTabbedPaneConstraints>
             </Constraint>
@@ -4430,7 +4430,7 @@
               <JTabbedPaneConstraints tabName="Calculos CIF">
                 <Property name="tabTitle" type="java.lang.String" value="Calculos CIF"/>
                 <Property name="tabIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="F:\GitHub\SistemaContable\SistemaContable\img\calculadora.png"/>
+                  <Image iconType="3" name="/img/calculadora.png"/>
                 </Property>
               </JTabbedPaneConstraints>
             </Constraint>
