@@ -970,7 +970,7 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
                     .addComponent(btnAnadirTransaccion, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 287, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(422, Short.MAX_VALUE))
+                .addContainerGap(411, Short.MAX_VALUE))
         );
 
         contenedorPestañas.addTab("Libro diario", new javax.swing.ImageIcon(getClass().getResource("/img/libro.png")), jPanel2); // NOI18N
@@ -1026,7 +1026,7 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
                 .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 344, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(31, 31, 31)
                 .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(322, Short.MAX_VALUE))
+                .addContainerGap(311, Short.MAX_VALUE))
         );
 
         contenedorPestañas.addTab("Libro mayor", new javax.swing.ImageIcon(getClass().getResource("/img/libros.png")), jPanel3); // NOI18N
@@ -1120,7 +1120,7 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnGenerarBalanzaComprobacion, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblInforBalanzaComprobacion))
-                .addContainerGap(328, Short.MAX_VALUE))
+                .addContainerGap(317, Short.MAX_VALUE))
         );
 
         contenedorPestañas.addTab("Balance comprobación", new javax.swing.ImageIcon(getClass().getResource("/img/hora.png")), jPanel4); // NOI18N
@@ -1260,6 +1260,11 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
         jButton5.setForeground(new java.awt.Color(51, 51, 51));
         jButton5.setText("LIMPIAR");
         jButton5.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel28Layout = new javax.swing.GroupLayout(jPanel28);
         jPanel28.setLayout(jPanel28Layout);
@@ -1330,7 +1335,7 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
                 .addComponent(jLabel149)
                 .addGap(18, 18, 18)
                 .addComponent(jPanel28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(558, Short.MAX_VALUE))
+                .addContainerGap(547, Short.MAX_VALUE))
         );
 
         contenedorPestañas.addTab("Costo total", new javax.swing.ImageIcon(getClass().getResource("/img/presupuesto.png")), jPanel27); // NOI18N
@@ -1835,6 +1840,11 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
         btnLimpiar.setForeground(new java.awt.Color(51, 51, 51));
         btnLimpiar.setText("LIMPIAR");
         btnLimpiar.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        btnLimpiar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLimpiarActionPerformed(evt);
+            }
+        });
 
         jLabel77.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel77.setText("SALARIO:");
@@ -2297,6 +2307,11 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
         btnLimpia.setForeground(new java.awt.Color(51, 51, 51));
         btnLimpia.setText("LIMPIAR");
         btnLimpia.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        btnLimpia.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLimpiaActionPerformed(evt);
+            }
+        });
 
         btnGuardar.setBackground(new java.awt.Color(204, 204, 204));
         btnGuardar.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -4064,7 +4079,10 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(contenedorPestañas, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 823, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(contenedorPestañas, javax.swing.GroupLayout.DEFAULT_SIZE, 812, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         setSize(new java.awt.Dimension(1199, 831));
@@ -4851,6 +4869,21 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
         txtUtilidadesPerdidas.setText(String.valueOf(GastosVsIngresos));
         lblResultadoGastosVsIngresos.setText(utilidadVsPerdida);
     }//GEN-LAST:event_btnCalculoUtilidadesPerdidasActionPerformed
+
+    private void btnLimpiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiaActionPerformed
+      
+        
+
+    }//GEN-LAST:event_btnLimpiaActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void btnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarActionPerformed
+
+
+    }//GEN-LAST:event_btnLimpiarActionPerformed
 
     //metodos utilitarios
     public void limpiarTxtPestañaCuentas(){
