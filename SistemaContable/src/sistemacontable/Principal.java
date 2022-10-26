@@ -349,17 +349,6 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
         lblResultadoGastosVsIngresos = new javax.swing.JLabel();
         btnCalculoUtilidadesPerdidas = new javax.swing.JButton();
         lblInfoEstadoResultado = new javax.swing.JLabel();
-        jPanel27 = new javax.swing.JPanel();
-        jPanel28 = new javax.swing.JPanel();
-        jLabel146 = new javax.swing.JLabel();
-        jLabel147 = new javax.swing.JLabel();
-        jLabel148 = new javax.swing.JLabel();
-        txtManoDeObra = new javax.swing.JTextField();
-        txtCostoTotal = new javax.swing.JTextField();
-        txtCIF = new javax.swing.JTextField();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jLabel149 = new javax.swing.JLabel();
         jScrollPane8 = new javax.swing.JScrollPane();
         jPanel14 = new javax.swing.JPanel();
         jLabel26 = new javax.swing.JLabel();
@@ -751,6 +740,17 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
         txtTotalTotal = new javax.swing.JTextField();
         txtTotalVInfraestructura = new javax.swing.JTextField();
         txtTotalVMantenimientoSoft = new javax.swing.JTextField();
+        jPanel27 = new javax.swing.JPanel();
+        jPanel28 = new javax.swing.JPanel();
+        jLabel146 = new javax.swing.JLabel();
+        jLabel147 = new javax.swing.JLabel();
+        jLabel148 = new javax.swing.JLabel();
+        txtManoDeObra = new javax.swing.JTextField();
+        txtCostoTotal = new javax.swing.JTextField();
+        txtCIF = new javax.swing.JTextField();
+        jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        jLabel149 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("ShieldSystem's Sistema Contable");
@@ -873,7 +873,7 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
                         .addComponent(btnAbrirArchivo, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(32, 32, 32)
                         .addComponent(btnCrearNuevoArchivoInfc, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(559, Short.MAX_VALUE))
+                .addContainerGap(1057, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -959,7 +959,7 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btnAnadirTransaccion, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 811, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(111, 349, Short.MAX_VALUE))
+                .addGap(111, 847, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -970,7 +970,7 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
                     .addComponent(btnAnadirTransaccion, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 287, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(411, Short.MAX_VALUE))
+                .addContainerGap(410, Short.MAX_VALUE))
         );
 
         contenedorPestañas.addTab("Libro diario", new javax.swing.ImageIcon(getClass().getResource("/img/libro.png")), jPanel2); // NOI18N
@@ -1013,7 +1013,7 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addContainerGap(33, Short.MAX_VALUE)
+                .addContainerGap(531, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 804, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -1026,7 +1026,7 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
                 .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 344, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(31, 31, 31)
                 .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(311, Short.MAX_VALUE))
+                .addContainerGap(310, Short.MAX_VALUE))
         );
 
         contenedorPestañas.addTab("Libro mayor", new javax.swing.ImageIcon(getClass().getResource("/img/libros.png")), jPanel3); // NOI18N
@@ -1098,7 +1098,7 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                         .addGap(160, 160, 160)
                         .addComponent(jLabel7)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 443, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 941, Short.MAX_VALUE)
                         .addComponent(txtDebe, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(83, 83, 83)
                         .addComponent(txtHaber, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1120,7 +1120,7 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnGenerarBalanzaComprobacion, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblInforBalanzaComprobacion))
-                .addContainerGap(317, Short.MAX_VALUE))
+                .addContainerGap(316, Short.MAX_VALUE))
         );
 
         contenedorPestañas.addTab("Balance comprobación", new javax.swing.ImageIcon(getClass().getResource("/img/hora.png")), jPanel4); // NOI18N
@@ -1206,7 +1206,7 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
                             .addComponent(lblResultadoGastosVsIngresos, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 981, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(lblInfoEstadoResultado))
-                .addContainerGap(190, Short.MAX_VALUE))
+                .addContainerGap(688, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1227,118 +1227,6 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
         );
 
         contenedorPestañas.addTab("Estado de resultado", new javax.swing.ImageIcon(getClass().getResource("/img/resultados.png")), jPanel5); // NOI18N
-
-        jPanel28.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel28.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 204, 255)));
-        jPanel28.setForeground(new java.awt.Color(255, 255, 255));
-
-        jLabel146.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel146.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel146.setText("Mano de obra real:");
-
-        jLabel147.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel147.setText("Costos indirectos de fabricacion:");
-
-        jLabel148.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel148.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel148.setText("Costo Total:");
-
-        txtManoDeObra.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-
-        txtCostoTotal.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-
-        txtCIF.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-
-        jButton4.setBackground(new java.awt.Color(204, 204, 204));
-        jButton4.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(51, 51, 51));
-        jButton4.setText("CALCULAR COSTO TOTAL");
-        jButton4.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-
-        jButton5.setBackground(new java.awt.Color(204, 204, 204));
-        jButton5.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(51, 51, 51));
-        jButton5.setText("LIMPIAR");
-        jButton5.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel28Layout = new javax.swing.GroupLayout(jPanel28);
-        jPanel28.setLayout(jPanel28Layout);
-        jPanel28Layout.setHorizontalGroup(
-            jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel28Layout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addGroup(jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(jLabel148, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel147, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(jLabel146, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(txtCIF, javax.swing.GroupLayout.DEFAULT_SIZE, 123, Short.MAX_VALUE)
-                    .addComponent(txtManoDeObra)
-                    .addComponent(txtCostoTotal))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 74, Short.MAX_VALUE)
-                .addGroup(jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(30, 30, 30))
-        );
-        jPanel28Layout.setVerticalGroup(
-            jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel28Layout.createSequentialGroup()
-                .addGroup(jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel28Layout.createSequentialGroup()
-                        .addGap(38, 38, 38)
-                        .addGroup(jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel146)
-                            .addComponent(txtManoDeObra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel147)
-                            .addComponent(txtCIF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel28Layout.createSequentialGroup()
-                        .addGap(29, 29, 29)
-                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel148)
-                    .addComponent(txtCostoTotal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        jLabel149.setText("COSTO TOTAL");
-
-        javax.swing.GroupLayout jPanel27Layout = new javax.swing.GroupLayout(jPanel27);
-        jPanel27.setLayout(jPanel27Layout);
-        jPanel27Layout.setHorizontalGroup(
-            jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel27Layout.createSequentialGroup()
-                .addGroup(jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel27Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jPanel28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel27Layout.createSequentialGroup()
-                        .addGap(231, 231, 231)
-                        .addComponent(jLabel149)))
-                .addContainerGap(523, Short.MAX_VALUE))
-        );
-        jPanel27Layout.setVerticalGroup(
-            jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel27Layout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addComponent(jLabel149)
-                .addGap(18, 18, 18)
-                .addComponent(jPanel28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(547, Short.MAX_VALUE))
-        );
-
-        contenedorPestañas.addTab("Costo total", new javax.swing.ImageIcon(getClass().getResource("/img/presupuesto.png")), jPanel27); // NOI18N
 
         jLabel26.setText("COSTO REAL DE MANO DE OBRA DE LOS EMPLEADOS");
 
@@ -1847,7 +1735,7 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
         });
 
         jLabel77.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel77.setText("SALARIO:");
+        jLabel77.setText("SALARIO DIARIO:");
 
         jLabel78.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel78.setText("HORAS TRABAJADAS AL DIA:");
@@ -2030,12 +1918,11 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
                         .addComponent(jLabel76)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jPanel25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(130, 130, 130))
+                .addGap(157, 157, 157))
         );
 
         jScrollPane8.setViewportView(jPanel14);
         jPanel14.getAccessibleContext().setAccessibleName("");
-        jPanel14.getAccessibleContext().setAccessibleParent(jPanel28);
 
         contenedorPestañas.addTab("Mano de obra", jScrollPane8);
 
@@ -4069,13 +3956,131 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
 
         contenedorPestañas.addTab("Calculos CIF", new javax.swing.ImageIcon(getClass().getResource("/img/calculadora.png")), jScrollPane7); // NOI18N
 
+        jPanel28.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel28.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 204, 255)));
+        jPanel28.setForeground(new java.awt.Color(255, 255, 255));
+
+        jLabel146.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel146.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel146.setText("Mano de obra real:");
+
+        jLabel147.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel147.setText("Costos indirectos de fabricacion:");
+
+        jLabel148.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel148.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel148.setText("Costo Total:");
+
+        txtManoDeObra.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+
+        txtCostoTotal.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+
+        txtCIF.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+
+        jButton4.setBackground(new java.awt.Color(204, 204, 204));
+        jButton4.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
+        jButton4.setForeground(new java.awt.Color(51, 51, 51));
+        jButton4.setText("CALCULAR COSTO TOTAL");
+        jButton4.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+
+        jButton5.setBackground(new java.awt.Color(204, 204, 204));
+        jButton5.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
+        jButton5.setForeground(new java.awt.Color(51, 51, 51));
+        jButton5.setText("LIMPIAR");
+        jButton5.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel28Layout = new javax.swing.GroupLayout(jPanel28);
+        jPanel28.setLayout(jPanel28Layout);
+        jPanel28Layout.setHorizontalGroup(
+            jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel28Layout.createSequentialGroup()
+                .addGap(18, 18, 18)
+                .addGroup(jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(jLabel148, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel147, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jLabel146, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(txtCIF, javax.swing.GroupLayout.DEFAULT_SIZE, 123, Short.MAX_VALUE)
+                    .addComponent(txtManoDeObra)
+                    .addComponent(txtCostoTotal))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 74, Short.MAX_VALUE)
+                .addGroup(jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(30, 30, 30))
+        );
+        jPanel28Layout.setVerticalGroup(
+            jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel28Layout.createSequentialGroup()
+                .addGroup(jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel28Layout.createSequentialGroup()
+                        .addGap(38, 38, 38)
+                        .addGroup(jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel146)
+                            .addComponent(txtManoDeObra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel147)
+                            .addComponent(txtCIF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel28Layout.createSequentialGroup()
+                        .addGap(29, 29, 29)
+                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel148)
+                    .addComponent(txtCostoTotal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jLabel149.setText("COSTO TOTAL");
+
+        javax.swing.GroupLayout jPanel27Layout = new javax.swing.GroupLayout(jPanel27);
+        jPanel27.setLayout(jPanel27Layout);
+        jPanel27Layout.setHorizontalGroup(
+            jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel27Layout.createSequentialGroup()
+                .addGroup(jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel27Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jPanel28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel27Layout.createSequentialGroup()
+                        .addGap(231, 231, 231)
+                        .addComponent(jLabel149)))
+                .addContainerGap(1021, Short.MAX_VALUE))
+        );
+        jPanel27Layout.setVerticalGroup(
+            jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel27Layout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addComponent(jLabel149)
+                .addGap(18, 18, 18)
+                .addComponent(jPanel28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(546, Short.MAX_VALUE))
+        );
+
+        contenedorPestañas.addTab("Costo total", new javax.swing.ImageIcon(getClass().getResource("/img/presupuesto.png")), jPanel27); // NOI18N
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(contenedorPestañas, javax.swing.GroupLayout.PREFERRED_SIZE, 1177, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(contenedorPestañas, javax.swing.GroupLayout.PREFERRED_SIZE, 1675, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -4085,7 +4090,7 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
                 .addContainerGap())
         );
 
-        setSize(new java.awt.Dimension(1199, 831));
+        setSize(new java.awt.Dimension(1674, 831));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -4103,9 +4108,10 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
     private void txtHorasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtHorasActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtHorasActionPerformed
-
+    double valorTotalManoObra, totalCif;
     private void btnCalcularManoDeObraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcularManoDeObraActionPerformed
         //Se obtienen los datos introducidos en los textbox
+        DecimalFormat df = new DecimalFormat("#.00");
         double salario;
         int horasTrabajadas, diasAguinaldo, diasVacacion, diasTrabajados;
         float recargoVacacion, recargoSeguro, recargoAFP, eficienciaEmpleado, recargoINSAFORP;
@@ -4138,6 +4144,7 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
         afp = (septimoDia + vacacion)*(convierte(recargoAFP));
         insaforp = (septimoDia + vacacion)*(convierte(recargoINSAFORP));
         total = septimoDia + vacacion + aguinaldo + salud + afp + insaforp;
+        valorTotalManoObra = total;
         totalDia = total/5;
         totalHora = totalDia/8;
 
@@ -4170,39 +4177,39 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
         factorSalarioSemanaE = totalSemanaSE/factorSemanaE;
 
         //Impresion en los txtBox de la primera tabla
-        txtVacacion2.setText(""+vacacion);
-        txtSeptimo2.setText(""+septimoDia);
-        txtAguinaldo2.setText(""+aguinaldo);
-        txtSalud.setText(""+ salud);
-        txtAFP.setText(""+afp);
-        txtINSAFORP.setText(""+insaforp);
-        txtTotal.setText(""+total);
-        txtTotalDia.setText(""+totalDia);
-        txtTotalHora.setText(""+totalHora);
+        txtVacacion2.setText(""+df.format(vacacion));
+        txtSeptimo2.setText(""+df.format(septimoDia));
+        txtAguinaldo2.setText(""+df.format(aguinaldo));
+        txtSalud.setText(""+ df.format(salud));
+        txtAFP.setText(""+df.format(afp));
+        txtINSAFORP.setText(""+df.format(insaforp));
+        txtTotal.setText(df.format(total));
+        txtTotalDia.setText(""+df.format(totalDia));
+        txtTotalHora.setText(""+df.format(totalHora));
 
         //Impresion en los txtBox de la tabla SIN EFICIENCIA
-        txtFactorDia.setText("" + factorDia);
-        txtFactorHora.setText("" + factorHora);
-        txtFactorSemana.setText("" + factorSemana);
-        txtSalarioDia.setText("" + factorSalarioDia);
-        txtSalarioHora.setText("" + factorSalarioHora);
-        txtSalarioSemana.setText("" + factorSalarioSemana);
-        txtDia.setText("" + totalDiaS);
-        txtHora.setText("" + totalHoraS);
-        txtSemana.setText("" + totalSemanaS);
+        txtFactorDia.setText("" + df.format(factorDia));
+        txtFactorHora.setText("" + df.format(factorHora));
+        txtFactorSemana.setText("" + df.format(factorSemana));
+        txtSalarioDia.setText("" + df.format(factorSalarioDia));
+        txtSalarioHora.setText("" + df.format(factorSalarioHora));
+        txtSalarioSemana.setText("" + df.format(factorSalarioSemana));
+        txtDia.setText("" + df.format(totalDiaS));
+        txtHora.setText("" +df.format( totalHoraS));
+        txtSemana.setText("" + df.format(totalSemanaS));
 
         //Impresion de los txtBox en la tabal CON EFICIENCIA
-        txtFactorDiaEficiencia.setText("" + factorDiaE);
-        txtFactorHoraEficiencia.setText("" + factorHoraE);
-        txtFactorSemanaEficiencia.setText("" + factorSemanaE);
-        txtSalarioDiaEficiencia.setText("" + factorSalarioDiaE);
-        txtSalarioHoraEficiencia.setText("" + factorSalarioHoraE);
-        txtSalarioSemanaEficiencia.setText("" + factorSalarioSemanaE);
-        txtDiaEficiencia.setText("" + totalDiaSE);
-        txtHoraEficiencia.setText("" + totalHoraSE);
-        txtSemanaEficiencia.setText("" + totalSemanaSE);
+        txtFactorDiaEficiencia.setText("" +df.format(factorDiaE));
+        txtFactorHoraEficiencia.setText("" + df.format(factorHoraE));
+        txtFactorSemanaEficiencia.setText("" +df.format( factorSemanaE));
+        txtSalarioDiaEficiencia.setText("" + df.format(factorSalarioDiaE));
+        txtSalarioHoraEficiencia.setText("" + df.format(factorSalarioHoraE));
+        txtSalarioSemanaEficiencia.setText("" + df.format(factorSalarioSemanaE));
+        txtDiaEficiencia.setText("" + df.format(totalDiaSE));
+        txtHoraEficiencia.setText("" +df.format( totalHoraSE));
+        txtSemanaEficiencia.setText("" + df.format(totalSemanaSE));
     }//GEN-LAST:event_btnCalcularManoDeObraActionPerformed
-
+    
     private void txtTotalHoraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTotalHoraActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtTotalHoraActionPerformed
@@ -4846,7 +4853,8 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
         //
         double sumaTotalTotal;
         sumaTotalTotal = sumaAnalisis + sumaDiseno + sumaDesarrollo + sumaPrueba + sumaMantenimiento + sumaCalidad + sumaInsumo + sumaMantenimientoSoft + sumaInfraestructura;
-        txtTotalTotal.setText("" + df.format(sumaTotalTotal));
+        totalCif = sumaTotalTotal;
+        txtTotalTotal.setText( df.format(sumaTotalTotal));
         txtTotalVCalidad.setText("" + df.format(sumaCalidad));
         txtTotalVInsumo.setText("" + df.format(sumaInsumo));
         txtTotalVMantenimientoSoft.setText("" + df.format(sumaMantenimientoSoft));
@@ -4872,7 +4880,208 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
 
     private void btnLimpiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiaActionPerformed
       
+         //
+        txtSalariosSup2.setText("");
+        txtSalariosOfi2.setText("");
+        txtManoDeObraIndirecta2.setText("");
+        txtMaterialesIndirectos2.setText("");
+        txtSuministros2.setText("");
+        txtHerramientas2.setText("");
+        txtOtrosMateriales2.setText("");
+        txtDepreciacion2.setText("");
+        txtImpuestos2.setText("");
+        txtServiciosPublicos2.setText("");
+        txtServiciosPrivados2.setText("");
+
+        txtTotales2.setText("" );
+        txtTotalEspacio.setText("" );
+        txtTotalConsumo.setText("" );
+        txtTotalEmpleado.setText("" );
+        txtTotalHoraHombre.setText("" );
+        //Recojo los datos de los textbox de Departamentos
+        txtAnalisisEspacio.setText("");
+        txtAnalisisConsumo.setText("");
+        txtAnalisisEmpleado.setText("");
+        txtAnalisisHora.setText("");
+        txtDisenoEspacio.setText("");
+        txtDisenoConsumo.setText("");
+        txtDisenoEmpleado.setText("");
+        txtDisenoHora.setText("");
+        txtDesarrolloEspacio.setText("");
+        txtDesarrolloConsumo.setText("");
+        txtDesarrolloEmpleado.setText("");
+        txtDesarrolloHora.setText("");
+        txtPruebaEspacio.setText("");
+        txtPruebaConsumo.setText("");
+        txtPruebaEmpleado.setText("");
+        txtPruebaHora.setText("");
+        txtMantenimientoEspacio.setText("");
+        txtMantenimientoConsumo.setText("");
+        txtMantenimientoEmpleado.setText("");
+        txtMantenimientoHora.setText("");
+        txtCalidadEspacio.setText("");
+        txtCalidadConsumo.setText("");
+        txtCalidadEmpleado.setText("");
+        txtCalidadHora.setText("");
+        txtInsumoEspacio.setText("");
+        txtInsumoConsumo.setText("");
+        txtInsumoEmpleado.setText("");
+        txtInsumoHora.setText("");
+        txtMantenimientoSoftEspacio.setText("");
+        txtMantenimientoSoftConsumo.setText("");
+        txtMantenimientoSoftEmpleado.setText("");
+        txtMantenimientoSoftHora.setText("");
+        txtMantenimientoServicioConsumo.setText("");
+        txtMantenimientoServicioEmpleado.setText("");
+        txtMantenimientoServicioHora.setText("");
         
+        
+         //
+        txtSalarioSupAnalisisProductivo.setText("");
+        txtSalarioSupDisenoProductivo.setText("");
+        txtSalarioSupDesarrolloProductivo.setText("");
+        txtSalarioSupPruebaProductivo.setText("");
+        txtSalarioSupMantenimientoProductivo.setText("");
+        txtSalarioSupCalidadServicio.setText("");
+        txtSalarioSupInsumoServicio.setText("");
+        txtSalarioSupMantenimientoSoftServicio.setText("");
+        txtSalarioSupInfraestructuraServicio.setText("");
+        //
+        txtSalarioOfiCalidadServicio.setText("");
+        txtSalarioOfiInsumosServicio.setText("");
+        txtSalarioOfiMantenimientoSoftServicio.setText("");
+        txtSalarioOfiInfraestructuraServicio.setText("");
+        //
+        txtManoAnalisisProductivo.setText("");
+        txtManoDisenoProductivo.setText("");
+        txtManoDesarrolloProductivo.setText("");
+        txtManoPruebaProductivo.setText("");
+        txtManoMantenimientoProductivo.setText("");
+        //
+        txtMaterialAnalisisProductivo.setText("");
+        txtMaterialDisenoProductivo.setText("");
+        txtMaterialDesarrolloProductivo.setText("");
+        txtMaterialPruebaProductivo.setText("");
+        txtMaterialMantenimientoProductivo.setText("");
+        //
+        txtSumiAnalisisProductivo.setText("");
+        txtSumiDisenoProductivo.setText("");
+        txtSumiDesarrolloProductivo.setText("");
+        txtSumiPruebaProductivo.setText("");
+        txtSumiMantenimientoProductivo.setText("");
+        //
+        txtHerraAnalisisProductivo.setText("");
+        txtHerraDisenoProductivo.setText("");
+        txtHerraDesarrolloProductivo.setText("");
+        txtHerraPruebaProductivo.setText("");
+        txtHerraMantenimientoProductivo.setText("");
+        txtHerraCalidadServicio.setText("");
+        txtHerraInsumoServicio.setText("");
+        txtHerraMantenimientoSoftServicio.setText("");
+        txtHerraInfraestructuraServicio.setText("");
+        //
+        txtOtrosAnalisisProductivo.setText("");
+        txtOtrosDisenoProductivo.setText("");
+        txtOtrosDesarrolloProductivo.setText("");
+        txtOtrosPruebaProductivo.setText("");
+        txtOtrosMantenimientoProductivo.setText("");
+        txtOtrosCalidadServicio.setText("");
+        txtOtrosInsumoServicio.setText("");
+        txtOtrosMantenimientoSoftServicio.setText("");
+        txtOtrosInfraestructuraServicio.setText("");
+        //
+        txtDepreciacionAnalisisProductivo.setText("");
+        txtDepreciacionDisenoProductivo.setText("");
+        txtDepreciacionDesarrolloProductivo.setText("");
+        txtDepreciacionPruebaProductivo.setText("");
+        txtDepreciacionMantenimientoProductivo.setText("");
+        txtDepreciacionCalidadServicio.setText("");
+        txtDepreciacionInsumoServicio.setText("");
+        txtDepreciacionMantenimientoSoftServicio.setText("");
+        txtDepreciacionInfraestructuraServicio.setText("");
+        //
+        txtImpuestosAnalisisProductivo.setText("");
+        txtImpuestosDisenoProductivo.setText("");
+        txtImpuestosDesarrolloProductivo.setText("");
+        txtImpuestosPruebaProductivo.setText("");
+        txtImpuestosMantenimientoProductivo.setText("");
+        txtImpuestosCalidadServicio.setText("");
+        txtImpuestosInsumoServicio.setText("");
+        txtImpuestosMantenimientoSoftServicio.setText("");
+        txtImpuestosInfraestructuraServicio.setText("");
+        //
+        txtServicioPublicoAnalisisProductivo.setText("");
+        txtServicioPublicoDisenoProductivo.setText("");
+        txtServicioPublicoDesarrolloProductivo.setText("");
+        txtServicioPublicoPruebaProductivo.setText("");
+        txtServicioPublicoMantenimientoProductivo.setText("");
+        txtServicioPublicoCalidadServicio.setText("");
+        txtServicioPublicoInsumoServicio.setText("");
+        txtServicioPublicoMantenimientoSoftServicio.setText("");
+        txtServicioPublicoInfraestructuraServicio.setText("");
+        //
+        txtServicioPrivadoAnalisisProductivo.setText("");
+        txtServicioPrivadoDisenoProductivo.setText("");
+        txtServicioPrivadoDesarrolloProductivo.setText("");
+        txtServicioPrivadoPruebaProductivo.setText("");
+        txtServicioPrivadoMantenimientoProductivo.setText("");
+        txtServicioPrivadoCalidadServicio.setText("");
+        txtServicioPrivadoInsumoServicio.setText("");
+        txtServicioPrivadoMantenimientoSoftServicio.setText("");
+        txtServicioPrivadoInfraestructuraServicio.setText("");
+        //
+        txtCalidadAnalisisProductivo.setText("");
+        txtCalidadDisenoProductivo.setText("");
+        txtCalidadDesarrolloProductivo.setText("");
+        txtCalidadPruebaProductivo.setText("");
+        txtCalidadMantenimientoProductivo.setText("");
+        //
+        txtInsumoAnalisisProductivo.setText("");
+        txtInsumoDisenoProductivo.setText("");
+        txtInsumoDesarrolloProductivo.setText("");
+        txtInsumoPruebaProductivo.setText("");
+        txtInsumoMantenimientoProductivo.setText("");
+        //
+        txtMantenimientoSoftAnalisisProductivo.setText("");
+        txtMantenimientoSoftDisenoProductivo.setText("");
+        txtMantenimientoSoftDesarrolloProductivo.setText("");
+        txtMantenimientoSoftPruebaProductivo.setText("");
+        txtMantenimientoSoftMantenimientoProductivo.setText("");
+        txtMantenimientoServicioEspacio.setText("");
+        //
+        txtInfraestructuraAnalisisProductivo.setText("");
+        txtInfraestructuraDisenoProductivo.setText("");
+        txtInfraestructuraDesarrolloProductivo.setText("");
+        txtInfraestructuraPruebaProductivo.setText("");
+        txtInfraestructuraMantenimientoProductivo.setText("");
+        //SETEANDO LOS VALORES DE LOS TOTALES EN LOS TXT FINALES
+        txtTotalAnalisis.setText("");
+        txtTotalDesarrollo.setText("");
+        txtTotalDiseno.setText("");
+        txtTotalPrueba.setText("");
+        txtTotalMantenimiento.setText("");
+        txtTotalCalidad.setText("");
+        txtTotalInsumo.setText("");
+        txtTotalMantenimientoSoft.setText("");
+        txtTotalInfraestructura.setText("");
+        //totales segun cada cuenta, parte derecha
+        txtTotalSalarioSup.setText("" );
+        txtTotalSalarioOfi.setText("" );
+        txtTotalMano.setText("" );
+        txtTotalMaterial.setText("" );
+        txtTotalOtros.setText("" );
+        txtTotalDepreciacion.setText("" );
+        txtTotalImpuesto.setText("" );
+        txtTotalServicioPublico.setText("" );
+        txtTotalServicioPrivado.setText("" );
+        txtTotalSumi.setText("" );
+        txtTotalHerra.setText("" );
+        txtTotalPresupuesto.setText("" );
+        txtTotalTotal.setText("");
+        txtTotalVCalidad.setText("" );
+        txtTotalVInsumo.setText("" );
+        txtTotalVMantenimientoSoft.setText("" );
+        txtTotalVInfraestructura.setText("");
 
     }//GEN-LAST:event_btnLimpiaActionPerformed
 
@@ -4882,8 +5091,58 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
 
     private void btnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarActionPerformed
 
-
+        txtSalario.setText("");
+        txtHoras.setText("");
+        txtDiasAguinaldo.setText("");
+        txtDiasVacacion.setText("");
+        txtDiasTrabajado.setText("");
+        txtPorcentajeVacacion.setText("");
+        txtPorcentajeSeguro.setText("");
+        txtPorcentajeAFP.setText("");
+        txtPorcentajeINSAFORP.setText("");
+        txtPorcentajeEficiencia.setText("");
+        
+        //
+        txtSeptimo2.setText("");
+        txtAguinaldo2.setText("");
+        txtVacacion2.setText("");
+        txtSalud.setText("");
+        txtAFP.setText("");
+        txtINSAFORP.setText("");
+        txtTotal.setText("");
+        txtTotalDia.setText("");
+        txtTotalHora.setText("");
+        txtDia.setText("");
+        txtHora.setText("");
+        txtSemana.setText("");
+        txtSalarioDia.setText("");
+        txtSalarioHora.setText("");
+        txtSalarioSemana.setText("");
+        txtFactorDia.setText("");
+        txtFactorHora.setText("");
+        txtFactorSemana.setText("");
+        txtDiaEficiencia.setText("");
+        txtHoraEficiencia.setText("");
+        txtSalarioDiaEficiencia.setText("");
+        txtSalarioHoraEficiencia.setText("");
+        txtSalarioSemanaEficiencia.setText("");
+        txtFactorDiaEficiencia.setText("");
+        txtFactorHoraEficiencia.setText("");
+        txtFactorSemanaEficiencia.setText("");
     }//GEN-LAST:event_btnLimpiarActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+        DecimalFormat df = new DecimalFormat("#.00");
+        double manoObra, ciif, suma;
+        System.out.println("El valor del total es:" + valorTotalManoObra);
+        manoObra = valorTotalManoObra;
+        txtManoDeObra.setText("" + df.format(manoObra));
+        ciif = totalCif;
+        txtCIF.setText("" + df.format(ciif));
+        suma = manoObra + ciif;
+        txtCostoTotal.setText("" + df.format(suma));
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     //metodos utilitarios
     public void limpiarTxtPestañaCuentas(){
