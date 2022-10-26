@@ -2215,23 +2215,23 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
 
         jLabel79.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel79.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel79.setText("Análisis");
+        jLabel79.setText("Compras");
 
         jLabel80.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel80.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel80.setText("Diseño");
+        jLabel80.setText("Ventas");
 
         jLabel81.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel81.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel81.setText("Desarrollo");
+        jLabel81.setText("Mercadeo");
 
         jLabel82.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel82.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel82.setText("Pruebas");
+        jLabel82.setText("Inventario");
 
         jLabel83.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel83.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel83.setText("Mantenimiento");
+        jLabel83.setText("Logistica");
 
         txtAnalisisEspacio.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
         txtAnalisisEspacio.addActionListener(new java.awt.event.ActionListener() {
@@ -2298,9 +2298,9 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
 
         txtMantenimientoEmpleado.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
 
-        jLabel84.setText("DEPARTAMENTOS ÁREA PRODUCTIVA.");
+        jLabel84.setText("DEPARTAMENTOS ÁREA DISTRIBUTIVA.");
 
-        jLabel85.setText("DEPARTAMENTOS ÁREA DE SERVICIOS BRINDADOS");
+        jLabel85.setText("DEPARTAMENTOS ÁREA DE SERVICIOS BASICOS");
 
         txtCalidadConsumo.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
 
@@ -2334,19 +2334,19 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
 
         jLabel86.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel86.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel86.setText("Calidad");
+        jLabel86.setText("Finanzas");
 
         jLabel87.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel87.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel87.setText("Insumos y materiales");
+        jLabel87.setText("Recursos Humanos");
 
         jLabel88.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel88.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel88.setText("Mantenimiento de software");
+        jLabel88.setText("Adminsitracion");
 
         jLabel89.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel89.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel89.setText("Mantenimiento");
+        jLabel89.setText("Mantenimiento de infra");
 
         txtCalidadHora.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
 
@@ -2409,11 +2409,13 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
                                 .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addGroup(jPanel18Layout.createSequentialGroup()
                                         .addComponent(jLabel89)
-                                        .addGap(69, 69, 69))
-                                    .addComponent(jLabel88, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(75, 75, 75))
                                     .addComponent(jLabel87, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addComponent(jLabel86))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel18Layout.createSequentialGroup()
+                                    .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabel86)
+                                        .addComponent(jLabel88, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
                             .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addGroup(jPanel18Layout.createSequentialGroup()
                                     .addComponent(txtMantenimientoSoftEspacio, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2644,11 +2646,11 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
         jPanel21.setBackground(new java.awt.Color(153, 153, 153));
 
         jLabel94.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel94.setText("ÁREA DE COSTOS PRODUCTIVOS");
+        jLabel94.setText("ÁREA DISTRIBUTIVA");
 
-        jLabel95.setText("DISEÑO");
+        jLabel95.setText("VENTAS");
 
-        jLabel96.setText("ANÁLISIS");
+        jLabel96.setText("COMPRAS");
 
         txtSalarioSupAnalisisProductivo.setEditable(false);
 
@@ -2740,7 +2742,7 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
 
         txtDepreciacionDesarrolloProductivo.setEditable(false);
 
-        jLabel112.setText("DESARROLLO");
+        jLabel112.setText("MERCADEO");
 
         txtServicioPublicoPruebaProductivo.setEditable(false);
 
@@ -2802,9 +2804,9 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
 
         txtSalarioSupMantenimientoProductivo.setEditable(false);
 
-        jLabel113.setText("PRUEBAS");
+        jLabel113.setText("INVENTARIO");
 
-        jLabel117.setText("MANTENIMIENTO");
+        jLabel117.setText("LOGISTICA");
 
         txtTotalAnalisis.setEditable(false);
 
@@ -2882,65 +2884,61 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
                                 .addComponent(jLabel95)))
                         .addGap(30, 30, 30)
                         .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addGroup(jPanel21Layout.createSequentialGroup()
-                                    .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(txtServicioPrivadoDesarrolloProductivo, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(txtImpuestosDesarrolloProductivo)
-                                            .addComponent(txtServicioPublicoDesarrolloProductivo, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(txtCalidadDesarrolloProductivo)
-                                            .addComponent(txtInsumoDesarrolloProductivo, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(txtMantenimientoSoftDesarrolloProductivo)
-                                            .addComponent(txtInfraestructuraDesarrolloProductivo, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(txtManoDesarrolloProductivo)
-                                            .addComponent(txtMaterialDesarrolloProductivo, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(txtSalarioSupDesarrolloProductivo)
-                                            .addComponent(txtSalarioOfiDesarrolloProductivo, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(txtSumiDesarrolloProductivo)
-                                            .addComponent(txtHerraDesarrolloProductivo, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(txtOtrosDesarrolloProductivo)
-                                            .addComponent(txtDepreciacionDesarrolloProductivo, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                    .addGap(27, 27, 27)
-                                    .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(txtServicioPrivadoPruebaProductivo, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(txtImpuestosPruebaProductivo)
-                                            .addComponent(txtServicioPublicoPruebaProductivo, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(txtCalidadPruebaProductivo)
-                                            .addComponent(txtInsumoPruebaProductivo, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(txtMantenimientoSoftPruebaProductivo)
-                                            .addComponent(txtInfraestructuraPruebaProductivo, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(txtManoPruebaProductivo)
-                                            .addComponent(txtMaterialPruebaProductivo, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(txtSalarioSupPruebaProductivo)
-                                            .addComponent(txtSalarioOfiPruebaProductivo, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(txtSumiPruebaProductivo)
-                                            .addComponent(txtHerraPruebaProductivo, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(txtOtrosPruebaProductivo)
-                                            .addComponent(txtDepreciacionPruebaProductivo, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addComponent(txtTotalPrueba, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGap(27, 27, 27))
-                                .addGroup(jPanel21Layout.createSequentialGroup()
-                                    .addComponent(jLabel112)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLabel113)
-                                    .addGap(48, 48, 48)))
                             .addGroup(jPanel21Layout.createSequentialGroup()
-                                .addComponent(txtTotalDesarrollo, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(139, 139, 139)))
+                                .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txtServicioPrivadoDesarrolloProductivo, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(txtImpuestosDesarrolloProductivo)
+                                        .addComponent(txtServicioPublicoDesarrolloProductivo, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(txtCalidadDesarrolloProductivo)
+                                        .addComponent(txtInsumoDesarrolloProductivo, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(txtMantenimientoSoftDesarrolloProductivo)
+                                        .addComponent(txtInfraestructuraDesarrolloProductivo, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(txtManoDesarrolloProductivo)
+                                        .addComponent(txtMaterialDesarrolloProductivo, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(txtSalarioSupDesarrolloProductivo)
+                                        .addComponent(txtSalarioOfiDesarrolloProductivo, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(txtSumiDesarrolloProductivo)
+                                        .addComponent(txtHerraDesarrolloProductivo, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(txtOtrosDesarrolloProductivo)
+                                        .addComponent(txtDepreciacionDesarrolloProductivo, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPanel21Layout.createSequentialGroup()
+                                        .addGap(8, 8, 8)
+                                        .addComponent(jLabel112)))
+                                .addGap(27, 27, 27)
+                                .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txtServicioPrivadoPruebaProductivo, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(txtImpuestosPruebaProductivo)
+                                        .addComponent(txtServicioPublicoPruebaProductivo, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(txtCalidadPruebaProductivo)
+                                        .addComponent(txtInsumoPruebaProductivo, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(txtMantenimientoSoftPruebaProductivo)
+                                        .addComponent(txtInfraestructuraPruebaProductivo, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(txtManoPruebaProductivo)
+                                        .addComponent(txtMaterialPruebaProductivo, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(txtSalarioSupPruebaProductivo)
+                                        .addComponent(txtSalarioOfiPruebaProductivo, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(txtSumiPruebaProductivo)
+                                        .addComponent(txtHerraPruebaProductivo, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(txtOtrosPruebaProductivo)
+                                        .addComponent(txtDepreciacionPruebaProductivo, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(txtTotalPrueba, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel113)))
+                            .addComponent(txtTotalDesarrollo, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(27, 27, 27)
                         .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel117, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(txtSalarioSupMantenimientoProductivo)
@@ -2972,7 +2970,10 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
                 .addGap(12, 12, 12)
                 .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel21Layout.createSequentialGroup()
-                        .addComponent(jLabel117)
+                        .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel117)
+                            .addComponent(jLabel113)
+                            .addComponent(jLabel112))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(txtSalarioSupMantenimientoProductivo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -3005,10 +3006,7 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
                     .addGroup(jPanel21Layout.createSequentialGroup()
                         .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel96, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jLabel95)
-                                .addComponent(jLabel112)
-                                .addComponent(jLabel113)))
+                            .addComponent(jLabel95))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel21Layout.createSequentialGroup()
@@ -3221,17 +3219,17 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
         jLabel114.setBackground(new java.awt.Color(153, 255, 255));
         jLabel114.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel114.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel114.setText("Insumos y Materiales");
+        jLabel114.setText("RECURSOS HUMANOS");
 
         jLabel115.setBackground(new java.awt.Color(153, 255, 255));
         jLabel115.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel115.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel115.setText("Mantenimiento de software");
+        jLabel115.setText("ADMINISTRACION");
 
         jLabel116.setBackground(new java.awt.Color(153, 255, 255));
         jLabel116.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel116.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel116.setText("Infraestructura y Limpieza");
+        jLabel116.setText("MANTENIMIENTO DE INFRA");
 
         jLabel120.setBackground(new java.awt.Color(153, 255, 255));
         jLabel120.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -3271,7 +3269,7 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
         jLabel125.setBackground(new java.awt.Color(153, 255, 255));
         jLabel125.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel125.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel125.setText("Calidad");
+        jLabel125.setText("FINANZAS");
 
         jLabel119.setBackground(new java.awt.Color(153, 255, 255));
         jLabel119.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -3307,11 +3305,11 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
         jPanel22.setBackground(new java.awt.Color(153, 153, 153));
 
         jLabel118.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel118.setText("ÁREA DE COSTOS SOBRE SERVICIOS");
+        jLabel118.setText("ÁREA DE SERVICIOS BASICOS");
 
-        jLabel133.setText("INSUMOS Y MATERIALES ");
+        jLabel133.setText("RECURSOS HUMANOS");
 
-        jLabel134.setText("CALIDAD");
+        jLabel134.setText("FINANZAS");
 
         txtSalarioSupCalidadServicio.setEditable(false);
 
@@ -3403,7 +3401,7 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
 
         txtDepreciacionMantenimientoSoftServicio.setEditable(false);
 
-        jLabel135.setText("MANTENIMI.. SOFTWARE");
+        jLabel135.setText("ADMINISTRACION");
 
         txtServicioPublicoInfraestructuraServicio.setEditable(false);
 
@@ -3465,7 +3463,7 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
 
         txtTotalSalarioSup.setEditable(false);
 
-        jLabel136.setText("INFRAESTRUCTURA");
+        jLabel136.setText("M. DE INFRAESTRUCTURA");
 
         jLabel137.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel137.setText("TOTALES");
@@ -3533,26 +3531,27 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
                                             .addGroup(jPanel22Layout.createSequentialGroup()
                                                 .addGap(14, 14, 14)
                                                 .addComponent(jLabel134)))
-                                        .addGap(13, 13, 13)
-                                        .addGroup(jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(jLabel133, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGroup(jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                .addComponent(txtServicioPublicoInsumoServicio, javax.swing.GroupLayout.Alignment.TRAILING)
-                                                .addComponent(txtImpuestosInsumoServicio, javax.swing.GroupLayout.Alignment.TRAILING)
-                                                .addComponent(txtDepreciacionInsumoServicio, javax.swing.GroupLayout.Alignment.TRAILING)
-                                                .addComponent(txtOtrosInsumoServicio, javax.swing.GroupLayout.Alignment.TRAILING)
-                                                .addComponent(txtHerraInsumoServicio, javax.swing.GroupLayout.Alignment.TRAILING)
-                                                .addComponent(txtSumiInsumoServicio, javax.swing.GroupLayout.Alignment.TRAILING)
-                                                .addComponent(txtMaterialInsumoServicio, javax.swing.GroupLayout.Alignment.TRAILING)
-                                                .addComponent(txtManoInsumoServicio, javax.swing.GroupLayout.Alignment.TRAILING)
-                                                .addComponent(txtSalarioOfiInsumosServicio, javax.swing.GroupLayout.Alignment.TRAILING)
-                                                .addComponent(txtSalarioSupInsumoServicio, javax.swing.GroupLayout.Alignment.TRAILING)
-                                                .addComponent(txtServicioPrivadoInsumoServicio, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 119, Short.MAX_VALUE))
-                                            .addGroup(jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                .addComponent(txtInfraestructuraInsumoServicio, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 119, Short.MAX_VALUE)
-                                                .addComponent(txtMantenimientoSoftInsumoServicio, javax.swing.GroupLayout.Alignment.TRAILING)
-                                                .addComponent(txtInsumoInsumoServicio, javax.swing.GroupLayout.Alignment.TRAILING)
-                                                .addComponent(txtCalidadInsumoServicio, javax.swing.GroupLayout.Alignment.TRAILING)))))
+                                        .addGap(30, 30, 30)
+                                        .addGroup(jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                .addGroup(jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                    .addComponent(txtServicioPublicoInsumoServicio, javax.swing.GroupLayout.Alignment.TRAILING)
+                                                    .addComponent(txtImpuestosInsumoServicio, javax.swing.GroupLayout.Alignment.TRAILING)
+                                                    .addComponent(txtDepreciacionInsumoServicio, javax.swing.GroupLayout.Alignment.TRAILING)
+                                                    .addComponent(txtOtrosInsumoServicio, javax.swing.GroupLayout.Alignment.TRAILING)
+                                                    .addComponent(txtHerraInsumoServicio, javax.swing.GroupLayout.Alignment.TRAILING)
+                                                    .addComponent(txtSumiInsumoServicio, javax.swing.GroupLayout.Alignment.TRAILING)
+                                                    .addComponent(txtMaterialInsumoServicio, javax.swing.GroupLayout.Alignment.TRAILING)
+                                                    .addComponent(txtManoInsumoServicio, javax.swing.GroupLayout.Alignment.TRAILING)
+                                                    .addComponent(txtSalarioOfiInsumosServicio, javax.swing.GroupLayout.Alignment.TRAILING)
+                                                    .addComponent(txtSalarioSupInsumoServicio, javax.swing.GroupLayout.Alignment.TRAILING)
+                                                    .addComponent(txtServicioPrivadoInsumoServicio, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 119, Short.MAX_VALUE))
+                                                .addGroup(jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                    .addComponent(txtInfraestructuraInsumoServicio, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 119, Short.MAX_VALUE)
+                                                    .addComponent(txtMantenimientoSoftInsumoServicio, javax.swing.GroupLayout.Alignment.TRAILING)
+                                                    .addComponent(txtInsumoInsumoServicio, javax.swing.GroupLayout.Alignment.TRAILING)
+                                                    .addComponent(txtCalidadInsumoServicio, javax.swing.GroupLayout.Alignment.TRAILING)))
+                                            .addComponent(jLabel133))))
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel22Layout.createSequentialGroup()
@@ -3569,12 +3568,15 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
                                                     .addComponent(txtServicioPrivadoMantenimientoSoftServicio, javax.swing.GroupLayout.Alignment.LEADING)
                                                     .addComponent(txtMaterialMantenimientoSoftServicio, javax.swing.GroupLayout.Alignment.LEADING)
                                                     .addComponent(txtManoMantenimientoSoftServicio)
-                                                    .addComponent(txtSumiMantenimientoSoftServicio)
-                                                    .addComponent(jLabel135, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE))
+                                                    .addComponent(txtSumiMantenimientoSoftServicio))
                                                 .addGap(25, 25, 25))
                                             .addGroup(jPanel22Layout.createSequentialGroup()
-                                                .addComponent(txtTotalVMantenimientoSoft)
-                                                .addGap(30, 30, 30)))
+                                                .addComponent(txtTotalVMantenimientoSoft, javax.swing.GroupLayout.DEFAULT_SIZE, 135, Short.MAX_VALUE)
+                                                .addGap(30, 30, 30))
+                                            .addGroup(jPanel22Layout.createSequentialGroup()
+                                                .addGap(22, 22, 22)
+                                                .addComponent(jLabel135)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                                         .addGroup(jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(txtTotalVInfraestructura, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addGroup(jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)

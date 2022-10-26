@@ -3153,14 +3153,18 @@
                                               <Group type="103" alignment="0" groupAlignment="1" attributes="0">
                                                   <Group type="102" alignment="1" attributes="0">
                                                       <Component id="jLabel89" min="-2" max="-2" attributes="0"/>
-                                                      <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
+                                                      <EmptySpace min="-2" pref="75" max="-2" attributes="0"/>
                                                   </Group>
-                                                  <Component id="jLabel88" alignment="1" min="-2" pref="151" max="-2" attributes="0"/>
                                                   <Component id="jLabel87" alignment="0" min="-2" pref="121" max="-2" attributes="0"/>
                                               </Group>
-                                              <Component id="jLabel86" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Group type="102" attributes="0">
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Component id="jLabel86" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jLabel88" alignment="0" min="-2" pref="151" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                              </Group>
                                           </Group>
-                                          <EmptySpace max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Group type="102" alignment="0" attributes="0">
                                                   <Component id="txtMantenimientoSoftEspacio" min="-2" pref="96" max="-2" attributes="0"/>
@@ -3380,7 +3384,7 @@
                         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="33" green="33" red="33" type="rgb"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="An&#xe1;lisis"/>
+                        <Property name="text" type="java.lang.String" value="Compras"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel80">
@@ -3391,7 +3395,7 @@
                         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="33" green="33" red="33" type="rgb"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="Dise&#xf1;o"/>
+                        <Property name="text" type="java.lang.String" value="Ventas"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel81">
@@ -3402,7 +3406,7 @@
                         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="33" green="33" red="33" type="rgb"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="Desarrollo"/>
+                        <Property name="text" type="java.lang.String" value="Mercadeo"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel82">
@@ -3413,7 +3417,7 @@
                         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="33" green="33" red="33" type="rgb"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="Pruebas"/>
+                        <Property name="text" type="java.lang.String" value="Inventario"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel83">
@@ -3424,7 +3428,7 @@
                         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="33" green="33" red="33" type="rgb"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="Mantenimiento"/>
+                        <Property name="text" type="java.lang.String" value="Logistica"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JTextField" name="txtAnalisisEspacio">
@@ -3764,12 +3768,12 @@
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel84">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="DEPARTAMENTOS &#xc1;REA PRODUCTIVA."/>
+                        <Property name="text" type="java.lang.String" value="DEPARTAMENTOS &#xc1;REA DISTRIBUTIVA."/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel85">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="DEPARTAMENTOS &#xc1;REA DE SERVICIOS BRINDADOS"/>
+                        <Property name="text" type="java.lang.String" value="DEPARTAMENTOS &#xc1;REA DE SERVICIOS BASICOS"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JTextField" name="txtCalidadConsumo">
@@ -3946,7 +3950,7 @@
                         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="33" green="33" red="33" type="rgb"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="Calidad"/>
+                        <Property name="text" type="java.lang.String" value="Finanzas"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel87">
@@ -3957,7 +3961,7 @@
                         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="33" green="33" red="33" type="rgb"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="Insumos y materiales"/>
+                        <Property name="text" type="java.lang.String" value="Recursos Humanos"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel88">
@@ -3968,7 +3972,7 @@
                         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="33" green="33" red="33" type="rgb"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="Mantenimiento de software"/>
+                        <Property name="text" type="java.lang.String" value="Adminsitracion"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel89">
@@ -3979,7 +3983,7 @@
                         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="33" green="33" red="33" type="rgb"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="Mantenimiento"/>
+                        <Property name="text" type="java.lang.String" value="Mantenimiento de infra"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JTextField" name="txtCalidadHora">
@@ -4500,86 +4504,80 @@
                                       </Group>
                                       <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                                              <Group type="102" alignment="0" attributes="0">
-                                                  <Group type="103" groupAlignment="0" attributes="0">
-                                                      <Component id="txtServicioPrivadoDesarrolloProductivo" alignment="0" min="-2" pref="85" max="-2" attributes="0"/>
-                                                      <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                                                          <Component id="txtImpuestosDesarrolloProductivo" alignment="0" max="32767" attributes="0"/>
-                                                          <Component id="txtServicioPublicoDesarrolloProductivo" alignment="0" min="-2" pref="85" max="-2" attributes="0"/>
-                                                      </Group>
-                                                      <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                                                          <Component id="txtCalidadDesarrolloProductivo" alignment="0" max="32767" attributes="0"/>
-                                                          <Component id="txtInsumoDesarrolloProductivo" alignment="0" min="-2" pref="85" max="-2" attributes="0"/>
-                                                      </Group>
-                                                      <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                                                          <Component id="txtMantenimientoSoftDesarrolloProductivo" alignment="0" max="32767" attributes="0"/>
-                                                          <Component id="txtInfraestructuraDesarrolloProductivo" alignment="0" min="-2" pref="85" max="-2" attributes="0"/>
-                                                      </Group>
-                                                      <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                                                          <Component id="txtManoDesarrolloProductivo" alignment="0" max="32767" attributes="0"/>
-                                                          <Component id="txtMaterialDesarrolloProductivo" alignment="0" min="-2" pref="85" max="-2" attributes="0"/>
-                                                      </Group>
-                                                      <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                                                          <Component id="txtSalarioSupDesarrolloProductivo" alignment="0" max="32767" attributes="0"/>
-                                                          <Component id="txtSalarioOfiDesarrolloProductivo" alignment="0" min="-2" pref="85" max="-2" attributes="0"/>
-                                                      </Group>
-                                                      <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                                                          <Component id="txtSumiDesarrolloProductivo" alignment="0" max="32767" attributes="0"/>
-                                                          <Component id="txtHerraDesarrolloProductivo" alignment="0" min="-2" pref="85" max="-2" attributes="0"/>
-                                                      </Group>
-                                                      <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                                                          <Component id="txtOtrosDesarrolloProductivo" alignment="0" max="32767" attributes="0"/>
-                                                          <Component id="txtDepreciacionDesarrolloProductivo" alignment="0" min="-2" pref="85" max="-2" attributes="0"/>
-                                                      </Group>
-                                                  </Group>
-                                                  <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                                                  <Group type="103" groupAlignment="0" attributes="0">
-                                                      <Component id="txtServicioPrivadoPruebaProductivo" alignment="0" min="-2" pref="85" max="-2" attributes="0"/>
-                                                      <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                                                          <Component id="txtImpuestosPruebaProductivo" alignment="0" max="32767" attributes="0"/>
-                                                          <Component id="txtServicioPublicoPruebaProductivo" alignment="0" min="-2" pref="85" max="-2" attributes="0"/>
-                                                      </Group>
-                                                      <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                                                          <Component id="txtCalidadPruebaProductivo" alignment="0" max="32767" attributes="0"/>
-                                                          <Component id="txtInsumoPruebaProductivo" alignment="0" min="-2" pref="85" max="-2" attributes="0"/>
-                                                      </Group>
-                                                      <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                                                          <Component id="txtMantenimientoSoftPruebaProductivo" alignment="0" max="32767" attributes="0"/>
-                                                          <Component id="txtInfraestructuraPruebaProductivo" alignment="0" min="-2" pref="85" max="-2" attributes="0"/>
-                                                      </Group>
-                                                      <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                                                          <Component id="txtManoPruebaProductivo" alignment="0" max="32767" attributes="0"/>
-                                                          <Component id="txtMaterialPruebaProductivo" alignment="0" min="-2" pref="85" max="-2" attributes="0"/>
-                                                      </Group>
-                                                      <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                                                          <Component id="txtSalarioSupPruebaProductivo" alignment="0" max="32767" attributes="0"/>
-                                                          <Component id="txtSalarioOfiPruebaProductivo" alignment="0" min="-2" pref="85" max="-2" attributes="0"/>
-                                                      </Group>
-                                                      <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                                                          <Component id="txtSumiPruebaProductivo" alignment="0" max="32767" attributes="0"/>
-                                                          <Component id="txtHerraPruebaProductivo" alignment="0" min="-2" pref="85" max="-2" attributes="0"/>
-                                                      </Group>
-                                                      <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                                                          <Component id="txtOtrosPruebaProductivo" alignment="0" max="32767" attributes="0"/>
-                                                          <Component id="txtDepreciacionPruebaProductivo" alignment="0" min="-2" pref="85" max="-2" attributes="0"/>
-                                                      </Group>
-                                                      <Component id="txtTotalPrueba" alignment="0" min="-2" pref="85" max="-2" attributes="0"/>
-                                                  </Group>
-                                                  <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                                              </Group>
-                                              <Group type="102" alignment="0" attributes="0">
-                                                  <Component id="jLabel112" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace max="32767" attributes="0"/>
-                                                  <Component id="jLabel113" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
-                                              </Group>
-                                          </Group>
                                           <Group type="102" alignment="0" attributes="0">
-                                              <Component id="txtTotalDesarrollo" min="-2" pref="85" max="-2" attributes="0"/>
-                                              <EmptySpace min="-2" pref="139" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="txtServicioPrivadoDesarrolloProductivo" alignment="0" min="-2" pref="85" max="-2" attributes="0"/>
+                                                  <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
+                                                      <Component id="txtImpuestosDesarrolloProductivo" alignment="0" max="32767" attributes="0"/>
+                                                      <Component id="txtServicioPublicoDesarrolloProductivo" alignment="0" min="-2" pref="85" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
+                                                      <Component id="txtCalidadDesarrolloProductivo" alignment="0" max="32767" attributes="0"/>
+                                                      <Component id="txtInsumoDesarrolloProductivo" alignment="0" min="-2" pref="85" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
+                                                      <Component id="txtMantenimientoSoftDesarrolloProductivo" alignment="0" max="32767" attributes="0"/>
+                                                      <Component id="txtInfraestructuraDesarrolloProductivo" alignment="0" min="-2" pref="85" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
+                                                      <Component id="txtManoDesarrolloProductivo" alignment="0" max="32767" attributes="0"/>
+                                                      <Component id="txtMaterialDesarrolloProductivo" alignment="0" min="-2" pref="85" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
+                                                      <Component id="txtSalarioSupDesarrolloProductivo" alignment="0" max="32767" attributes="0"/>
+                                                      <Component id="txtSalarioOfiDesarrolloProductivo" alignment="0" min="-2" pref="85" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
+                                                      <Component id="txtSumiDesarrolloProductivo" alignment="0" max="32767" attributes="0"/>
+                                                      <Component id="txtHerraDesarrolloProductivo" alignment="0" min="-2" pref="85" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
+                                                      <Component id="txtOtrosDesarrolloProductivo" alignment="0" max="32767" attributes="0"/>
+                                                      <Component id="txtDepreciacionDesarrolloProductivo" alignment="0" min="-2" pref="85" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Group type="102" alignment="0" attributes="0">
+                                                      <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
+                                                      <Component id="jLabel112" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                              </Group>
+                                              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="txtServicioPrivadoPruebaProductivo" alignment="0" min="-2" pref="85" max="-2" attributes="0"/>
+                                                  <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
+                                                      <Component id="txtImpuestosPruebaProductivo" alignment="0" max="32767" attributes="0"/>
+                                                      <Component id="txtServicioPublicoPruebaProductivo" alignment="0" min="-2" pref="85" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
+                                                      <Component id="txtCalidadPruebaProductivo" alignment="0" max="32767" attributes="0"/>
+                                                      <Component id="txtInsumoPruebaProductivo" alignment="0" min="-2" pref="85" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
+                                                      <Component id="txtMantenimientoSoftPruebaProductivo" alignment="0" max="32767" attributes="0"/>
+                                                      <Component id="txtInfraestructuraPruebaProductivo" alignment="0" min="-2" pref="85" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
+                                                      <Component id="txtManoPruebaProductivo" alignment="0" max="32767" attributes="0"/>
+                                                      <Component id="txtMaterialPruebaProductivo" alignment="0" min="-2" pref="85" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
+                                                      <Component id="txtSalarioSupPruebaProductivo" alignment="0" max="32767" attributes="0"/>
+                                                      <Component id="txtSalarioOfiPruebaProductivo" alignment="0" min="-2" pref="85" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
+                                                      <Component id="txtSumiPruebaProductivo" alignment="0" max="32767" attributes="0"/>
+                                                      <Component id="txtHerraPruebaProductivo" alignment="0" min="-2" pref="85" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
+                                                      <Component id="txtOtrosPruebaProductivo" alignment="0" max="32767" attributes="0"/>
+                                                      <Component id="txtDepreciacionPruebaProductivo" alignment="0" min="-2" pref="85" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Component id="txtTotalPrueba" alignment="0" min="-2" pref="85" max="-2" attributes="0"/>
+                                                  <Component id="jLabel113" min="-2" max="-2" attributes="0"/>
+                                              </Group>
                                           </Group>
+                                          <Component id="txtTotalDesarrollo" alignment="0" min="-2" pref="85" max="-2" attributes="0"/>
                                       </Group>
+                                      <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                           <Component id="jLabel117" alignment="0" max="32767" attributes="0"/>
                                           <Component id="txtSalarioSupMantenimientoProductivo" alignment="0" max="32767" attributes="0"/>
@@ -4617,7 +4615,11 @@
                               <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="1" attributes="0">
                                   <Group type="102" alignment="1" attributes="0">
-                                      <Component id="jLabel117" min="-2" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="jLabel117" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel113" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel112" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Component id="txtSalarioSupMantenimientoProductivo" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -4651,11 +4653,7 @@
                                   <Group type="102" alignment="1" attributes="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="jLabel96" alignment="1" min="-2" max="-2" attributes="0"/>
-                                          <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                                              <Component id="jLabel95" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jLabel112" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jLabel113" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          </Group>
+                                          <Component id="jLabel95" alignment="0" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
@@ -4806,17 +4804,17 @@
                     <Component class="javax.swing.JLabel" name="jLabel94">
                       <Properties>
                         <Property name="horizontalAlignment" type="int" value="0"/>
-                        <Property name="text" type="java.lang.String" value="&#xc1;REA DE COSTOS PRODUCTIVOS"/>
+                        <Property name="text" type="java.lang.String" value="&#xc1;REA DISTRIBUTIVA"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel95">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="DISE&#xd1;O"/>
+                        <Property name="text" type="java.lang.String" value="VENTAS"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel96">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="AN&#xc1;LISIS"/>
+                        <Property name="text" type="java.lang.String" value="COMPRAS"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JTextField" name="txtSalarioSupAnalisisProductivo">
@@ -5046,7 +5044,7 @@
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel112">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="DESARROLLO"/>
+                        <Property name="text" type="java.lang.String" value="MERCADEO"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JTextField" name="txtServicioPublicoPruebaProductivo">
@@ -5201,12 +5199,12 @@
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel113">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="PRUEBAS"/>
+                        <Property name="text" type="java.lang.String" value="INVENTARIO"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel117">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="MANTENIMIENTO"/>
+                        <Property name="text" type="java.lang.String" value="LOGISTICA"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JTextField" name="txtTotalAnalisis">
@@ -5457,7 +5455,7 @@
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="33" green="33" red="33" type="rgb"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Insumos y Materiales"/>
+                    <Property name="text" type="java.lang.String" value="RECURSOS HUMANOS"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel115">
@@ -5471,7 +5469,7 @@
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="33" green="33" red="33" type="rgb"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Mantenimiento de software"/>
+                    <Property name="text" type="java.lang.String" value="ADMINISTRACION"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel116">
@@ -5485,7 +5483,7 @@
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="33" green="33" red="33" type="rgb"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Infraestructura y Limpieza"/>
+                    <Property name="text" type="java.lang.String" value="MANTENIMIENTO DE INFRA"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel120">
@@ -5597,7 +5595,7 @@
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="33" green="33" red="33" type="rgb"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Calidad"/>
+                    <Property name="text" type="java.lang.String" value="FINANZAS"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel119">
@@ -5755,28 +5753,30 @@
                                                               <Component id="jLabel134" min="-2" max="-2" attributes="0"/>
                                                           </Group>
                                                       </Group>
-                                                      <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
-                                                      <Group type="103" groupAlignment="1" attributes="0">
-                                                          <Component id="jLabel133" alignment="1" min="-2" pref="136" max="-2" attributes="0"/>
-                                                          <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
-                                                              <Component id="txtServicioPublicoInsumoServicio" alignment="1" max="32767" attributes="0"/>
-                                                              <Component id="txtImpuestosInsumoServicio" alignment="1" max="32767" attributes="0"/>
-                                                              <Component id="txtDepreciacionInsumoServicio" alignment="1" max="32767" attributes="0"/>
-                                                              <Component id="txtOtrosInsumoServicio" alignment="1" max="32767" attributes="0"/>
-                                                              <Component id="txtHerraInsumoServicio" alignment="1" max="32767" attributes="0"/>
-                                                              <Component id="txtSumiInsumoServicio" alignment="1" max="32767" attributes="0"/>
-                                                              <Component id="txtMaterialInsumoServicio" alignment="1" max="32767" attributes="0"/>
-                                                              <Component id="txtManoInsumoServicio" alignment="1" max="32767" attributes="0"/>
-                                                              <Component id="txtSalarioOfiInsumosServicio" alignment="1" max="32767" attributes="0"/>
-                                                              <Component id="txtSalarioSupInsumoServicio" alignment="1" max="32767" attributes="0"/>
-                                                              <Component id="txtServicioPrivadoInsumoServicio" alignment="1" pref="119" max="32767" attributes="0"/>
+                                                      <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                                                      <Group type="103" groupAlignment="0" attributes="0">
+                                                          <Group type="103" groupAlignment="1" attributes="0">
+                                                              <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
+                                                                  <Component id="txtServicioPublicoInsumoServicio" alignment="1" max="32767" attributes="0"/>
+                                                                  <Component id="txtImpuestosInsumoServicio" alignment="1" max="32767" attributes="0"/>
+                                                                  <Component id="txtDepreciacionInsumoServicio" alignment="1" max="32767" attributes="0"/>
+                                                                  <Component id="txtOtrosInsumoServicio" alignment="1" max="32767" attributes="0"/>
+                                                                  <Component id="txtHerraInsumoServicio" alignment="1" max="32767" attributes="0"/>
+                                                                  <Component id="txtSumiInsumoServicio" alignment="1" max="32767" attributes="0"/>
+                                                                  <Component id="txtMaterialInsumoServicio" alignment="1" max="32767" attributes="0"/>
+                                                                  <Component id="txtManoInsumoServicio" alignment="1" max="32767" attributes="0"/>
+                                                                  <Component id="txtSalarioOfiInsumosServicio" alignment="1" max="32767" attributes="0"/>
+                                                                  <Component id="txtSalarioSupInsumoServicio" alignment="1" max="32767" attributes="0"/>
+                                                                  <Component id="txtServicioPrivadoInsumoServicio" alignment="1" pref="119" max="32767" attributes="0"/>
+                                                              </Group>
+                                                              <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
+                                                                  <Component id="txtInfraestructuraInsumoServicio" alignment="1" pref="119" max="32767" attributes="0"/>
+                                                                  <Component id="txtMantenimientoSoftInsumoServicio" alignment="1" max="32767" attributes="0"/>
+                                                                  <Component id="txtInsumoInsumoServicio" alignment="1" max="32767" attributes="0"/>
+                                                                  <Component id="txtCalidadInsumoServicio" alignment="1" max="32767" attributes="0"/>
+                                                              </Group>
                                                           </Group>
-                                                          <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
-                                                              <Component id="txtInfraestructuraInsumoServicio" alignment="1" pref="119" max="32767" attributes="0"/>
-                                                              <Component id="txtMantenimientoSoftInsumoServicio" alignment="1" max="32767" attributes="0"/>
-                                                              <Component id="txtInsumoInsumoServicio" alignment="1" max="32767" attributes="0"/>
-                                                              <Component id="txtCalidadInsumoServicio" alignment="1" max="32767" attributes="0"/>
-                                                          </Group>
+                                                          <Component id="jLabel133" min="-2" max="-2" attributes="0"/>
                                                       </Group>
                                                   </Group>
                                               </Group>
@@ -5797,13 +5797,17 @@
                                                                   <Component id="txtMaterialMantenimientoSoftServicio" alignment="0" max="32767" attributes="0"/>
                                                                   <Component id="txtManoMantenimientoSoftServicio" alignment="1" max="32767" attributes="0"/>
                                                                   <Component id="txtSumiMantenimientoSoftServicio" alignment="1" max="32767" attributes="0"/>
-                                                                  <Component id="jLabel135" alignment="0" pref="140" max="32767" attributes="0"/>
                                                               </Group>
                                                               <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                                                           </Group>
                                                           <Group type="102" alignment="0" attributes="0">
-                                                              <Component id="txtTotalVMantenimientoSoft" max="32767" attributes="0"/>
+                                                              <Component id="txtTotalVMantenimientoSoft" pref="135" max="32767" attributes="0"/>
                                                               <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                                                          </Group>
+                                                          <Group type="102" alignment="0" attributes="0">
+                                                              <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+                                                              <Component id="jLabel135" min="-2" max="-2" attributes="0"/>
+                                                              <EmptySpace max="32767" attributes="0"/>
                                                           </Group>
                                                       </Group>
                                                       <Group type="103" groupAlignment="0" attributes="0">
@@ -6074,17 +6078,17 @@
                     <Component class="javax.swing.JLabel" name="jLabel118">
                       <Properties>
                         <Property name="horizontalAlignment" type="int" value="0"/>
-                        <Property name="text" type="java.lang.String" value="&#xc1;REA DE COSTOS SOBRE SERVICIOS"/>
+                        <Property name="text" type="java.lang.String" value="&#xc1;REA DE SERVICIOS BASICOS"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel133">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="INSUMOS Y MATERIALES "/>
+                        <Property name="text" type="java.lang.String" value="RECURSOS HUMANOS"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel134">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="CALIDAD"/>
+                        <Property name="text" type="java.lang.String" value="FINANZAS"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JTextField" name="txtSalarioSupCalidadServicio">
@@ -6314,7 +6318,7 @@
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel135">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="MANTENIMI.. SOFTWARE"/>
+                        <Property name="text" type="java.lang.String" value="ADMINISTRACION"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JTextField" name="txtServicioPublicoInfraestructuraServicio">
@@ -6469,7 +6473,7 @@
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel136">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="INFRAESTRUCTURA"/>
+                        <Property name="text" type="java.lang.String" value="M. DE INFRAESTRUCTURA"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel137">
