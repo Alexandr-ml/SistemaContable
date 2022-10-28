@@ -244,6 +244,7 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
         
         lstCuentasDisponibles.setModel(controladorCuentasDisp);
         lstCuentasDisponibles.addListSelectionListener(this);
+        controladorCuentasDisp.actualizarLista();
     }
     
     public void configurarTablaLibroDiario(List<Registro> asientos){
@@ -4331,6 +4332,9 @@ public class Principal extends javax.swing.JFrame  implements ListSelectionListe
             contenedorPestañas.setEnabled(true);
             btnAnadirCuenta.setEnabled(true);
         }
+        
+        
+        
     }//GEN-LAST:event_btnAbrirArchivoActionPerformed
 
     private void btnModificarCuentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarCuentaActionPerformed
